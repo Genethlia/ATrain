@@ -1,0 +1,29 @@
+_deps/zlib-build/CMakeFiles/zlibstatic.dir/cpu_features.c.obj: \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\zlib-src\cpu_features.c \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\zlib-src\zbuild.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stddef.h \
+ C:/msys64/mingw64/include/stddef.h C:/msys64/mingw64/include/crtdefs.h \
+ C:/msys64/mingw64/include/corecrt.h C:/msys64/mingw64/include/_mingw.h \
+ C:/msys64/mingw64/include/_mingw_mac.h \
+ C:/msys64/mingw64/include/_mingw_secapi.h \
+ C:/msys64/mingw64/include/vadefs.h C:/msys64/mingw64/include/string.h \
+ C:/msys64/mingw64/include/corecrt_memory.h \
+ C:/msys64/mingw64/include/corecrt_wstring.h \
+ C:/msys64/mingw64/include/stdlib.h \
+ C:/msys64/mingw64/include/corecrt_malloc.h \
+ C:/msys64/mingw64/include/corecrt_wstdlib.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/limits.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/syslimits.h \
+ C:/msys64/mingw64/include/limits.h C:/msys64/mingw64/include/malloc.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/mm_malloc.h \
+ C:/msys64/mingw64/include/errno.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdint.h \
+ C:/msys64/mingw64/include/stdint.h C:/msys64/mingw64/include/stdio.h \
+ C:/msys64/mingw64/include/corecrt_wstdio.h \
+ C:/msys64/mingw64/include/corecrt_stdio_config.h \
+ C:/msys64/mingw64/include/_mingw_off_t.h \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\zlib-src\cpu_features.h \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\zlib-src\adler32_fold.h \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\zlib-src\crc32_fold.h \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\zlib-src\arch/x86/x86_features.h \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\zlib-src\fallback_builtins.h

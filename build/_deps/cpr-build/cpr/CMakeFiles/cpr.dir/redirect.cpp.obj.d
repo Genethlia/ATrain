@@ -1,0 +1,16 @@
+_deps/cpr-build/cpr/CMakeFiles/cpr.dir/redirect.cpp.obj: \
+ C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\build\_deps\cpr-src\cpr\redirect.cpp \
+ C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/redirect.h \
+ C:/msys64/mingw64/include/c++/16.2.0/cstdint \
+ C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++config.h \
+ C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+ C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+ C:/msys64/mingw64/include/c++/16.2.0/pstl/pstl_config.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdint.h \
+ C:/msys64/mingw64/include/stdint.h C:/msys64/mingw64/include/crtdefs.h \
+ C:/msys64/mingw64/include/corecrt.h C:/msys64/mingw64/include/_mingw.h \
+ C:/msys64/mingw64/include/_mingw_mac.h \
+ C:/msys64/mingw64/include/_mingw_secapi.h \
+ C:/msys64/mingw64/include/vadefs.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stddef.h \
+ C:/msys64/mingw64/include/stddef.h
