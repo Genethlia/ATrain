@@ -11,7 +11,7 @@ OllamaProvider::OllamaProvider(const std::string &model)
 {
 }
 
-std::string OllamaProvider::GenerateResponse(const std::deque<Message> &history, long long &tokenCount)
+std::string OllamaProvider::GenerateResponse(const std::deque<Message> &history)
 {
     nlohmann::json request{
         {"model", modelName},
@@ -40,12 +40,7 @@ std::string OllamaProvider::GenerateResponse(const std::deque<Message> &history,
 
     auto result = nlohmann::json::parse(response.text);
 
-    long long inputTokenCount = result.value("prompt_eval_count", 0);
-    long long outputTokenCount = result.value("eval_count", 0);
-
     auto content = result.at("message").at("content").get<std::string>();
-    tokenCount = inputTokenCount + outputTokenCount;
 
     return content;
 }
-

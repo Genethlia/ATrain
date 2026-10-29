@@ -818,7 +818,6 @@ _deps/zlib-build/CMakeFiles/zlib.dir/arch/x86/chunkset_avx2.c.obj: _deps/zlib-sr
   _deps/zlib-build/zlib.h \
   _deps/zlib-build/zlib_name_mangling.h \
   _deps/zlib-src/adler32_fold.h \
-  _deps/zlib-src/arch/generic/chunk_permute_table.h \
   _deps/zlib-src/chunkset_tpl.h \
   _deps/zlib-src/crc32_fold.h \
   _deps/zlib-src/deflate.h \
@@ -830,6 +829,7 @@ _deps/zlib-build/CMakeFiles/zlib.dir/arch/x86/chunkset_avx2.c.obj: _deps/zlib-sr
   _deps/zlib-src/zbuild.h \
   _deps/zlib-src/zendian.h \
   _deps/zlib-src/zutil.h \
+  _deps/zlib-src/arch/generic/chunk_permute_table.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -1145,7 +1145,6 @@ _deps/zlib-build/CMakeFiles/zlib.dir/arch/x86/chunkset_ssse3.c.obj: _deps/zlib-s
   _deps/zlib-build/zlib.h \
   _deps/zlib-build/zlib_name_mangling.h \
   _deps/zlib-src/adler32_fold.h \
-  _deps/zlib-src/arch/generic/chunk_permute_table.h \
   _deps/zlib-src/chunkset_tpl.h \
   _deps/zlib-src/crc32_fold.h \
   _deps/zlib-src/deflate.h \
@@ -1157,6 +1156,7 @@ _deps/zlib-build/CMakeFiles/zlib.dir/arch/x86/chunkset_ssse3.c.obj: _deps/zlib-s
   _deps/zlib-src/zbuild.h \
   _deps/zlib-src/zendian.h \
   _deps/zlib-src/zutil.h \
+  _deps/zlib-src/arch/generic/chunk_permute_table.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -1318,6 +1318,7 @@ _deps/zlib-build/CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.obj: _deps/zlib-
   _deps/zlib-src/zendian.h \
   _deps/zlib-src/zutil.h \
   _deps/zlib-src/zutil_p.h \
+  _deps/zlib-src/zbuild.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -1479,6 +1480,7 @@ _deps/zlib-build/CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.obj: _deps/zlib-
   _deps/zlib-src/zendian.h \
   _deps/zlib-src/zutil.h \
   _deps/zlib-src/zutil_p.h \
+  _deps/zlib-src/zbuild.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -4213,13 +4215,13 @@ _deps/zlib-src/arch/x86/adler32_sse42.c:
 
 _deps/zlib-src/arch/x86/chunkset_avx2.c:
 
-_deps/zlib-src/match_tpl.h:
-
-_deps/zlib-src/arch/generic/chunk_permute_table.h:
-
 _deps/zlib-src/inffast_tpl.h:
 
 _deps/zlib-src/inflate.h:
+
+_deps/zlib-src/match_tpl.h:
+
+_deps/zlib-src/arch/generic/chunk_permute_table.h:
 
 _deps/zlib-src/arch/x86/chunkset_sse2.c:
 

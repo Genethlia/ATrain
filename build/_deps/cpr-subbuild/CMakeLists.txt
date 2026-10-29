@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(cpr-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/libcpr/cpr.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "1.12.0"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/libcpr/cpr.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "da40186618909b1a7363d4e4495aa899c6e0eb75"
                     SOURCE_DIR          "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src"
                     BINARY_DIR          "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build"
                     CONFIGURE_COMMAND   ""

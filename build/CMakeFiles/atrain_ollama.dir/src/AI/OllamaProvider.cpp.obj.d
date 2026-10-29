@@ -2,7 +2,7 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\src\AI\OllamaProvider.cpp \
  C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\src\AI\OllamaProvider.h \
  C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\src\AI\IAIProvider.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/Core/Message.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/src/Core/Message.h \
  C:/msys64/mingw64/include/c++/16.2.0/string \
  C:/msys64/mingw64/include/c++/16.2.0/bits/requires_hosted.h \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -118,26 +118,24 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/tuple \
  C:/msys64/mingw64/include/c++/16.2.0/bits/invoke.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ranges_util.h \
- C:/msys64/mingw64/include/c++/16.2.0/cstdint \
- C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdint.h \
- C:/msys64/mingw64/include/stdint.h \
- C:/msys64/mingw64/include/c++/16.2.0/deque \
+ C:/msys64/mingw64/include/c++/16.2.0/vector \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/vector.tcc \
+ C:/msys64/mingw64/include/c++/16.2.0/deque \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_deque.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/deque.tcc \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/Core/Config.h \
- C:/msys64/mingw64/include/c++/16.2.0/stdexcept \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/cpr.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/api.h \
+ C:/msys64/mingw64/include/c++/16.2.0/fstream \
+ C:/msys64/mingw64/include/c++/16.2.0/istream \
+ C:/msys64/mingw64/include/c++/16.2.0/ios \
  C:/msys64/mingw64/include/c++/16.2.0/exception \
  C:/msys64/mingw64/include/c++/16.2.0/bits/exception_ptr.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/cxxabi_init_exception.h \
  C:/msys64/mingw64/include/c++/16.2.0/typeinfo \
  C:/msys64/mingw64/include/c++/16.2.0/bits/nested_exception.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/stdexcept_except.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/cpr.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/api.h \
- C:/msys64/mingw64/include/c++/16.2.0/fstream \
- C:/msys64/mingw64/include/c++/16.2.0/istream \
- C:/msys64/mingw64/include/c++/16.2.0/ios \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ios_base.h \
  C:/msys64/mingw64/include/c++/16.2.0/ext/atomicity.h \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -158,6 +156,8 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/bits/locale_classes.tcc \
  C:/msys64/mingw64/include/c++/16.2.0/system_error \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+ C:/msys64/mingw64/include/c++/16.2.0/stdexcept \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stdexcept_except.h \
  C:/msys64/mingw64/include/c++/16.2.0/streambuf \
  C:/msys64/mingw64/include/c++/16.2.0/bits/streambuf.tcc \
  C:/msys64/mingw64/include/c++/16.2.0/bits/basic_ios.h \
@@ -188,16 +188,15 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/ext/aligned_buffer.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/enable_special_members.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/node_handle.h \
- C:/msys64/mingw64/include/c++/16.2.0/vector \
- C:/msys64/mingw64/include/c++/16.2.0/bits/stl_vector.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/stl_bvector.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/vector.tcc \
  C:/msys64/mingw64/include/c++/16.2.0/array \
  C:/msys64/mingw64/include/c++/16.2.0/bits/binders.h \
  C:/msys64/mingw64/include/c++/16.2.0/future \
  C:/msys64/mingw64/include/c++/16.2.0/mutex \
  C:/msys64/mingw64/include/c++/16.2.0/bits/chrono.h \
  C:/msys64/mingw64/include/c++/16.2.0/ratio \
+ C:/msys64/mingw64/include/c++/16.2.0/cstdint \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdint.h \
+ C:/msys64/mingw64/include/stdint.h \
  C:/msys64/mingw64/include/c++/16.2.0/ctime \
  C:/msys64/mingw64/include/c++/16.2.0/bits/parse_numbers.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/std_mutex.h \
@@ -223,8 +222,8 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/utility \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_relops.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/intcmp.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/async.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/async_wrapper.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/async.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/async_wrapper.h \
  C:/msys64/mingw64/include/c++/16.2.0/memory \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_tempbuf.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_raw_storage_iter.h \
@@ -234,10 +233,10 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ranges_algobase.h \
  C:/msys64/mingw64/include/c++/16.2.0/pstl/glue_memory_defs.h \
  C:/msys64/mingw64/include/c++/16.2.0/pstl/execution_defs.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/singleton.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/singleton.h \
  C:/msys64/mingw64/include/c++/16.2.0/cassert \
  C:/msys64/mingw64/include/assert.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/threadpool.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/threadpool.h \
  C:/msys64/mingw64/include/c++/16.2.0/chrono \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_algo.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/algorithmfwd.h \
@@ -266,14 +265,14 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/queue \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_queue.h \
  C:/msys64/mingw64/include/c++/16.2.0/thread \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/async_wrapper.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/auth.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/util.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/callback.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/cprtypes.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/curl.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/curlver.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/system.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/async_wrapper.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/auth.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/util.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/callback.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/cprtypes.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/curl.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/curlver.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/system.h \
  C:/msys64/mingw64/include/inttypes.h \
  C:/msys64/mingw64/include/winsock2.h \
  C:/msys64/mingw64/include/_mingw_unicode.h \
@@ -505,15 +504,15 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/ws2ipdef.h C:/msys64/mingw64/include/in6addr.h \
  C:/msys64/mingw64/include/psdk_inc/_ip_mreq1.h \
  C:/msys64/mingw64/include/mstcpip.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/easy.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/multi.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/curl.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/urlapi.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/options.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/header.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/websockets.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/mprintf.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/system.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/easy.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/multi.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/curl.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/urlapi.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/options.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/header.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/websockets.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/mprintf.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/system.h \
  C:/msys64/mingw64/include/c++/16.2.0/map \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_tree.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_map.h \
@@ -521,13 +520,13 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/numeric \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_numeric.h \
  C:/msys64/mingw64/include/c++/16.2.0/pstl/glue_numeric_defs.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/cookies.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/curlholder.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/secure_string.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/cprtypes.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/bearer.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/include/curl/curlver.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/filesystem.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/cookies.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/curlholder.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/secure_string.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/cprtypes.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/bearer.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/curl-src/include/curl/curlver.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/filesystem.h \
  C:/msys64/mingw64/include/c++/16.2.0/filesystem \
  C:/msys64/mingw64/include/c++/16.2.0/bits/fs_fwd.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/fs_path.h \
@@ -536,61 +535,61 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/codecvt \
  C:/msys64/mingw64/include/c++/16.2.0/bits/fs_dir.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/fs_ops.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/multipart.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/buffer.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/file.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/multiperform.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/curlmultiholder.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/response.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/cert_info.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/error.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/ssl_options.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/util.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/session.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/multipart.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/buffer.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/file.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/multiperform.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/curlmultiholder.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/response.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/cert_info.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/error.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/ssl_options.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/util.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/session.h \
  C:/msys64/mingw64/include/c++/16.2.0/variant \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/accept_encoding.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/accept_encoding.h \
  C:/msys64/mingw64/include/c++/16.2.0/unordered_set \
  C:/msys64/mingw64/include/c++/16.2.0/bits/unordered_set.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/body.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/buffer.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/file.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/body_view.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/connect_timeout.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/timeout.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/http_version.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/interface.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/limit_rate.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/local_port.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/local_port_range.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/low_speed.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/parameters.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/curl_container.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/payload.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/proxies.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/proxyauth.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/range.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/redirect.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/reserve_size.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/resolve.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/body.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/buffer.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/file.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/body_view.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/connect_timeout.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/timeout.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/http_version.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/interface.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/limit_rate.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/local_port.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/local_port_range.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/low_speed.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/parameters.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/curl_container.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/payload.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/proxies.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/proxyauth.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/range.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/redirect.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/reserve_size.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/resolve.h \
  C:/msys64/mingw64/include/c++/16.2.0/set \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_set.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_multiset.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/unix_socket.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/user_agent.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/verbose.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/cpr_generated_includes/cpr/cprver.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/interceptor.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/ssl_ctx.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/include/cpr/status_codes.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/json.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/unix_socket.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/user_agent.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/verbose.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/CPR-BU~1/CPR_GE~1/cpr/cprver.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/interceptor.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/ssl_ctx.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/status_codes.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/json.hpp \
  C:/msys64/mingw64/include/c++/16.2.0/algorithm \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ranges_algo.h \
  C:/msys64/mingw64/include/c++/16.2.0/pstl/glue_algorithm_defs.h \
  C:/msys64/mingw64/include/c++/16.2.0/iterator \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stream_iterator.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/adl_serializer.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/abi_macros.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/adl_serializer.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/abi_macros.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp \
  C:/msys64/mingw64/include/c++/16.2.0/forward_list \
  C:/msys64/mingw64/include/c++/16.2.0/bits/forward_list.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/forward_list.tcc \
@@ -619,49 +618,49 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/bits/gslice_array.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/mask_array.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/indirect_array.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/exceptions.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/value_t.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/macro_scope.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/detected.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/void_t.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/exceptions.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/value_t.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/macro_scope.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/detected.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/void_t.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
  C:/msys64/mingw64/include/c++/16.2.0/version \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/string_escape.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/input/position_t.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/cpp_future.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/type_traits.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/call_std/end.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/json_fwd.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/string_concat.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/string_escape.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/input/position_t.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/cpp_future.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/type_traits.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/call_std/end.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/json_fwd.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/string_concat.hpp \
  C:/msys64/mingw64/include/c++/16.2.0/cstring \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/identity_tag.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/std_fs.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/conversions/to_json.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/identity_tag.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/std_fs.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/conversions/to_json.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
  C:/msys64/mingw64/include/c++/16.2.0/ranges \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/string_utils.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/byte_container_with_subtype.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/hash.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/input/binary_reader.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/input/input_adapters.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/input/json_sax.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/input/lexer.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/is_sax.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/input/parser.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/json_custom_base_class.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/json_pointer.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/json_ref.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/output/binary_writer.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/output/output_adapters.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/output/serializer.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/conversions/to_chars.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/ordered_map.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/string_utils.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/byte_container_with_subtype.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/hash.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/input/binary_reader.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/input/input_adapters.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/input/json_sax.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/input/lexer.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/meta/is_sax.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/input/parser.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/json_custom_base_class.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/json_pointer.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/json_ref.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/output/binary_writer.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/output/output_adapters.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/output/serializer.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/conversions/to_chars.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/ordered_map.hpp \
  C:/msys64/mingw64/include/c++/16.2.0/any \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/detail/macro_unscope.hpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/build/_deps/json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/macro_unscope.hpp \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp

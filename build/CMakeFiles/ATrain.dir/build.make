@@ -86,57 +86,25 @@ CMakeFiles/ATrain.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ATrain.dir/src/main.cpp.s"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\src\main.cpp" -o CMakeFiles\ATrain.dir\src\main.cpp.s
 
-CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj: CMakeFiles/ATrain.dir/flags.make
-CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj: CMakeFiles/ATrain.dir/includes_CXX.rsp
-CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj: C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/Core/Assistant.cpp
-CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj: CMakeFiles/ATrain.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj -MF CMakeFiles\ATrain.dir\src\Core\Assistant.cpp.obj.d -o CMakeFiles\ATrain.dir\src\Core\Assistant.cpp.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\src\Core\Assistant.cpp"
-
-CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\src\Core\Assistant.cpp" > CMakeFiles\ATrain.dir\src\Core\Assistant.cpp.i
-
-CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\src\Core\Assistant.cpp" -o CMakeFiles\ATrain.dir\src\Core\Assistant.cpp.s
-
-CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj: CMakeFiles/ATrain.dir/flags.make
-CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj: CMakeFiles/ATrain.dir/includes_CXX.rsp
-CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj: C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/AI/OllamaProvider.cpp
-CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj: CMakeFiles/ATrain.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj -MF CMakeFiles\ATrain.dir\src\AI\OllamaProvider.cpp.obj.d -o CMakeFiles\ATrain.dir\src\AI\OllamaProvider.cpp.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\src\AI\OllamaProvider.cpp"
-
-CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\src\AI\OllamaProvider.cpp" > CMakeFiles\ATrain.dir\src\AI\OllamaProvider.cpp.i
-
-CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\src\AI\OllamaProvider.cpp" -o CMakeFiles\ATrain.dir\src\AI\OllamaProvider.cpp.s
-
 # Object files for target ATrain
 ATrain_OBJECTS = \
-"CMakeFiles/ATrain.dir/src/main.cpp.obj" \
-"CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj" \
-"CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj"
+"CMakeFiles/ATrain.dir/src/main.cpp.obj"
 
 # External object files for target ATrain
 ATrain_EXTERNAL_OBJECTS =
 
 ATrain.exe: CMakeFiles/ATrain.dir/src/main.cpp.obj
-ATrain.exe: CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj
-ATrain.exe: CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj
 ATrain.exe: CMakeFiles/ATrain.dir/build.make
+ATrain.exe: libatrain_ollama.a
+ATrain.exe: libatrain_core.a
 ATrain.exe: _deps/cpr-build/cpr/libcpr.dll.a
 ATrain.exe: _deps/curl-build/lib/libcurl-d.dll.a
 ATrain.exe: CMakeFiles/ATrain.dir/linkLibs.rsp
 ATrain.exe: CMakeFiles/ATrain.dir/objects1.rsp
 ATrain.exe: CMakeFiles/ATrain.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ATrain.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ATrain.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ATrain.dir\link.txt --verbose=$(VERBOSE)
-	"C:\Program Files\CMake\bin\cmake.exe" -E copy -t "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build" "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/cpr/libcpr.dll" "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/lib/libcurl-d.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" "-DRUNTIME_DLLS=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/cpr/libcpr.dll;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/lib/libcurl-d.dll" "-DDESTINATION=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build" -P "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/cmake/CopyRuntime.cmake"
 
 # Rule to build all files generated by this target.
 CMakeFiles/ATrain.dir/build: ATrain.exe

@@ -7,6 +7,6 @@ command=C:/Program Files/CMake/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-
 source_dir=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-src
 work_dir=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps
 url(s)=https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz
-hash=
+hash=SHA256=42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa
       no_extract=
 

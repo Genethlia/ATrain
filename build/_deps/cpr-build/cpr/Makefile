@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\b
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -77,12 +77,22 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
 package_source/fast: package_source
 .PHONY : package_source/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	"C:\Program Files\CMake\bin\ctest.exe" $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -151,14 +161,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\cpr-build\cpr\\CMakeFiles\progress.marks"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/all
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\cpr-build\cpr\\CMakeFiles\progress.marks"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/clean
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/clean
 .PHONY : clean
 
 # The main clean target
@@ -167,22 +177,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/preinstall
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/preinstall
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/cpr-build/cpr/CMakeFiles/cpr.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/CMakeFiles/cpr.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/cpr-build/cpr/CMakeFiles/cpr.dir/rule
 .PHONY : _deps/cpr-build/cpr/CMakeFiles/cpr.dir/rule
 
 # Convenience name for target.
@@ -191,7 +201,7 @@ cpr: _deps/cpr-build/cpr/CMakeFiles/cpr.dir/rule
 
 # fast build rule for target.
 cpr/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/build
 .PHONY : cpr/fast
 
 accept_encoding.obj: accept_encoding.cpp.obj
@@ -199,7 +209,7 @@ accept_encoding.obj: accept_encoding.cpp.obj
 
 # target to build an object file
 accept_encoding.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/accept_encoding.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/accept_encoding.cpp.obj
 .PHONY : accept_encoding.cpp.obj
 
 accept_encoding.i: accept_encoding.cpp.i
@@ -207,7 +217,7 @@ accept_encoding.i: accept_encoding.cpp.i
 
 # target to preprocess a source file
 accept_encoding.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/accept_encoding.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/accept_encoding.cpp.i
 .PHONY : accept_encoding.cpp.i
 
 accept_encoding.s: accept_encoding.cpp.s
@@ -215,7 +225,7 @@ accept_encoding.s: accept_encoding.cpp.s
 
 # target to generate assembly for a file
 accept_encoding.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/accept_encoding.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/accept_encoding.cpp.s
 .PHONY : accept_encoding.cpp.s
 
 async.obj: async.cpp.obj
@@ -223,7 +233,7 @@ async.obj: async.cpp.obj
 
 # target to build an object file
 async.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/async.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/async.cpp.obj
 .PHONY : async.cpp.obj
 
 async.i: async.cpp.i
@@ -231,7 +241,7 @@ async.i: async.cpp.i
 
 # target to preprocess a source file
 async.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/async.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/async.cpp.i
 .PHONY : async.cpp.i
 
 async.s: async.cpp.s
@@ -239,7 +249,7 @@ async.s: async.cpp.s
 
 # target to generate assembly for a file
 async.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/async.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/async.cpp.s
 .PHONY : async.cpp.s
 
 auth.obj: auth.cpp.obj
@@ -247,7 +257,7 @@ auth.obj: auth.cpp.obj
 
 # target to build an object file
 auth.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/auth.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/auth.cpp.obj
 .PHONY : auth.cpp.obj
 
 auth.i: auth.cpp.i
@@ -255,7 +265,7 @@ auth.i: auth.cpp.i
 
 # target to preprocess a source file
 auth.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/auth.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/auth.cpp.i
 .PHONY : auth.cpp.i
 
 auth.s: auth.cpp.s
@@ -263,7 +273,7 @@ auth.s: auth.cpp.s
 
 # target to generate assembly for a file
 auth.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/auth.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/auth.cpp.s
 .PHONY : auth.cpp.s
 
 callback.obj: callback.cpp.obj
@@ -271,7 +281,7 @@ callback.obj: callback.cpp.obj
 
 # target to build an object file
 callback.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/callback.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/callback.cpp.obj
 .PHONY : callback.cpp.obj
 
 callback.i: callback.cpp.i
@@ -279,7 +289,7 @@ callback.i: callback.cpp.i
 
 # target to preprocess a source file
 callback.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/callback.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/callback.cpp.i
 .PHONY : callback.cpp.i
 
 callback.s: callback.cpp.s
@@ -287,7 +297,7 @@ callback.s: callback.cpp.s
 
 # target to generate assembly for a file
 callback.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/callback.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/callback.cpp.s
 .PHONY : callback.cpp.s
 
 cert_info.obj: cert_info.cpp.obj
@@ -295,7 +305,7 @@ cert_info.obj: cert_info.cpp.obj
 
 # target to build an object file
 cert_info.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cert_info.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cert_info.cpp.obj
 .PHONY : cert_info.cpp.obj
 
 cert_info.i: cert_info.cpp.i
@@ -303,7 +313,7 @@ cert_info.i: cert_info.cpp.i
 
 # target to preprocess a source file
 cert_info.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cert_info.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cert_info.cpp.i
 .PHONY : cert_info.cpp.i
 
 cert_info.s: cert_info.cpp.s
@@ -311,7 +321,7 @@ cert_info.s: cert_info.cpp.s
 
 # target to generate assembly for a file
 cert_info.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cert_info.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cert_info.cpp.s
 .PHONY : cert_info.cpp.s
 
 cookies.obj: cookies.cpp.obj
@@ -319,7 +329,7 @@ cookies.obj: cookies.cpp.obj
 
 # target to build an object file
 cookies.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cookies.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cookies.cpp.obj
 .PHONY : cookies.cpp.obj
 
 cookies.i: cookies.cpp.i
@@ -327,7 +337,7 @@ cookies.i: cookies.cpp.i
 
 # target to preprocess a source file
 cookies.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cookies.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cookies.cpp.i
 .PHONY : cookies.cpp.i
 
 cookies.s: cookies.cpp.s
@@ -335,7 +345,7 @@ cookies.s: cookies.cpp.s
 
 # target to generate assembly for a file
 cookies.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cookies.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cookies.cpp.s
 .PHONY : cookies.cpp.s
 
 cprtypes.obj: cprtypes.cpp.obj
@@ -343,7 +353,7 @@ cprtypes.obj: cprtypes.cpp.obj
 
 # target to build an object file
 cprtypes.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cprtypes.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cprtypes.cpp.obj
 .PHONY : cprtypes.cpp.obj
 
 cprtypes.i: cprtypes.cpp.i
@@ -351,7 +361,7 @@ cprtypes.i: cprtypes.cpp.i
 
 # target to preprocess a source file
 cprtypes.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cprtypes.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cprtypes.cpp.i
 .PHONY : cprtypes.cpp.i
 
 cprtypes.s: cprtypes.cpp.s
@@ -359,7 +369,7 @@ cprtypes.s: cprtypes.cpp.s
 
 # target to generate assembly for a file
 cprtypes.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cprtypes.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/cprtypes.cpp.s
 .PHONY : cprtypes.cpp.s
 
 curl_container.obj: curl_container.cpp.obj
@@ -367,7 +377,7 @@ curl_container.obj: curl_container.cpp.obj
 
 # target to build an object file
 curl_container.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curl_container.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curl_container.cpp.obj
 .PHONY : curl_container.cpp.obj
 
 curl_container.i: curl_container.cpp.i
@@ -375,7 +385,7 @@ curl_container.i: curl_container.cpp.i
 
 # target to preprocess a source file
 curl_container.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curl_container.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curl_container.cpp.i
 .PHONY : curl_container.cpp.i
 
 curl_container.s: curl_container.cpp.s
@@ -383,7 +393,7 @@ curl_container.s: curl_container.cpp.s
 
 # target to generate assembly for a file
 curl_container.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curl_container.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curl_container.cpp.s
 .PHONY : curl_container.cpp.s
 
 curlholder.obj: curlholder.cpp.obj
@@ -391,7 +401,7 @@ curlholder.obj: curlholder.cpp.obj
 
 # target to build an object file
 curlholder.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlholder.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlholder.cpp.obj
 .PHONY : curlholder.cpp.obj
 
 curlholder.i: curlholder.cpp.i
@@ -399,7 +409,7 @@ curlholder.i: curlholder.cpp.i
 
 # target to preprocess a source file
 curlholder.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlholder.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlholder.cpp.i
 .PHONY : curlholder.cpp.i
 
 curlholder.s: curlholder.cpp.s
@@ -407,7 +417,7 @@ curlholder.s: curlholder.cpp.s
 
 # target to generate assembly for a file
 curlholder.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlholder.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlholder.cpp.s
 .PHONY : curlholder.cpp.s
 
 curlmultiholder.obj: curlmultiholder.cpp.obj
@@ -415,7 +425,7 @@ curlmultiholder.obj: curlmultiholder.cpp.obj
 
 # target to build an object file
 curlmultiholder.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlmultiholder.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlmultiholder.cpp.obj
 .PHONY : curlmultiholder.cpp.obj
 
 curlmultiholder.i: curlmultiholder.cpp.i
@@ -423,7 +433,7 @@ curlmultiholder.i: curlmultiholder.cpp.i
 
 # target to preprocess a source file
 curlmultiholder.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlmultiholder.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlmultiholder.cpp.i
 .PHONY : curlmultiholder.cpp.i
 
 curlmultiholder.s: curlmultiholder.cpp.s
@@ -431,7 +441,7 @@ curlmultiholder.s: curlmultiholder.cpp.s
 
 # target to generate assembly for a file
 curlmultiholder.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlmultiholder.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/curlmultiholder.cpp.s
 .PHONY : curlmultiholder.cpp.s
 
 error.obj: error.cpp.obj
@@ -439,7 +449,7 @@ error.obj: error.cpp.obj
 
 # target to build an object file
 error.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/error.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/error.cpp.obj
 .PHONY : error.cpp.obj
 
 error.i: error.cpp.i
@@ -447,7 +457,7 @@ error.i: error.cpp.i
 
 # target to preprocess a source file
 error.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/error.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/error.cpp.i
 .PHONY : error.cpp.i
 
 error.s: error.cpp.s
@@ -455,7 +465,7 @@ error.s: error.cpp.s
 
 # target to generate assembly for a file
 error.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/error.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/error.cpp.s
 .PHONY : error.cpp.s
 
 file.obj: file.cpp.obj
@@ -463,7 +473,7 @@ file.obj: file.cpp.obj
 
 # target to build an object file
 file.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/file.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/file.cpp.obj
 .PHONY : file.cpp.obj
 
 file.i: file.cpp.i
@@ -471,7 +481,7 @@ file.i: file.cpp.i
 
 # target to preprocess a source file
 file.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/file.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/file.cpp.i
 .PHONY : file.cpp.i
 
 file.s: file.cpp.s
@@ -479,7 +489,7 @@ file.s: file.cpp.s
 
 # target to generate assembly for a file
 file.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/file.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/file.cpp.s
 .PHONY : file.cpp.s
 
 interceptor.obj: interceptor.cpp.obj
@@ -487,7 +497,7 @@ interceptor.obj: interceptor.cpp.obj
 
 # target to build an object file
 interceptor.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/interceptor.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/interceptor.cpp.obj
 .PHONY : interceptor.cpp.obj
 
 interceptor.i: interceptor.cpp.i
@@ -495,7 +505,7 @@ interceptor.i: interceptor.cpp.i
 
 # target to preprocess a source file
 interceptor.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/interceptor.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/interceptor.cpp.i
 .PHONY : interceptor.cpp.i
 
 interceptor.s: interceptor.cpp.s
@@ -503,7 +513,7 @@ interceptor.s: interceptor.cpp.s
 
 # target to generate assembly for a file
 interceptor.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/interceptor.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/interceptor.cpp.s
 .PHONY : interceptor.cpp.s
 
 multipart.obj: multipart.cpp.obj
@@ -511,7 +521,7 @@ multipart.obj: multipart.cpp.obj
 
 # target to build an object file
 multipart.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multipart.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multipart.cpp.obj
 .PHONY : multipart.cpp.obj
 
 multipart.i: multipart.cpp.i
@@ -519,7 +529,7 @@ multipart.i: multipart.cpp.i
 
 # target to preprocess a source file
 multipart.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multipart.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multipart.cpp.i
 .PHONY : multipart.cpp.i
 
 multipart.s: multipart.cpp.s
@@ -527,7 +537,7 @@ multipart.s: multipart.cpp.s
 
 # target to generate assembly for a file
 multipart.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multipart.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multipart.cpp.s
 .PHONY : multipart.cpp.s
 
 multiperform.obj: multiperform.cpp.obj
@@ -535,7 +545,7 @@ multiperform.obj: multiperform.cpp.obj
 
 # target to build an object file
 multiperform.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multiperform.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multiperform.cpp.obj
 .PHONY : multiperform.cpp.obj
 
 multiperform.i: multiperform.cpp.i
@@ -543,7 +553,7 @@ multiperform.i: multiperform.cpp.i
 
 # target to preprocess a source file
 multiperform.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multiperform.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multiperform.cpp.i
 .PHONY : multiperform.cpp.i
 
 multiperform.s: multiperform.cpp.s
@@ -551,7 +561,7 @@ multiperform.s: multiperform.cpp.s
 
 # target to generate assembly for a file
 multiperform.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multiperform.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/multiperform.cpp.s
 .PHONY : multiperform.cpp.s
 
 parameters.obj: parameters.cpp.obj
@@ -559,7 +569,7 @@ parameters.obj: parameters.cpp.obj
 
 # target to build an object file
 parameters.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/parameters.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/parameters.cpp.obj
 .PHONY : parameters.cpp.obj
 
 parameters.i: parameters.cpp.i
@@ -567,7 +577,7 @@ parameters.i: parameters.cpp.i
 
 # target to preprocess a source file
 parameters.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/parameters.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/parameters.cpp.i
 .PHONY : parameters.cpp.i
 
 parameters.s: parameters.cpp.s
@@ -575,7 +585,7 @@ parameters.s: parameters.cpp.s
 
 # target to generate assembly for a file
 parameters.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/parameters.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/parameters.cpp.s
 .PHONY : parameters.cpp.s
 
 payload.obj: payload.cpp.obj
@@ -583,7 +593,7 @@ payload.obj: payload.cpp.obj
 
 # target to build an object file
 payload.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/payload.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/payload.cpp.obj
 .PHONY : payload.cpp.obj
 
 payload.i: payload.cpp.i
@@ -591,7 +601,7 @@ payload.i: payload.cpp.i
 
 # target to preprocess a source file
 payload.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/payload.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/payload.cpp.i
 .PHONY : payload.cpp.i
 
 payload.s: payload.cpp.s
@@ -599,7 +609,7 @@ payload.s: payload.cpp.s
 
 # target to generate assembly for a file
 payload.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/payload.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/payload.cpp.s
 .PHONY : payload.cpp.s
 
 proxies.obj: proxies.cpp.obj
@@ -607,7 +617,7 @@ proxies.obj: proxies.cpp.obj
 
 # target to build an object file
 proxies.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxies.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxies.cpp.obj
 .PHONY : proxies.cpp.obj
 
 proxies.i: proxies.cpp.i
@@ -615,7 +625,7 @@ proxies.i: proxies.cpp.i
 
 # target to preprocess a source file
 proxies.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxies.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxies.cpp.i
 .PHONY : proxies.cpp.i
 
 proxies.s: proxies.cpp.s
@@ -623,7 +633,7 @@ proxies.s: proxies.cpp.s
 
 # target to generate assembly for a file
 proxies.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxies.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxies.cpp.s
 .PHONY : proxies.cpp.s
 
 proxyauth.obj: proxyauth.cpp.obj
@@ -631,7 +641,7 @@ proxyauth.obj: proxyauth.cpp.obj
 
 # target to build an object file
 proxyauth.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxyauth.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxyauth.cpp.obj
 .PHONY : proxyauth.cpp.obj
 
 proxyauth.i: proxyauth.cpp.i
@@ -639,7 +649,7 @@ proxyauth.i: proxyauth.cpp.i
 
 # target to preprocess a source file
 proxyauth.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxyauth.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxyauth.cpp.i
 .PHONY : proxyauth.cpp.i
 
 proxyauth.s: proxyauth.cpp.s
@@ -647,7 +657,7 @@ proxyauth.s: proxyauth.cpp.s
 
 # target to generate assembly for a file
 proxyauth.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxyauth.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/proxyauth.cpp.s
 .PHONY : proxyauth.cpp.s
 
 redirect.obj: redirect.cpp.obj
@@ -655,7 +665,7 @@ redirect.obj: redirect.cpp.obj
 
 # target to build an object file
 redirect.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/redirect.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/redirect.cpp.obj
 .PHONY : redirect.cpp.obj
 
 redirect.i: redirect.cpp.i
@@ -663,7 +673,7 @@ redirect.i: redirect.cpp.i
 
 # target to preprocess a source file
 redirect.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/redirect.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/redirect.cpp.i
 .PHONY : redirect.cpp.i
 
 redirect.s: redirect.cpp.s
@@ -671,7 +681,7 @@ redirect.s: redirect.cpp.s
 
 # target to generate assembly for a file
 redirect.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/redirect.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/redirect.cpp.s
 .PHONY : redirect.cpp.s
 
 response.obj: response.cpp.obj
@@ -679,7 +689,7 @@ response.obj: response.cpp.obj
 
 # target to build an object file
 response.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/response.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/response.cpp.obj
 .PHONY : response.cpp.obj
 
 response.i: response.cpp.i
@@ -687,7 +697,7 @@ response.i: response.cpp.i
 
 # target to preprocess a source file
 response.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/response.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/response.cpp.i
 .PHONY : response.cpp.i
 
 response.s: response.cpp.s
@@ -695,7 +705,7 @@ response.s: response.cpp.s
 
 # target to generate assembly for a file
 response.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/response.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/response.cpp.s
 .PHONY : response.cpp.s
 
 session.obj: session.cpp.obj
@@ -703,7 +713,7 @@ session.obj: session.cpp.obj
 
 # target to build an object file
 session.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/session.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/session.cpp.obj
 .PHONY : session.cpp.obj
 
 session.i: session.cpp.i
@@ -711,7 +721,7 @@ session.i: session.cpp.i
 
 # target to preprocess a source file
 session.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/session.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/session.cpp.i
 .PHONY : session.cpp.i
 
 session.s: session.cpp.s
@@ -719,7 +729,7 @@ session.s: session.cpp.s
 
 # target to generate assembly for a file
 session.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/session.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/session.cpp.s
 .PHONY : session.cpp.s
 
 ssl_ctx.obj: ssl_ctx.cpp.obj
@@ -727,7 +737,7 @@ ssl_ctx.obj: ssl_ctx.cpp.obj
 
 # target to build an object file
 ssl_ctx.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/ssl_ctx.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/ssl_ctx.cpp.obj
 .PHONY : ssl_ctx.cpp.obj
 
 ssl_ctx.i: ssl_ctx.cpp.i
@@ -735,7 +745,7 @@ ssl_ctx.i: ssl_ctx.cpp.i
 
 # target to preprocess a source file
 ssl_ctx.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/ssl_ctx.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/ssl_ctx.cpp.i
 .PHONY : ssl_ctx.cpp.i
 
 ssl_ctx.s: ssl_ctx.cpp.s
@@ -743,7 +753,7 @@ ssl_ctx.s: ssl_ctx.cpp.s
 
 # target to generate assembly for a file
 ssl_ctx.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/ssl_ctx.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/ssl_ctx.cpp.s
 .PHONY : ssl_ctx.cpp.s
 
 threadpool.obj: threadpool.cpp.obj
@@ -751,7 +761,7 @@ threadpool.obj: threadpool.cpp.obj
 
 # target to build an object file
 threadpool.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/threadpool.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/threadpool.cpp.obj
 .PHONY : threadpool.cpp.obj
 
 threadpool.i: threadpool.cpp.i
@@ -759,7 +769,7 @@ threadpool.i: threadpool.cpp.i
 
 # target to preprocess a source file
 threadpool.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/threadpool.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/threadpool.cpp.i
 .PHONY : threadpool.cpp.i
 
 threadpool.s: threadpool.cpp.s
@@ -767,7 +777,7 @@ threadpool.s: threadpool.cpp.s
 
 # target to generate assembly for a file
 threadpool.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/threadpool.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/threadpool.cpp.s
 .PHONY : threadpool.cpp.s
 
 timeout.obj: timeout.cpp.obj
@@ -775,7 +785,7 @@ timeout.obj: timeout.cpp.obj
 
 # target to build an object file
 timeout.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/timeout.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/timeout.cpp.obj
 .PHONY : timeout.cpp.obj
 
 timeout.i: timeout.cpp.i
@@ -783,7 +793,7 @@ timeout.i: timeout.cpp.i
 
 # target to preprocess a source file
 timeout.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/timeout.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/timeout.cpp.i
 .PHONY : timeout.cpp.i
 
 timeout.s: timeout.cpp.s
@@ -791,7 +801,7 @@ timeout.s: timeout.cpp.s
 
 # target to generate assembly for a file
 timeout.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/timeout.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/timeout.cpp.s
 .PHONY : timeout.cpp.s
 
 unix_socket.obj: unix_socket.cpp.obj
@@ -799,7 +809,7 @@ unix_socket.obj: unix_socket.cpp.obj
 
 # target to build an object file
 unix_socket.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/unix_socket.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/unix_socket.cpp.obj
 .PHONY : unix_socket.cpp.obj
 
 unix_socket.i: unix_socket.cpp.i
@@ -807,7 +817,7 @@ unix_socket.i: unix_socket.cpp.i
 
 # target to preprocess a source file
 unix_socket.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/unix_socket.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/unix_socket.cpp.i
 .PHONY : unix_socket.cpp.i
 
 unix_socket.s: unix_socket.cpp.s
@@ -815,7 +825,7 @@ unix_socket.s: unix_socket.cpp.s
 
 # target to generate assembly for a file
 unix_socket.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/unix_socket.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/unix_socket.cpp.s
 .PHONY : unix_socket.cpp.s
 
 util.obj: util.cpp.obj
@@ -823,7 +833,7 @@ util.obj: util.cpp.obj
 
 # target to build an object file
 util.cpp.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/util.cpp.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/util.cpp.obj
 .PHONY : util.cpp.obj
 
 util.i: util.cpp.i
@@ -831,7 +841,7 @@ util.i: util.cpp.i
 
 # target to preprocess a source file
 util.cpp.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/util.cpp.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/util.cpp.i
 .PHONY : util.cpp.i
 
 util.s: util.cpp.s
@@ -839,7 +849,7 @@ util.s: util.cpp.s
 
 # target to generate assembly for a file
 util.cpp.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/util.cpp.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/util.cpp.s
 .PHONY : util.cpp.s
 
 # Help Target
@@ -856,6 +866,7 @@ help:
 	@echo ... package
 	@echo ... package_source
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... cpr
 	@echo ... accept_encoding.obj
 	@echo ... accept_encoding.i
@@ -949,6 +960,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

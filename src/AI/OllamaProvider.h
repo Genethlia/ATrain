@@ -12,7 +12,7 @@ class OllamaProvider : public IAIProvider
 public:
     explicit OllamaProvider(const std::string &model);
 
-    std::string GenerateResponse(const std::deque<Message> &history, long long &tokenCount) override;
+    std::string GenerateResponse(const std::deque<Message> &history) override;
 
 private:
     std::string modelName;

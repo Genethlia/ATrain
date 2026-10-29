@@ -1,8 +1,8 @@
 CMakeFiles/atrain_core.dir/src/Core/Assistant.cpp.obj: \
  C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\src\Core\Assistant.cpp \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/Core/Assistant.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/AI/IAIProvider.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/Core/Message.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/src/Core/Assistant.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/src/AI/IAIProvider.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/src/Core/Message.h \
  C:/msys64/mingw64/include/c++/16.2.0/string \
  C:/msys64/mingw64/include/c++/16.2.0/bits/requires_hosted.h \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -118,21 +118,14 @@ CMakeFiles/atrain_core.dir/src/Core/Assistant.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/tuple \
  C:/msys64/mingw64/include/c++/16.2.0/bits/invoke.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ranges_util.h \
- C:/msys64/mingw64/include/c++/16.2.0/cstdint \
- C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdint.h \
- C:/msys64/mingw64/include/stdint.h \
- C:/msys64/mingw64/include/c++/16.2.0/deque \
+ C:/msys64/mingw64/include/c++/16.2.0/vector \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/vector.tcc \
+ C:/msys64/mingw64/include/c++/16.2.0/deque \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_deque.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/deque.tcc \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/Core/Config.h \
- C:/msys64/mingw64/include/c++/16.2.0/stdexcept \
- C:/msys64/mingw64/include/c++/16.2.0/exception \
- C:/msys64/mingw64/include/c++/16.2.0/bits/exception_ptr.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/cxxabi_init_exception.h \
- C:/msys64/mingw64/include/c++/16.2.0/typeinfo \
- C:/msys64/mingw64/include/c++/16.2.0/bits/nested_exception.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/stdexcept_except.h \
  C:/msys64/mingw64/include/c++/16.2.0/memory \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_tempbuf.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_raw_storage_iter.h \
@@ -140,6 +133,11 @@ CMakeFiles/atrain_core.dir/src/Core/Assistant.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/bits/unique_ptr.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ostream.h \
  C:/msys64/mingw64/include/c++/16.2.0/ios \
+ C:/msys64/mingw64/include/c++/16.2.0/exception \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/exception_ptr.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/cxxabi_init_exception.h \
+ C:/msys64/mingw64/include/c++/16.2.0/typeinfo \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/nested_exception.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ios_base.h \
  C:/msys64/mingw64/include/c++/16.2.0/ext/atomicity.h \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -160,6 +158,8 @@ CMakeFiles/atrain_core.dir/src/Core/Assistant.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/bits/locale_classes.tcc \
  C:/msys64/mingw64/include/c++/16.2.0/system_error \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+ C:/msys64/mingw64/include/c++/16.2.0/stdexcept \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stdexcept_except.h \
  C:/msys64/mingw64/include/c++/16.2.0/streambuf \
  C:/msys64/mingw64/include/c++/16.2.0/bits/streambuf.tcc \
  C:/msys64/mingw64/include/c++/16.2.0/bits/basic_ios.h \
@@ -186,13 +186,12 @@ CMakeFiles/atrain_core.dir/src/Core/Assistant.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ranges_algobase.h \
  C:/msys64/mingw64/include/c++/16.2.0/pstl/glue_memory_defs.h \
  C:/msys64/mingw64/include/c++/16.2.0/pstl/execution_defs.h \
- C:/msys64/mingw64/include/c++/16.2.0/algorithm \
- C:/msys64/mingw64/include/c++/16.2.0/bits/stl_algo.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/algorithmfwd.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/stl_heap.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/uniform_int_dist.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/ranges_algo.h \
- C:/msys64/mingw64/include/c++/16.2.0/pstl/glue_algorithm_defs.h \
+ C:/msys64/mingw64/include/c++/16.2.0/iostream \
+ C:/msys64/mingw64/include/c++/16.2.0/ostream \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/ostream_print.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/ostream.tcc \
+ C:/msys64/mingw64/include/c++/16.2.0/istream \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/istream.tcc \
  C:/msys64/mingw64/include/c++/16.2.0/utility \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_relops.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/intcmp.h

@@ -8,8 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/AI/OllamaProvider.cpp" "CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/AI/OllamaProvider.cpp.obj.d"
-  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/Core/Assistant.cpp" "CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/Core/Assistant.cpp.obj.d"
   "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/main.cpp" "CMakeFiles/ATrain.dir/src/main.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/main.cpp.obj.d"
   )
 

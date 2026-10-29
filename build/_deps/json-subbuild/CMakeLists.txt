@@ -19,7 +19,7 @@ project(json-populate NONE)
 
 include(ExternalProject)
 ExternalProject_Add(json-populate
-                     "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "TRUE" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "URL" "https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz"
+                     "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "TRUE" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "URL" "https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz" "URL_HASH" "SHA256=42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa"
                     SOURCE_DIR          "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-src"
                     BINARY_DIR          "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-build"
                     CONFIGURE_COMMAND   ""

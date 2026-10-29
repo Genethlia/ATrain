@@ -67,7 +67,7 @@ include _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/progress.make
 
 _deps/curl-build/CMakeFiles/curl-ca-firefox: _deps/curl-src/scripts/firefox-db2pem.sh
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "generating a fresh ca-bundle.crt"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build" && C:\msys64\usr\bin\perl.exe "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/scripts/firefox-db2pem.sh" lib/ca-bundle.crt
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1 && C:\msys64\usr\bin\perl.exe "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/scripts/firefox-db2pem.sh" lib/ca-bundle.crt
 
 _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/codegen:
 .PHONY : _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/codegen
@@ -81,7 +81,7 @@ _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/build: curl-ca-firefox
 .PHONY : _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/build
 
 _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build" && $(CMAKE_COMMAND) -P CMakeFiles\curl-ca-firefox.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1 && $(CMAKE_COMMAND) -P CMakeFiles\curl-ca-firefox.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/clean
 
 _deps/curl-build/CMakeFiles/curl-ca-firefox.dir/depend:

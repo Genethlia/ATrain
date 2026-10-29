@@ -76,7 +76,7 @@ _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/build: curl-examples
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/build
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && $(CMAKE_COMMAND) -P CMakeFiles\curl-examples.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && $(CMAKE_COMMAND) -P CMakeFiles\curl-examples.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/clean
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/depend:

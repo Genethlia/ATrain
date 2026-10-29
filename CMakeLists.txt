@@ -1,28 +1,29 @@
 
 cmake_minimum_required(VERSION 3.21)
-if(POLICY CMP0135)
-    cmake_policy(SET CMP0135 NEW)
-endif()
 
-project(ATrain LANGUAGES CXX)
+project(ATrain VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(CTest)
-
 include(FetchContent)
 
+# Dependency settings
+set(CPR_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(CPR_BUILD_TESTS_SSL OFF CACHE BOOL "" FORCE)
 set(CPR_USE_SYSTEM_LIB_PSL ON CACHE BOOL "" FORCE)
 set(CURL_USE_LIBPSL OFF CACHE BOOL "" FORCE)
 
+# CPR HTTP library
 FetchContent_Declare(
     cpr
     GIT_REPOSITORY https://github.com/libcpr/cpr.git
-    GIT_TAG da40186618909b1a7363d4e4495aa899c6e0eb75 # 1.12.0
+    GIT_TAG da40186618909b1a7363d4e4495aa899c6e0eb75
 )
 
+# JSON library
 FetchContent_Declare(
     json
     URL https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz
@@ -31,20 +32,47 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(cpr json)
 
-add_library(atrain_core STATIC src/Core/Assistant.cpp)
-target_include_directories(atrain_core PUBLIC src)
+# Core library
+add_library(atrain_core STATIC
+    src/Core/Assistant.cpp
+)
 
-add_library(atrain_ollama STATIC src/AI/OllamaProvider.cpp)
-target_link_libraries(atrain_ollama PUBLIC atrain_core PRIVATE cpr::cpr nlohmann_json::nlohmann_json)
+target_include_directories(atrain_core PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
 
-add_executable(ATrain src/main.cpp)
-target_link_libraries(ATrain PRIVATE atrain_ollama)
+# Ollama provider
+add_library(atrain_ollama STATIC
+    src/AI/OllamaProvider.cpp
+)
 
+target_link_libraries(atrain_ollama
+    PUBLIC
+        atrain_core
+    PRIVATE
+        cpr::cpr
+        nlohmann_json::nlohmann_json
+)
+
+# Main executable
+add_executable(ATrain
+    src/main.cpp
+)
+
+target_link_libraries(ATrain PRIVATE
+    atrain_ollama
+)
+
+# Compiler warnings
 function(atrain_warnings target)
     if(MSVC)
-        target_compile_options(${target} PRIVATE /W4 /permissive-)
+        target_compile_options(${target} PRIVATE
+            /W4 /permissive-
+        )
     else()
-        target_compile_options(${target} PRIVATE -Wall -Wextra -Wpedantic)
+        target_compile_options(${target} PRIVATE
+            -Wall -Wextra -Wpedantic
+        )
     endif()
 endfunction()
 
@@ -52,25 +80,14 @@ atrain_warnings(atrain_core)
 atrain_warnings(atrain_ollama)
 atrain_warnings(ATrain)
 
-if(BUILD_TESTING)
-    add_executable(atrain_tests tests/AssistantTests.cpp)
-    target_link_libraries(atrain_tests PRIVATE atrain_ollama)
-    atrain_warnings(atrain_tests)
-    add_test(NAME atrain_regressions COMMAND atrain_tests)
-endif()
-
+# Copy Windows runtime DLLs
 if(WIN32)
-    # A script also handles static builds with no runtime DLLs to copy.
-    function(atrain_copy_runtime target)
-        add_custom_command(TARGET ${target} POST_BUILD
-            COMMAND ${CMAKE_COMMAND}
-                "-DRUNTIME_DLLS=$<TARGET_RUNTIME_DLLS:${target}>"
-                "-DDESTINATION=$<TARGET_FILE_DIR:${target}>"
-                -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/CopyRuntime.cmake"
-            VERBATIM)
-    endfunction()
-    atrain_copy_runtime(ATrain)
-    if(BUILD_TESTING)
-        atrain_copy_runtime(atrain_tests)
-    endif()
+    add_custom_command(
+        TARGET ATrain POST_BUILD
+        COMMAND ${CMAKE_COMMAND}
+            "-DRUNTIME_DLLS=$<TARGET_RUNTIME_DLLS:ATrain>"
+            "-DDESTINATION=$<TARGET_FILE_DIR:ATrain>"
+            -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/CopyRuntime.cmake"
+        VERBATIM
+    )
 endif()

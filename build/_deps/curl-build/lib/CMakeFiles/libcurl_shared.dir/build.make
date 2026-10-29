@@ -76,20 +76,20 @@ _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.obj: _deps/curl-bui
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.obj: _deps/curl-src/lib/dllmain.c
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.obj: _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.obj"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\lib" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.obj -MF CMakeFiles\libcurl_shared.dir\dllmain.c.obj.d -o CMakeFiles\libcurl_shared.dir\dllmain.c.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\dllmain.c"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\lib && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.obj -MF CMakeFiles\libcurl_shared.dir\dllmain.c.obj.d -o CMakeFiles\libcurl_shared.dir\dllmain.c.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\dllmain.c"
 
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/libcurl_shared.dir/dllmain.c.i"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\lib" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\dllmain.c" > CMakeFiles\libcurl_shared.dir\dllmain.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\lib && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\dllmain.c" > CMakeFiles\libcurl_shared.dir\dllmain.c.i
 
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/dllmain.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/libcurl_shared.dir/dllmain.c.s"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\lib" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\dllmain.c" -o CMakeFiles\libcurl_shared.dir\dllmain.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\lib && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\dllmain.c" -o CMakeFiles\libcurl_shared.dir\dllmain.c.s
 
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/libcurl.rc.obj: _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/flags.make
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/libcurl.rc.obj: _deps/curl-src/lib/libcurl.rc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building RC object _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/libcurl.rc.obj"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\lib" && C:\msys64\mingw64\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\libcurl.rc" CMakeFiles\libcurl_shared.dir\libcurl.rc.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\lib && C:\msys64\mingw64\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib\libcurl.rc" CMakeFiles\libcurl_shared.dir\libcurl.rc.obj
 
 # Object files for target libcurl_shared
 libcurl_shared_OBJECTS = \
@@ -457,14 +457,14 @@ _deps/curl-build/lib/libcurl-d.dll: _deps/curl-build/lib/CMakeFiles/libcurl_shar
 _deps/curl-build/lib/libcurl-d.dll: _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/objects1.rsp
 _deps/curl-build/lib/libcurl-d.dll: _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libcurl-d.dll"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\lib" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\libcurl_shared.dir\link.txt --verbose=$(VERBOSE)
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\libcurl_shared.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/build: _deps/curl-build/lib/libcurl-d.dll
 .PHONY : _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/build
 
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\lib" && $(CMAKE_COMMAND) -P CMakeFiles\libcurl_shared.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\lib && $(CMAKE_COMMAND) -P CMakeFiles\libcurl_shared.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/clean
 
 _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/depend:

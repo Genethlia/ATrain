@@ -11,7 +11,7 @@ C_FLAGS =  -Werror-implicit-function-declaration -W -Wall -pedantic -Wbad-functi
 
 RC_DEFINES = -DBUILDING_LIBCURL -DCPR_ENABLE_CURL_HTTP_ONLY -DCPR_ENABLE_SSL -DCPR_USE_SYSTEM_LIB_PSL -DCURL_HIDDEN_SYMBOLS -DHAVE_CONFIG_H -Dlibcurl_shared_EXPORTS
 
-RC_INCLUDES = -I "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\include" -I "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\lib" -I "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\lib" -I C:\msys64\mingw64\bin\..\include
+RC_INCLUDES = -I C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\curl-src\include -I C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\lib -I C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\curl-src\lib -I C:\msys64\mingw64\bin\..\include
 
 RC_FLAGS = 
 

@@ -52,13 +52,13 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe"
-          checkout "1.12.0" --
+          checkout "da40186618909b1a7363d4e4495aa899c6e0eb75" --
   WORKING_DIRECTORY "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: '1.12.0'")
+  message(FATAL_ERROR "Failed to checkout tag: 'da40186618909b1a7363d4e4495aa899c6e0eb75'")
 endif()
 
 set(init_submodules TRUE)

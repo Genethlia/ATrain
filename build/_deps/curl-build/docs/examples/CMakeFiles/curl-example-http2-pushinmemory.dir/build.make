@@ -76,15 +76,15 @@ _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/ht
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.obj: _deps/curl-src/docs/examples/http2-pushinmemory.c
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.obj: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.obj"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.obj -MF CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.obj.d -o CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\http2-pushinmemory.c"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.obj -MF CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.obj.d -o CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\http2-pushinmemory.c"
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.i"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\http2-pushinmemory.c" > CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\http2-pushinmemory.c" > CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.i
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.s"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\http2-pushinmemory.c" -o CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\http2-pushinmemory.c" -o CMakeFiles\curl-example-http2-pushinmemory.dir\http2-pushinmemory.c.s
 
 # Object files for target curl-example-http2-pushinmemory
 curl__example__http2__pushinmemory_OBJECTS = \
@@ -100,14 +100,14 @@ _deps/curl-build/docs/examples/http2-pushinmemory.exe: _deps/curl-build/docs/exa
 _deps/curl-build/docs/examples/http2-pushinmemory.exe: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/objects1.rsp
 _deps/curl-build/docs/examples/http2-pushinmemory.exe: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable http2-pushinmemory.exe"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\curl-example-http2-pushinmemory.dir\link.txt --verbose=$(VERBOSE)
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\curl-example-http2-pushinmemory.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/build: _deps/curl-build/docs/examples/http2-pushinmemory.exe
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/build
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && $(CMAKE_COMMAND) -P CMakeFiles\curl-example-http2-pushinmemory.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && $(CMAKE_COMMAND) -P CMakeFiles\curl-example-http2-pushinmemory.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/clean
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/depend:

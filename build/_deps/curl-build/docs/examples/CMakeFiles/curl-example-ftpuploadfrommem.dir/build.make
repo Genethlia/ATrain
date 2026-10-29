@@ -76,15 +76,15 @@ _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpu
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.obj: _deps/curl-src/docs/examples/ftpuploadfrommem.c
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.obj: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.obj"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.obj -MF CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.obj.d -o CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\ftpuploadfrommem.c"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.obj -MF CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.obj.d -o CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.obj -c "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\ftpuploadfrommem.c"
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.i"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\ftpuploadfrommem.c" > CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\ftpuploadfrommem.c" > CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.i
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.s"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\ftpuploadfrommem.c" -o CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs\examples\ftpuploadfrommem.c" -o CMakeFiles\curl-example-ftpuploadfrommem.dir\ftpuploadfrommem.c.s
 
 # Object files for target curl-example-ftpuploadfrommem
 curl__example__ftpuploadfrommem_OBJECTS = \
@@ -100,14 +100,14 @@ _deps/curl-build/docs/examples/ftpuploadfrommem.exe: _deps/curl-build/docs/examp
 _deps/curl-build/docs/examples/ftpuploadfrommem.exe: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/objects1.rsp
 _deps/curl-build/docs/examples/ftpuploadfrommem.exe: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ftpuploadfrommem.exe"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\curl-example-ftpuploadfrommem.dir\link.txt --verbose=$(VERBOSE)
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\curl-example-ftpuploadfrommem.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/build: _deps/curl-build/docs/examples/ftpuploadfrommem.exe
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/build
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples" && $(CMAKE_COMMAND) -P CMakeFiles\curl-example-ftpuploadfrommem.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs\examples && $(CMAKE_COMMAND) -P CMakeFiles\curl-example-ftpuploadfrommem.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/clean
 
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/depend:

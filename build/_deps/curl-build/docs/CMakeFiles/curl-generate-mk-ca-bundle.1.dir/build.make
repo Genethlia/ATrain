@@ -70,7 +70,7 @@ _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1: _deps/curl-build/
 _deps/curl-build/docs/mk-ca-bundle.1: _deps/curl-src/scripts/cd2nroff
 _deps/curl-build/docs/mk-ca-bundle.1: _deps/curl-src/docs/mk-ca-bundle.md
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating mk-ca-bundle.1"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-src\docs" && C:\msys64\usr\bin\perl.exe "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/scripts/cd2nroff" mk-ca-bundle.md > "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/docs/mk-ca-bundle.1"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\curl-src\docs && C:\msys64\usr\bin\perl.exe "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/scripts/cd2nroff" mk-ca-bundle.md > "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/docs/mk-ca-bundle.1"
 
 _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1.dir/codegen:
 .PHONY : _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1.dir/codegen
@@ -85,7 +85,7 @@ _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1.dir/build: curl-ge
 .PHONY : _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1.dir/build
 
 _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs" && $(CMAKE_COMMAND) -P CMakeFiles\curl-generate-mk-ca-bundle.1.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1\docs && $(CMAKE_COMMAND) -P CMakeFiles\curl-generate-mk-ca-bundle.1.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1.dir/clean
 
 _deps/curl-build/docs/CMakeFiles/curl-generate-mk-ca-bundle.1.dir/depend:

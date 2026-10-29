@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\b
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -77,12 +77,22 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
 package_source/fast: package_source
 .PHONY : package_source/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	"C:\Program Files\CMake\bin\ctest.exe" $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -151,14 +161,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\libcurl\opts\\CMakeFiles\progress.marks"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/all
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\libcurl\opts\\CMakeFiles\progress.marks"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/clean
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/clean
 .PHONY : clean
 
 # The main clean target
@@ -167,22 +177,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/preinstall
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/preinstall
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/curl-build/docs/libcurl/opts/CMakeFiles/curl-opts-man.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/CMakeFiles/curl-opts-man.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/libcurl/opts/CMakeFiles/curl-opts-man.dir/rule
 .PHONY : _deps/curl-build/docs/libcurl/opts/CMakeFiles/curl-opts-man.dir/rule
 
 # Convenience name for target.
@@ -191,7 +201,7 @@ curl-opts-man: _deps/curl-build/docs/libcurl/opts/CMakeFiles/curl-opts-man.dir/r
 
 # fast build rule for target.
 curl-opts-man/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\libcurl\opts\CMakeFiles\curl-opts-man.dir\build.make _deps/curl-build/docs/libcurl/opts/CMakeFiles/curl-opts-man.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\libcurl\opts\CMakeFiles\curl-opts-man.dir\build.make _deps/curl-build/docs/libcurl/opts/CMakeFiles/curl-opts-man.dir/build
 .PHONY : curl-opts-man/fast
 
 # Help Target
@@ -208,6 +218,7 @@ help:
 	@echo ... package
 	@echo ... package_source
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... curl-opts-man
 .PHONY : help
 
@@ -220,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

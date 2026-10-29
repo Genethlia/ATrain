@@ -12,7 +12,7 @@ function(check_file_hash has_hash hash_is_good)
     message(FATAL_ERROR "hash_is_good Can't be empty")
   endif()
 
-  if("" STREQUAL "")
+  if("SHA256" STREQUAL "")
     # No check
     set("${has_hash}" FALSE PARENT_SCOPE)
     set("${hash_is_good}" FALSE PARENT_SCOPE)
@@ -24,14 +24,14 @@ function(check_file_hash has_hash hash_is_good)
   message(VERBOSE "verifying file...
        file='C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-subbuild/json-populate-prefix/src/json.tar.xz'")
 
-  file("" "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-subbuild/json-populate-prefix/src/json.tar.xz" actual_value)
+  file("SHA256" "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-subbuild/json-populate-prefix/src/json.tar.xz" actual_value)
 
-  if(NOT "${actual_value}" STREQUAL "")
+  if(NOT "${actual_value}" STREQUAL "42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
-    message(VERBOSE " hash of
+    message(VERBOSE "SHA256 hash of
     C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-subbuild/json-populate-prefix/src/json.tar.xz
   does not match expected value
-    expected: ''
+    expected: '42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa'
       actual: '${actual_value}'")
   else()
     set("${hash_is_good}" TRUE PARENT_SCOPE)
@@ -77,7 +77,7 @@ if(EXISTS "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_dep
     if(hash_is_good)
       message(VERBOSE "File already exists and hash match (skip download):
   file='C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-subbuild/json-populate-prefix/src/json.tar.xz'
-  =''"
+  SHA256='42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa'"
       )
       return()
     else()

@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\b
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -77,12 +77,22 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
 package_source/fast: package_source
 .PHONY : package_source/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	"C:\Program Files\CMake\bin\ctest.exe" $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -151,14 +161,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples\\CMakeFiles\progress.marks"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/all
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build\docs\examples\\CMakeFiles\progress.marks"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/clean
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -167,22 +177,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/preinstall
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/preinstall
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/rule
 
 # Convenience name for target.
@@ -191,12 +201,12 @@ curl-examples: _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/rule
 
 # fast build rule for target.
 curl-examples/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-examples.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-examples.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/build
 .PHONY : curl-examples/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/rule
 
 # Convenience name for target.
@@ -205,12 +215,12 @@ curl-example-10-at-a-time: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-10-at-a-time/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/build
 .PHONY : curl-example-10-at-a-time/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/rule
 
 # Convenience name for target.
@@ -219,12 +229,12 @@ curl-example-address-scope: _deps/curl-build/docs/examples/CMakeFiles/curl-examp
 
 # fast build rule for target.
 curl-example-address-scope/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/build
 .PHONY : curl-example-address-scope/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/rule
 
 # Convenience name for target.
@@ -233,12 +243,12 @@ curl-example-altsvc: _deps/curl-build/docs/examples/CMakeFiles/curl-example-alts
 
 # fast build rule for target.
 curl-example-altsvc/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/build
 .PHONY : curl-example-altsvc/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/rule
 
 # Convenience name for target.
@@ -247,12 +257,12 @@ curl-example-anyauthput: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-anyauthput/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/build
 .PHONY : curl-example-anyauthput/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/rule
 
 # Convenience name for target.
@@ -261,12 +271,12 @@ curl-example-block_ip: _deps/curl-build/docs/examples/CMakeFiles/curl-example-bl
 
 # fast build rule for target.
 curl-example-block_ip/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/build
 .PHONY : curl-example-block_ip/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/rule
 
 # Convenience name for target.
@@ -275,12 +285,12 @@ curl-example-certinfo: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ce
 
 # fast build rule for target.
 curl-example-certinfo/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/build
 .PHONY : curl-example-certinfo/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/rule
 
 # Convenience name for target.
@@ -289,12 +299,12 @@ curl-example-chkspeed: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ch
 
 # fast build rule for target.
 curl-example-chkspeed/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/build
 .PHONY : curl-example-chkspeed/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/rule
 
 # Convenience name for target.
@@ -303,12 +313,12 @@ curl-example-connect-to: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-connect-to/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/build
 .PHONY : curl-example-connect-to/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/rule
 
 # Convenience name for target.
@@ -317,12 +327,12 @@ curl-example-cookie_interface: _deps/curl-build/docs/examples/CMakeFiles/curl-ex
 
 # fast build rule for target.
 curl-example-cookie_interface/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/build
 .PHONY : curl-example-cookie_interface/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/rule
 
 # Convenience name for target.
@@ -331,12 +341,12 @@ curl-example-debug: _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug
 
 # fast build rule for target.
 curl-example-debug/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/build
 .PHONY : curl-example-debug/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/rule
 
 # Convenience name for target.
@@ -345,12 +355,12 @@ curl-example-default-scheme: _deps/curl-build/docs/examples/CMakeFiles/curl-exam
 
 # fast build rule for target.
 curl-example-default-scheme/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/build
 .PHONY : curl-example-default-scheme/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/rule
 
 # Convenience name for target.
@@ -359,12 +369,12 @@ curl-example-externalsocket: _deps/curl-build/docs/examples/CMakeFiles/curl-exam
 
 # fast build rule for target.
 curl-example-externalsocket/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/build
 .PHONY : curl-example-externalsocket/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/rule
 
 # Convenience name for target.
@@ -373,12 +383,12 @@ curl-example-fileupload: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-fileupload/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/build
 .PHONY : curl-example-fileupload/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/rule
 
 # Convenience name for target.
@@ -387,12 +397,12 @@ curl-example-ftp-wildcard: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-ftp-wildcard/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/build
 .PHONY : curl-example-ftp-wildcard/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/rule
 
 # Convenience name for target.
@@ -401,12 +411,12 @@ curl-example-ftpget: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpg
 
 # fast build rule for target.
 curl-example-ftpget/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/build
 .PHONY : curl-example-ftpget/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/rule
 
 # Convenience name for target.
@@ -415,12 +425,12 @@ curl-example-ftpgetinfo: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-ftpgetinfo/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/build
 .PHONY : curl-example-ftpgetinfo/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/rule
 
 # Convenience name for target.
@@ -429,12 +439,12 @@ curl-example-ftpgetresp: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-ftpgetresp/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/build
 .PHONY : curl-example-ftpgetresp/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/rule
 
 # Convenience name for target.
@@ -443,12 +453,12 @@ curl-example-ftpsget: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp
 
 # fast build rule for target.
 curl-example-ftpsget/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/build
 .PHONY : curl-example-ftpsget/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/rule
 
 # Convenience name for target.
@@ -457,12 +467,12 @@ curl-example-ftpupload: _deps/curl-build/docs/examples/CMakeFiles/curl-example-f
 
 # fast build rule for target.
 curl-example-ftpupload/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/build
 .PHONY : curl-example-ftpupload/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/rule
 
 # Convenience name for target.
@@ -471,12 +481,12 @@ curl-example-ftpuploadfrommem: _deps/curl-build/docs/examples/CMakeFiles/curl-ex
 
 # fast build rule for target.
 curl-example-ftpuploadfrommem/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/build
 .PHONY : curl-example-ftpuploadfrommem/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/rule
 
 # Convenience name for target.
@@ -485,12 +495,12 @@ curl-example-ftpuploadresume: _deps/curl-build/docs/examples/CMakeFiles/curl-exa
 
 # fast build rule for target.
 curl-example-ftpuploadresume/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/build
 .PHONY : curl-example-ftpuploadresume/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/rule
 
 # Convenience name for target.
@@ -499,12 +509,12 @@ curl-example-getinfo: _deps/curl-build/docs/examples/CMakeFiles/curl-example-get
 
 # fast build rule for target.
 curl-example-getinfo/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/build
 .PHONY : curl-example-getinfo/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/rule
 
 # Convenience name for target.
@@ -513,12 +523,12 @@ curl-example-getinmemory: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-getinmemory/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/build
 .PHONY : curl-example-getinmemory/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/rule
 
 # Convenience name for target.
@@ -527,12 +537,12 @@ curl-example-getredirect: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-getredirect/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/build
 .PHONY : curl-example-getredirect/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/rule
 
 # Convenience name for target.
@@ -541,12 +551,12 @@ curl-example-getreferrer: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-getreferrer/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/build
 .PHONY : curl-example-getreferrer/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/rule
 
 # Convenience name for target.
@@ -555,12 +565,12 @@ curl-example-headerapi: _deps/curl-build/docs/examples/CMakeFiles/curl-example-h
 
 # fast build rule for target.
 curl-example-headerapi/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/build
 .PHONY : curl-example-headerapi/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/rule
 
 # Convenience name for target.
@@ -569,12 +579,12 @@ curl-example-hsts-preload: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-hsts-preload/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/build
 .PHONY : curl-example-hsts-preload/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/rule
 
 # Convenience name for target.
@@ -583,12 +593,12 @@ curl-example-http-options: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-http-options/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/build
 .PHONY : curl-example-http-options/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/rule
 
 # Convenience name for target.
@@ -597,12 +607,12 @@ curl-example-http-post: _deps/curl-build/docs/examples/CMakeFiles/curl-example-h
 
 # fast build rule for target.
 curl-example-http-post/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/build
 .PHONY : curl-example-http-post/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/rule
 
 # Convenience name for target.
@@ -611,12 +621,12 @@ curl-example-http2-download: _deps/curl-build/docs/examples/CMakeFiles/curl-exam
 
 # fast build rule for target.
 curl-example-http2-download/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/build
 .PHONY : curl-example-http2-download/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/rule
 
 # Convenience name for target.
@@ -625,12 +635,12 @@ curl-example-http2-pushinmemory: _deps/curl-build/docs/examples/CMakeFiles/curl-
 
 # fast build rule for target.
 curl-example-http2-pushinmemory/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/build
 .PHONY : curl-example-http2-pushinmemory/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/rule
 
 # Convenience name for target.
@@ -639,12 +649,12 @@ curl-example-http2-serverpush: _deps/curl-build/docs/examples/CMakeFiles/curl-ex
 
 # fast build rule for target.
 curl-example-http2-serverpush/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/build
 .PHONY : curl-example-http2-serverpush/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/rule
 
 # Convenience name for target.
@@ -653,12 +663,12 @@ curl-example-http2-upload: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-http2-upload/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/build
 .PHONY : curl-example-http2-upload/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/rule
 
 # Convenience name for target.
@@ -667,12 +677,12 @@ curl-example-http3: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3
 
 # fast build rule for target.
 curl-example-http3/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/build
 .PHONY : curl-example-http3/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/rule
 
 # Convenience name for target.
@@ -681,12 +691,12 @@ curl-example-http3-present: _deps/curl-build/docs/examples/CMakeFiles/curl-examp
 
 # fast build rule for target.
 curl-example-http3-present/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/build
 .PHONY : curl-example-http3-present/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/rule
 
 # Convenience name for target.
@@ -695,12 +705,12 @@ curl-example-httpcustomheader: _deps/curl-build/docs/examples/CMakeFiles/curl-ex
 
 # fast build rule for target.
 curl-example-httpcustomheader/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/build
 .PHONY : curl-example-httpcustomheader/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/rule
 
 # Convenience name for target.
@@ -709,12 +719,12 @@ curl-example-httpput: _deps/curl-build/docs/examples/CMakeFiles/curl-example-htt
 
 # fast build rule for target.
 curl-example-httpput/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/build
 .PHONY : curl-example-httpput/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/rule
 
 # Convenience name for target.
@@ -723,12 +733,12 @@ curl-example-httpput-postfields: _deps/curl-build/docs/examples/CMakeFiles/curl-
 
 # fast build rule for target.
 curl-example-httpput-postfields/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/build
 .PHONY : curl-example-httpput-postfields/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/rule
 
 # Convenience name for target.
@@ -737,12 +747,12 @@ curl-example-https: _deps/curl-build/docs/examples/CMakeFiles/curl-example-https
 
 # fast build rule for target.
 curl-example-https/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/build
 .PHONY : curl-example-https/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/rule
 
 # Convenience name for target.
@@ -751,12 +761,12 @@ curl-example-imap-append: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-imap-append/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/build
 .PHONY : curl-example-imap-append/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/rule
 
 # Convenience name for target.
@@ -765,12 +775,12 @@ curl-example-imap-authzid: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-imap-authzid/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/build
 .PHONY : curl-example-imap-authzid/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/rule
 
 # Convenience name for target.
@@ -779,12 +789,12 @@ curl-example-imap-copy: _deps/curl-build/docs/examples/CMakeFiles/curl-example-i
 
 # fast build rule for target.
 curl-example-imap-copy/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/build
 .PHONY : curl-example-imap-copy/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/rule
 
 # Convenience name for target.
@@ -793,12 +803,12 @@ curl-example-imap-create: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-imap-create/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/build
 .PHONY : curl-example-imap-create/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/rule
 
 # Convenience name for target.
@@ -807,12 +817,12 @@ curl-example-imap-delete: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-imap-delete/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/build
 .PHONY : curl-example-imap-delete/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/rule
 
 # Convenience name for target.
@@ -821,12 +831,12 @@ curl-example-imap-examine: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-imap-examine/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/build
 .PHONY : curl-example-imap-examine/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/rule
 
 # Convenience name for target.
@@ -835,12 +845,12 @@ curl-example-imap-fetch: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-imap-fetch/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/build
 .PHONY : curl-example-imap-fetch/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/rule
 
 # Convenience name for target.
@@ -849,12 +859,12 @@ curl-example-imap-list: _deps/curl-build/docs/examples/CMakeFiles/curl-example-i
 
 # fast build rule for target.
 curl-example-imap-list/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/build
 .PHONY : curl-example-imap-list/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/rule
 
 # Convenience name for target.
@@ -863,12 +873,12 @@ curl-example-imap-lsub: _deps/curl-build/docs/examples/CMakeFiles/curl-example-i
 
 # fast build rule for target.
 curl-example-imap-lsub/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/build
 .PHONY : curl-example-imap-lsub/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/rule
 
 # Convenience name for target.
@@ -877,12 +887,12 @@ curl-example-imap-multi: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-imap-multi/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/build
 .PHONY : curl-example-imap-multi/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/rule
 
 # Convenience name for target.
@@ -891,12 +901,12 @@ curl-example-imap-noop: _deps/curl-build/docs/examples/CMakeFiles/curl-example-i
 
 # fast build rule for target.
 curl-example-imap-noop/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/build
 .PHONY : curl-example-imap-noop/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/rule
 
 # Convenience name for target.
@@ -905,12 +915,12 @@ curl-example-imap-search: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-imap-search/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/build
 .PHONY : curl-example-imap-search/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/rule
 
 # Convenience name for target.
@@ -919,12 +929,12 @@ curl-example-imap-ssl: _deps/curl-build/docs/examples/CMakeFiles/curl-example-im
 
 # fast build rule for target.
 curl-example-imap-ssl/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/build
 .PHONY : curl-example-imap-ssl/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/rule
 
 # Convenience name for target.
@@ -933,12 +943,12 @@ curl-example-imap-store: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-imap-store/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/build
 .PHONY : curl-example-imap-store/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/rule
 
 # Convenience name for target.
@@ -947,12 +957,12 @@ curl-example-imap-tls: _deps/curl-build/docs/examples/CMakeFiles/curl-example-im
 
 # fast build rule for target.
 curl-example-imap-tls/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/build
 .PHONY : curl-example-imap-tls/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/rule
 
 # Convenience name for target.
@@ -961,12 +971,12 @@ curl-example-interface: _deps/curl-build/docs/examples/CMakeFiles/curl-example-i
 
 # fast build rule for target.
 curl-example-interface/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/build
 .PHONY : curl-example-interface/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/rule
 
 # Convenience name for target.
@@ -975,12 +985,12 @@ curl-example-ipv6: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.d
 
 # fast build rule for target.
 curl-example-ipv6/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/build
 .PHONY : curl-example-ipv6/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/rule
 
 # Convenience name for target.
@@ -989,12 +999,12 @@ curl-example-keepalive: _deps/curl-build/docs/examples/CMakeFiles/curl-example-k
 
 # fast build rule for target.
 curl-example-keepalive/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/build
 .PHONY : curl-example-keepalive/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/rule
 
 # Convenience name for target.
@@ -1003,12 +1013,12 @@ curl-example-localport: _deps/curl-build/docs/examples/CMakeFiles/curl-example-l
 
 # fast build rule for target.
 curl-example-localport/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/build
 .PHONY : curl-example-localport/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/rule
 
 # Convenience name for target.
@@ -1017,12 +1027,12 @@ curl-example-maxconnects: _deps/curl-build/docs/examples/CMakeFiles/curl-example
 
 # fast build rule for target.
 curl-example-maxconnects/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/build
 .PHONY : curl-example-maxconnects/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/rule
 
 # Convenience name for target.
@@ -1031,12 +1041,12 @@ curl-example-multi-app: _deps/curl-build/docs/examples/CMakeFiles/curl-example-m
 
 # fast build rule for target.
 curl-example-multi-app/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/build
 .PHONY : curl-example-multi-app/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/rule
 
 # Convenience name for target.
@@ -1045,12 +1055,12 @@ curl-example-multi-debugcallback: _deps/curl-build/docs/examples/CMakeFiles/curl
 
 # fast build rule for target.
 curl-example-multi-debugcallback/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/build
 .PHONY : curl-example-multi-debugcallback/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/rule
 
 # Convenience name for target.
@@ -1059,12 +1069,12 @@ curl-example-multi-double: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-multi-double/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/build
 .PHONY : curl-example-multi-double/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/rule
 
 # Convenience name for target.
@@ -1073,12 +1083,12 @@ curl-example-multi-formadd: _deps/curl-build/docs/examples/CMakeFiles/curl-examp
 
 # fast build rule for target.
 curl-example-multi-formadd/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/build
 .PHONY : curl-example-multi-formadd/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/rule
 
 # Convenience name for target.
@@ -1087,12 +1097,12 @@ curl-example-multi-legacy: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-multi-legacy/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/build
 .PHONY : curl-example-multi-legacy/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/rule
 
 # Convenience name for target.
@@ -1101,12 +1111,12 @@ curl-example-multi-post: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-multi-post/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/build
 .PHONY : curl-example-multi-post/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/rule
 
 # Convenience name for target.
@@ -1115,12 +1125,12 @@ curl-example-multi-single: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-multi-single/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/build
 .PHONY : curl-example-multi-single/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/rule
 
 # Convenience name for target.
@@ -1129,12 +1139,12 @@ curl-example-netrc: _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc
 
 # fast build rule for target.
 curl-example-netrc/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/build
 .PHONY : curl-example-netrc/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/rule
 
 # Convenience name for target.
@@ -1143,12 +1153,12 @@ curl-example-parseurl: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pa
 
 # fast build rule for target.
 curl-example-parseurl/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/build
 .PHONY : curl-example-parseurl/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/rule
 
 # Convenience name for target.
@@ -1157,12 +1167,12 @@ curl-example-persistent: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-persistent/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/build
 .PHONY : curl-example-persistent/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/rule
 
 # Convenience name for target.
@@ -1171,12 +1181,12 @@ curl-example-pop3-authzid: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-pop3-authzid/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/build
 .PHONY : curl-example-pop3-authzid/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/rule
 
 # Convenience name for target.
@@ -1185,12 +1195,12 @@ curl-example-pop3-dele: _deps/curl-build/docs/examples/CMakeFiles/curl-example-p
 
 # fast build rule for target.
 curl-example-pop3-dele/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/build
 .PHONY : curl-example-pop3-dele/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/rule
 
 # Convenience name for target.
@@ -1199,12 +1209,12 @@ curl-example-pop3-list: _deps/curl-build/docs/examples/CMakeFiles/curl-example-p
 
 # fast build rule for target.
 curl-example-pop3-list/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/build
 .PHONY : curl-example-pop3-list/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/rule
 
 # Convenience name for target.
@@ -1213,12 +1223,12 @@ curl-example-pop3-multi: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-pop3-multi/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/build
 .PHONY : curl-example-pop3-multi/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/rule
 
 # Convenience name for target.
@@ -1227,12 +1237,12 @@ curl-example-pop3-noop: _deps/curl-build/docs/examples/CMakeFiles/curl-example-p
 
 # fast build rule for target.
 curl-example-pop3-noop/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/build
 .PHONY : curl-example-pop3-noop/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/rule
 
 # Convenience name for target.
@@ -1241,12 +1251,12 @@ curl-example-pop3-retr: _deps/curl-build/docs/examples/CMakeFiles/curl-example-p
 
 # fast build rule for target.
 curl-example-pop3-retr/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/build
 .PHONY : curl-example-pop3-retr/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/rule
 
 # Convenience name for target.
@@ -1255,12 +1265,12 @@ curl-example-pop3-ssl: _deps/curl-build/docs/examples/CMakeFiles/curl-example-po
 
 # fast build rule for target.
 curl-example-pop3-ssl/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/build
 .PHONY : curl-example-pop3-ssl/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/rule
 
 # Convenience name for target.
@@ -1269,12 +1279,12 @@ curl-example-pop3-stat: _deps/curl-build/docs/examples/CMakeFiles/curl-example-p
 
 # fast build rule for target.
 curl-example-pop3-stat/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/build
 .PHONY : curl-example-pop3-stat/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/rule
 
 # Convenience name for target.
@@ -1283,12 +1293,12 @@ curl-example-pop3-tls: _deps/curl-build/docs/examples/CMakeFiles/curl-example-po
 
 # fast build rule for target.
 curl-example-pop3-tls/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/build
 .PHONY : curl-example-pop3-tls/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/rule
 
 # Convenience name for target.
@@ -1297,12 +1307,12 @@ curl-example-pop3-top: _deps/curl-build/docs/examples/CMakeFiles/curl-example-po
 
 # fast build rule for target.
 curl-example-pop3-top/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/build
 .PHONY : curl-example-pop3-top/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/rule
 
 # Convenience name for target.
@@ -1311,12 +1321,12 @@ curl-example-pop3-uidl: _deps/curl-build/docs/examples/CMakeFiles/curl-example-p
 
 # fast build rule for target.
 curl-example-pop3-uidl/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/build
 .PHONY : curl-example-pop3-uidl/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/rule
 
 # Convenience name for target.
@@ -1325,12 +1335,12 @@ curl-example-post-callback: _deps/curl-build/docs/examples/CMakeFiles/curl-examp
 
 # fast build rule for target.
 curl-example-post-callback/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/build
 .PHONY : curl-example-post-callback/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/rule
 
 # Convenience name for target.
@@ -1339,12 +1349,12 @@ curl-example-postinmemory: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-postinmemory/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/build
 .PHONY : curl-example-postinmemory/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/rule
 
 # Convenience name for target.
@@ -1353,12 +1363,12 @@ curl-example-postit2: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pos
 
 # fast build rule for target.
 curl-example-postit2/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/build
 .PHONY : curl-example-postit2/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/rule
 
 # Convenience name for target.
@@ -1367,12 +1377,12 @@ curl-example-postit2-formadd: _deps/curl-build/docs/examples/CMakeFiles/curl-exa
 
 # fast build rule for target.
 curl-example-postit2-formadd/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/build
 .PHONY : curl-example-postit2-formadd/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/rule
 
 # Convenience name for target.
@@ -1381,12 +1391,12 @@ curl-example-progressfunc: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-progressfunc/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/build
 .PHONY : curl-example-progressfunc/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/rule
 
 # Convenience name for target.
@@ -1395,12 +1405,12 @@ curl-example-protofeats: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-protofeats/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/build
 .PHONY : curl-example-protofeats/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/rule
 
 # Convenience name for target.
@@ -1409,12 +1419,12 @@ curl-example-range: _deps/curl-build/docs/examples/CMakeFiles/curl-example-range
 
 # fast build rule for target.
 curl-example-range/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/build
 .PHONY : curl-example-range/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/rule
 
 # Convenience name for target.
@@ -1423,12 +1433,12 @@ curl-example-resolve: _deps/curl-build/docs/examples/CMakeFiles/curl-example-res
 
 # fast build rule for target.
 curl-example-resolve/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/build
 .PHONY : curl-example-resolve/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rule
 
 # Convenience name for target.
@@ -1437,12 +1447,12 @@ curl-example-rtsp-options: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-rtsp-options/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/build
 .PHONY : curl-example-rtsp-options/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/rule
 
 # Convenience name for target.
@@ -1451,12 +1461,12 @@ curl-example-sendrecv: _deps/curl-build/docs/examples/CMakeFiles/curl-example-se
 
 # fast build rule for target.
 curl-example-sendrecv/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/build
 .PHONY : curl-example-sendrecv/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/rule
 
 # Convenience name for target.
@@ -1465,12 +1475,12 @@ curl-example-sepheaders: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-sepheaders/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/build
 .PHONY : curl-example-sepheaders/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/rule
 
 # Convenience name for target.
@@ -1479,12 +1489,12 @@ curl-example-sftpget: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sft
 
 # fast build rule for target.
 curl-example-sftpget/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/build
 .PHONY : curl-example-sftpget/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/rule
 
 # Convenience name for target.
@@ -1493,12 +1503,12 @@ curl-example-sftpuploadresume: _deps/curl-build/docs/examples/CMakeFiles/curl-ex
 
 # fast build rule for target.
 curl-example-sftpuploadresume/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/build
 .PHONY : curl-example-sftpuploadresume/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/rule
 
 # Convenience name for target.
@@ -1507,12 +1517,12 @@ curl-example-shared-connection-cache: _deps/curl-build/docs/examples/CMakeFiles/
 
 # fast build rule for target.
 curl-example-shared-connection-cache/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/build
 .PHONY : curl-example-shared-connection-cache/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/rule
 
 # Convenience name for target.
@@ -1521,12 +1531,12 @@ curl-example-simple: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simp
 
 # fast build rule for target.
 curl-example-simple/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/build
 .PHONY : curl-example-simple/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/rule
 
 # Convenience name for target.
@@ -1535,12 +1545,12 @@ curl-example-simplepost: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-simplepost/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/build
 .PHONY : curl-example-simplepost/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/rule
 
 # Convenience name for target.
@@ -1549,12 +1559,12 @@ curl-example-simplessl: _deps/curl-build/docs/examples/CMakeFiles/curl-example-s
 
 # fast build rule for target.
 curl-example-simplessl/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/build
 .PHONY : curl-example-simplessl/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/rule
 
 # Convenience name for target.
@@ -1563,12 +1573,12 @@ curl-example-smtp-authzid: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-smtp-authzid/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/build
 .PHONY : curl-example-smtp-authzid/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/rule
 
 # Convenience name for target.
@@ -1577,12 +1587,12 @@ curl-example-smtp-expn: _deps/curl-build/docs/examples/CMakeFiles/curl-example-s
 
 # fast build rule for target.
 curl-example-smtp-expn/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/build
 .PHONY : curl-example-smtp-expn/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/rule
 
 # Convenience name for target.
@@ -1591,12 +1601,12 @@ curl-example-smtp-mail: _deps/curl-build/docs/examples/CMakeFiles/curl-example-s
 
 # fast build rule for target.
 curl-example-smtp-mail/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/build
 .PHONY : curl-example-smtp-mail/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/rule
 
 # Convenience name for target.
@@ -1605,12 +1615,12 @@ curl-example-smtp-mime: _deps/curl-build/docs/examples/CMakeFiles/curl-example-s
 
 # fast build rule for target.
 curl-example-smtp-mime/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/build
 .PHONY : curl-example-smtp-mime/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/rule
 
 # Convenience name for target.
@@ -1619,12 +1629,12 @@ curl-example-smtp-multi: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-smtp-multi/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/build
 .PHONY : curl-example-smtp-multi/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/rule
 
 # Convenience name for target.
@@ -1633,12 +1643,12 @@ curl-example-smtp-ssl: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sm
 
 # fast build rule for target.
 curl-example-smtp-ssl/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/build
 .PHONY : curl-example-smtp-ssl/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/rule
 
 # Convenience name for target.
@@ -1647,12 +1657,12 @@ curl-example-smtp-tls: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sm
 
 # fast build rule for target.
 curl-example-smtp-tls/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/build
 .PHONY : curl-example-smtp-tls/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/rule
 
 # Convenience name for target.
@@ -1661,12 +1671,12 @@ curl-example-smtp-vrfy: _deps/curl-build/docs/examples/CMakeFiles/curl-example-s
 
 # fast build rule for target.
 curl-example-smtp-vrfy/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/build
 .PHONY : curl-example-smtp-vrfy/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/rule
 
 # Convenience name for target.
@@ -1675,12 +1685,12 @@ curl-example-sslbackend: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-sslbackend/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/build
 .PHONY : curl-example-sslbackend/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/rule
 
 # Convenience name for target.
@@ -1689,12 +1699,12 @@ curl-example-unixsocket: _deps/curl-build/docs/examples/CMakeFiles/curl-example-
 
 # fast build rule for target.
 curl-example-unixsocket/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/build
 .PHONY : curl-example-unixsocket/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/rule
 
 # Convenience name for target.
@@ -1703,12 +1713,12 @@ curl-example-url2file: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ur
 
 # fast build rule for target.
 curl-example-url2file/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/build
 .PHONY : curl-example-url2file/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/rule
 
 # Convenience name for target.
@@ -1717,12 +1727,12 @@ curl-example-urlapi: _deps/curl-build/docs/examples/CMakeFiles/curl-example-urla
 
 # fast build rule for target.
 curl-example-urlapi/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/build
 .PHONY : curl-example-urlapi/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/rule
 
 # Convenience name for target.
@@ -1731,12 +1741,12 @@ curl-example-websocket: _deps/curl-build/docs/examples/CMakeFiles/curl-example-w
 
 # fast build rule for target.
 curl-example-websocket/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/build
 .PHONY : curl-example-websocket/fast
 
 # Convenience name for target.
 _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/rule:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/rule
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/rule
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/rule
 
 # Convenience name for target.
@@ -1745,7 +1755,7 @@ curl-example-websocket-cb: _deps/curl-build/docs/examples/CMakeFiles/curl-exampl
 
 # fast build rule for target.
 curl-example-websocket-cb/fast:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/build
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/build
 .PHONY : curl-example-websocket-cb/fast
 
 10-at-a-time.obj: 10-at-a-time.c.obj
@@ -1753,7 +1763,7 @@ curl-example-websocket-cb/fast:
 
 # target to build an object file
 10-at-a-time.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/10-at-a-time.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/10-at-a-time.c.obj
 .PHONY : 10-at-a-time.c.obj
 
 10-at-a-time.i: 10-at-a-time.c.i
@@ -1761,7 +1771,7 @@ curl-example-websocket-cb/fast:
 
 # target to preprocess a source file
 10-at-a-time.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/10-at-a-time.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/10-at-a-time.c.i
 .PHONY : 10-at-a-time.c.i
 
 10-at-a-time.s: 10-at-a-time.c.s
@@ -1769,7 +1779,7 @@ curl-example-websocket-cb/fast:
 
 # target to generate assembly for a file
 10-at-a-time.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/10-at-a-time.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-10-at-a-time.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/10-at-a-time.c.s
 .PHONY : 10-at-a-time.c.s
 
 address-scope.obj: address-scope.c.obj
@@ -1777,7 +1787,7 @@ address-scope.obj: address-scope.c.obj
 
 # target to build an object file
 address-scope.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/address-scope.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/address-scope.c.obj
 .PHONY : address-scope.c.obj
 
 address-scope.i: address-scope.c.i
@@ -1785,7 +1795,7 @@ address-scope.i: address-scope.c.i
 
 # target to preprocess a source file
 address-scope.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/address-scope.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/address-scope.c.i
 .PHONY : address-scope.c.i
 
 address-scope.s: address-scope.c.s
@@ -1793,7 +1803,7 @@ address-scope.s: address-scope.c.s
 
 # target to generate assembly for a file
 address-scope.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/address-scope.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-address-scope.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/address-scope.c.s
 .PHONY : address-scope.c.s
 
 altsvc.obj: altsvc.c.obj
@@ -1801,7 +1811,7 @@ altsvc.obj: altsvc.c.obj
 
 # target to build an object file
 altsvc.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/altsvc.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/altsvc.c.obj
 .PHONY : altsvc.c.obj
 
 altsvc.i: altsvc.c.i
@@ -1809,7 +1819,7 @@ altsvc.i: altsvc.c.i
 
 # target to preprocess a source file
 altsvc.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/altsvc.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/altsvc.c.i
 .PHONY : altsvc.c.i
 
 altsvc.s: altsvc.c.s
@@ -1817,7 +1827,7 @@ altsvc.s: altsvc.c.s
 
 # target to generate assembly for a file
 altsvc.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/altsvc.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-altsvc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/altsvc.c.s
 .PHONY : altsvc.c.s
 
 anyauthput.obj: anyauthput.c.obj
@@ -1825,7 +1835,7 @@ anyauthput.obj: anyauthput.c.obj
 
 # target to build an object file
 anyauthput.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/anyauthput.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/anyauthput.c.obj
 .PHONY : anyauthput.c.obj
 
 anyauthput.i: anyauthput.c.i
@@ -1833,7 +1843,7 @@ anyauthput.i: anyauthput.c.i
 
 # target to preprocess a source file
 anyauthput.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/anyauthput.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/anyauthput.c.i
 .PHONY : anyauthput.c.i
 
 anyauthput.s: anyauthput.c.s
@@ -1841,7 +1851,7 @@ anyauthput.s: anyauthput.c.s
 
 # target to generate assembly for a file
 anyauthput.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/anyauthput.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-anyauthput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/anyauthput.c.s
 .PHONY : anyauthput.c.s
 
 block_ip.obj: block_ip.c.obj
@@ -1849,7 +1859,7 @@ block_ip.obj: block_ip.c.obj
 
 # target to build an object file
 block_ip.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/block_ip.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/block_ip.c.obj
 .PHONY : block_ip.c.obj
 
 block_ip.i: block_ip.c.i
@@ -1857,7 +1867,7 @@ block_ip.i: block_ip.c.i
 
 # target to preprocess a source file
 block_ip.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/block_ip.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/block_ip.c.i
 .PHONY : block_ip.c.i
 
 block_ip.s: block_ip.c.s
@@ -1865,7 +1875,7 @@ block_ip.s: block_ip.c.s
 
 # target to generate assembly for a file
 block_ip.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/block_ip.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-block_ip.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/block_ip.c.s
 .PHONY : block_ip.c.s
 
 certinfo.obj: certinfo.c.obj
@@ -1873,7 +1883,7 @@ certinfo.obj: certinfo.c.obj
 
 # target to build an object file
 certinfo.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/certinfo.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/certinfo.c.obj
 .PHONY : certinfo.c.obj
 
 certinfo.i: certinfo.c.i
@@ -1881,7 +1891,7 @@ certinfo.i: certinfo.c.i
 
 # target to preprocess a source file
 certinfo.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/certinfo.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/certinfo.c.i
 .PHONY : certinfo.c.i
 
 certinfo.s: certinfo.c.s
@@ -1889,7 +1899,7 @@ certinfo.s: certinfo.c.s
 
 # target to generate assembly for a file
 certinfo.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/certinfo.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-certinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/certinfo.c.s
 .PHONY : certinfo.c.s
 
 chkspeed.obj: chkspeed.c.obj
@@ -1897,7 +1907,7 @@ chkspeed.obj: chkspeed.c.obj
 
 # target to build an object file
 chkspeed.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/chkspeed.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/chkspeed.c.obj
 .PHONY : chkspeed.c.obj
 
 chkspeed.i: chkspeed.c.i
@@ -1905,7 +1915,7 @@ chkspeed.i: chkspeed.c.i
 
 # target to preprocess a source file
 chkspeed.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/chkspeed.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/chkspeed.c.i
 .PHONY : chkspeed.c.i
 
 chkspeed.s: chkspeed.c.s
@@ -1913,7 +1923,7 @@ chkspeed.s: chkspeed.c.s
 
 # target to generate assembly for a file
 chkspeed.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/chkspeed.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-chkspeed.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/chkspeed.c.s
 .PHONY : chkspeed.c.s
 
 connect-to.obj: connect-to.c.obj
@@ -1921,7 +1931,7 @@ connect-to.obj: connect-to.c.obj
 
 # target to build an object file
 connect-to.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/connect-to.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/connect-to.c.obj
 .PHONY : connect-to.c.obj
 
 connect-to.i: connect-to.c.i
@@ -1929,7 +1939,7 @@ connect-to.i: connect-to.c.i
 
 # target to preprocess a source file
 connect-to.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/connect-to.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/connect-to.c.i
 .PHONY : connect-to.c.i
 
 connect-to.s: connect-to.c.s
@@ -1937,7 +1947,7 @@ connect-to.s: connect-to.c.s
 
 # target to generate assembly for a file
 connect-to.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/connect-to.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-connect-to.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/connect-to.c.s
 .PHONY : connect-to.c.s
 
 cookie_interface.obj: cookie_interface.c.obj
@@ -1945,7 +1955,7 @@ cookie_interface.obj: cookie_interface.c.obj
 
 # target to build an object file
 cookie_interface.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/cookie_interface.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/cookie_interface.c.obj
 .PHONY : cookie_interface.c.obj
 
 cookie_interface.i: cookie_interface.c.i
@@ -1953,7 +1963,7 @@ cookie_interface.i: cookie_interface.c.i
 
 # target to preprocess a source file
 cookie_interface.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/cookie_interface.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/cookie_interface.c.i
 .PHONY : cookie_interface.c.i
 
 cookie_interface.s: cookie_interface.c.s
@@ -1961,7 +1971,7 @@ cookie_interface.s: cookie_interface.c.s
 
 # target to generate assembly for a file
 cookie_interface.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/cookie_interface.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-cookie_interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/cookie_interface.c.s
 .PHONY : cookie_interface.c.s
 
 debug.obj: debug.c.obj
@@ -1969,7 +1979,7 @@ debug.obj: debug.c.obj
 
 # target to build an object file
 debug.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/debug.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/debug.c.obj
 .PHONY : debug.c.obj
 
 debug.i: debug.c.i
@@ -1977,7 +1987,7 @@ debug.i: debug.c.i
 
 # target to preprocess a source file
 debug.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/debug.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/debug.c.i
 .PHONY : debug.c.i
 
 debug.s: debug.c.s
@@ -1985,7 +1995,7 @@ debug.s: debug.c.s
 
 # target to generate assembly for a file
 debug.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/debug.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-debug.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/debug.c.s
 .PHONY : debug.c.s
 
 default-scheme.obj: default-scheme.c.obj
@@ -1993,7 +2003,7 @@ default-scheme.obj: default-scheme.c.obj
 
 # target to build an object file
 default-scheme.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/default-scheme.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/default-scheme.c.obj
 .PHONY : default-scheme.c.obj
 
 default-scheme.i: default-scheme.c.i
@@ -2001,7 +2011,7 @@ default-scheme.i: default-scheme.c.i
 
 # target to preprocess a source file
 default-scheme.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/default-scheme.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/default-scheme.c.i
 .PHONY : default-scheme.c.i
 
 default-scheme.s: default-scheme.c.s
@@ -2009,7 +2019,7 @@ default-scheme.s: default-scheme.c.s
 
 # target to generate assembly for a file
 default-scheme.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/default-scheme.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-default-scheme.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/default-scheme.c.s
 .PHONY : default-scheme.c.s
 
 externalsocket.obj: externalsocket.c.obj
@@ -2017,7 +2027,7 @@ externalsocket.obj: externalsocket.c.obj
 
 # target to build an object file
 externalsocket.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/externalsocket.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/externalsocket.c.obj
 .PHONY : externalsocket.c.obj
 
 externalsocket.i: externalsocket.c.i
@@ -2025,7 +2035,7 @@ externalsocket.i: externalsocket.c.i
 
 # target to preprocess a source file
 externalsocket.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/externalsocket.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/externalsocket.c.i
 .PHONY : externalsocket.c.i
 
 externalsocket.s: externalsocket.c.s
@@ -2033,7 +2043,7 @@ externalsocket.s: externalsocket.c.s
 
 # target to generate assembly for a file
 externalsocket.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/externalsocket.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-externalsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/externalsocket.c.s
 .PHONY : externalsocket.c.s
 
 fileupload.obj: fileupload.c.obj
@@ -2041,7 +2051,7 @@ fileupload.obj: fileupload.c.obj
 
 # target to build an object file
 fileupload.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/fileupload.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/fileupload.c.obj
 .PHONY : fileupload.c.obj
 
 fileupload.i: fileupload.c.i
@@ -2049,7 +2059,7 @@ fileupload.i: fileupload.c.i
 
 # target to preprocess a source file
 fileupload.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/fileupload.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/fileupload.c.i
 .PHONY : fileupload.c.i
 
 fileupload.s: fileupload.c.s
@@ -2057,7 +2067,7 @@ fileupload.s: fileupload.c.s
 
 # target to generate assembly for a file
 fileupload.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/fileupload.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-fileupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/fileupload.c.s
 .PHONY : fileupload.c.s
 
 ftp-wildcard.obj: ftp-wildcard.c.obj
@@ -2065,7 +2075,7 @@ ftp-wildcard.obj: ftp-wildcard.c.obj
 
 # target to build an object file
 ftp-wildcard.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/ftp-wildcard.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/ftp-wildcard.c.obj
 .PHONY : ftp-wildcard.c.obj
 
 ftp-wildcard.i: ftp-wildcard.c.i
@@ -2073,7 +2083,7 @@ ftp-wildcard.i: ftp-wildcard.c.i
 
 # target to preprocess a source file
 ftp-wildcard.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/ftp-wildcard.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/ftp-wildcard.c.i
 .PHONY : ftp-wildcard.c.i
 
 ftp-wildcard.s: ftp-wildcard.c.s
@@ -2081,7 +2091,7 @@ ftp-wildcard.s: ftp-wildcard.c.s
 
 # target to generate assembly for a file
 ftp-wildcard.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/ftp-wildcard.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftp-wildcard.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/ftp-wildcard.c.s
 .PHONY : ftp-wildcard.c.s
 
 ftpget.obj: ftpget.c.obj
@@ -2089,7 +2099,7 @@ ftpget.obj: ftpget.c.obj
 
 # target to build an object file
 ftpget.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/ftpget.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/ftpget.c.obj
 .PHONY : ftpget.c.obj
 
 ftpget.i: ftpget.c.i
@@ -2097,7 +2107,7 @@ ftpget.i: ftpget.c.i
 
 # target to preprocess a source file
 ftpget.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/ftpget.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/ftpget.c.i
 .PHONY : ftpget.c.i
 
 ftpget.s: ftpget.c.s
@@ -2105,7 +2115,7 @@ ftpget.s: ftpget.c.s
 
 # target to generate assembly for a file
 ftpget.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/ftpget.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/ftpget.c.s
 .PHONY : ftpget.c.s
 
 ftpgetinfo.obj: ftpgetinfo.c.obj
@@ -2113,7 +2123,7 @@ ftpgetinfo.obj: ftpgetinfo.c.obj
 
 # target to build an object file
 ftpgetinfo.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/ftpgetinfo.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/ftpgetinfo.c.obj
 .PHONY : ftpgetinfo.c.obj
 
 ftpgetinfo.i: ftpgetinfo.c.i
@@ -2121,7 +2131,7 @@ ftpgetinfo.i: ftpgetinfo.c.i
 
 # target to preprocess a source file
 ftpgetinfo.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/ftpgetinfo.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/ftpgetinfo.c.i
 .PHONY : ftpgetinfo.c.i
 
 ftpgetinfo.s: ftpgetinfo.c.s
@@ -2129,7 +2139,7 @@ ftpgetinfo.s: ftpgetinfo.c.s
 
 # target to generate assembly for a file
 ftpgetinfo.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/ftpgetinfo.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/ftpgetinfo.c.s
 .PHONY : ftpgetinfo.c.s
 
 ftpgetresp.obj: ftpgetresp.c.obj
@@ -2137,7 +2147,7 @@ ftpgetresp.obj: ftpgetresp.c.obj
 
 # target to build an object file
 ftpgetresp.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/ftpgetresp.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/ftpgetresp.c.obj
 .PHONY : ftpgetresp.c.obj
 
 ftpgetresp.i: ftpgetresp.c.i
@@ -2145,7 +2155,7 @@ ftpgetresp.i: ftpgetresp.c.i
 
 # target to preprocess a source file
 ftpgetresp.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/ftpgetresp.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/ftpgetresp.c.i
 .PHONY : ftpgetresp.c.i
 
 ftpgetresp.s: ftpgetresp.c.s
@@ -2153,7 +2163,7 @@ ftpgetresp.s: ftpgetresp.c.s
 
 # target to generate assembly for a file
 ftpgetresp.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/ftpgetresp.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpgetresp.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/ftpgetresp.c.s
 .PHONY : ftpgetresp.c.s
 
 ftpsget.obj: ftpsget.c.obj
@@ -2161,7 +2171,7 @@ ftpsget.obj: ftpsget.c.obj
 
 # target to build an object file
 ftpsget.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/ftpsget.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/ftpsget.c.obj
 .PHONY : ftpsget.c.obj
 
 ftpsget.i: ftpsget.c.i
@@ -2169,7 +2179,7 @@ ftpsget.i: ftpsget.c.i
 
 # target to preprocess a source file
 ftpsget.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/ftpsget.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/ftpsget.c.i
 .PHONY : ftpsget.c.i
 
 ftpsget.s: ftpsget.c.s
@@ -2177,7 +2187,7 @@ ftpsget.s: ftpsget.c.s
 
 # target to generate assembly for a file
 ftpsget.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/ftpsget.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpsget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/ftpsget.c.s
 .PHONY : ftpsget.c.s
 
 ftpupload.obj: ftpupload.c.obj
@@ -2185,7 +2195,7 @@ ftpupload.obj: ftpupload.c.obj
 
 # target to build an object file
 ftpupload.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/ftpupload.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/ftpupload.c.obj
 .PHONY : ftpupload.c.obj
 
 ftpupload.i: ftpupload.c.i
@@ -2193,7 +2203,7 @@ ftpupload.i: ftpupload.c.i
 
 # target to preprocess a source file
 ftpupload.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/ftpupload.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/ftpupload.c.i
 .PHONY : ftpupload.c.i
 
 ftpupload.s: ftpupload.c.s
@@ -2201,7 +2211,7 @@ ftpupload.s: ftpupload.c.s
 
 # target to generate assembly for a file
 ftpupload.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/ftpupload.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpupload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/ftpupload.c.s
 .PHONY : ftpupload.c.s
 
 ftpuploadfrommem.obj: ftpuploadfrommem.c.obj
@@ -2209,7 +2219,7 @@ ftpuploadfrommem.obj: ftpuploadfrommem.c.obj
 
 # target to build an object file
 ftpuploadfrommem.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.obj
 .PHONY : ftpuploadfrommem.c.obj
 
 ftpuploadfrommem.i: ftpuploadfrommem.c.i
@@ -2217,7 +2227,7 @@ ftpuploadfrommem.i: ftpuploadfrommem.c.i
 
 # target to preprocess a source file
 ftpuploadfrommem.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.i
 .PHONY : ftpuploadfrommem.c.i
 
 ftpuploadfrommem.s: ftpuploadfrommem.c.s
@@ -2225,7 +2235,7 @@ ftpuploadfrommem.s: ftpuploadfrommem.c.s
 
 # target to generate assembly for a file
 ftpuploadfrommem.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadfrommem.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/ftpuploadfrommem.c.s
 .PHONY : ftpuploadfrommem.c.s
 
 ftpuploadresume.obj: ftpuploadresume.c.obj
@@ -2233,7 +2243,7 @@ ftpuploadresume.obj: ftpuploadresume.c.obj
 
 # target to build an object file
 ftpuploadresume.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/ftpuploadresume.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/ftpuploadresume.c.obj
 .PHONY : ftpuploadresume.c.obj
 
 ftpuploadresume.i: ftpuploadresume.c.i
@@ -2241,7 +2251,7 @@ ftpuploadresume.i: ftpuploadresume.c.i
 
 # target to preprocess a source file
 ftpuploadresume.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/ftpuploadresume.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/ftpuploadresume.c.i
 .PHONY : ftpuploadresume.c.i
 
 ftpuploadresume.s: ftpuploadresume.c.s
@@ -2249,7 +2259,7 @@ ftpuploadresume.s: ftpuploadresume.c.s
 
 # target to generate assembly for a file
 ftpuploadresume.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/ftpuploadresume.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/ftpuploadresume.c.s
 .PHONY : ftpuploadresume.c.s
 
 getinfo.obj: getinfo.c.obj
@@ -2257,7 +2267,7 @@ getinfo.obj: getinfo.c.obj
 
 # target to build an object file
 getinfo.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/getinfo.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/getinfo.c.obj
 .PHONY : getinfo.c.obj
 
 getinfo.i: getinfo.c.i
@@ -2265,7 +2275,7 @@ getinfo.i: getinfo.c.i
 
 # target to preprocess a source file
 getinfo.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/getinfo.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/getinfo.c.i
 .PHONY : getinfo.c.i
 
 getinfo.s: getinfo.c.s
@@ -2273,7 +2283,7 @@ getinfo.s: getinfo.c.s
 
 # target to generate assembly for a file
 getinfo.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/getinfo.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinfo.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/getinfo.c.s
 .PHONY : getinfo.c.s
 
 getinmemory.obj: getinmemory.c.obj
@@ -2281,7 +2291,7 @@ getinmemory.obj: getinmemory.c.obj
 
 # target to build an object file
 getinmemory.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/getinmemory.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/getinmemory.c.obj
 .PHONY : getinmemory.c.obj
 
 getinmemory.i: getinmemory.c.i
@@ -2289,7 +2299,7 @@ getinmemory.i: getinmemory.c.i
 
 # target to preprocess a source file
 getinmemory.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/getinmemory.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/getinmemory.c.i
 .PHONY : getinmemory.c.i
 
 getinmemory.s: getinmemory.c.s
@@ -2297,7 +2307,7 @@ getinmemory.s: getinmemory.c.s
 
 # target to generate assembly for a file
 getinmemory.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/getinmemory.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/getinmemory.c.s
 .PHONY : getinmemory.c.s
 
 getredirect.obj: getredirect.c.obj
@@ -2305,7 +2315,7 @@ getredirect.obj: getredirect.c.obj
 
 # target to build an object file
 getredirect.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/getredirect.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/getredirect.c.obj
 .PHONY : getredirect.c.obj
 
 getredirect.i: getredirect.c.i
@@ -2313,7 +2323,7 @@ getredirect.i: getredirect.c.i
 
 # target to preprocess a source file
 getredirect.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/getredirect.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/getredirect.c.i
 .PHONY : getredirect.c.i
 
 getredirect.s: getredirect.c.s
@@ -2321,7 +2331,7 @@ getredirect.s: getredirect.c.s
 
 # target to generate assembly for a file
 getredirect.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/getredirect.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getredirect.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/getredirect.c.s
 .PHONY : getredirect.c.s
 
 getreferrer.obj: getreferrer.c.obj
@@ -2329,7 +2339,7 @@ getreferrer.obj: getreferrer.c.obj
 
 # target to build an object file
 getreferrer.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/getreferrer.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/getreferrer.c.obj
 .PHONY : getreferrer.c.obj
 
 getreferrer.i: getreferrer.c.i
@@ -2337,7 +2347,7 @@ getreferrer.i: getreferrer.c.i
 
 # target to preprocess a source file
 getreferrer.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/getreferrer.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/getreferrer.c.i
 .PHONY : getreferrer.c.i
 
 getreferrer.s: getreferrer.c.s
@@ -2345,7 +2355,7 @@ getreferrer.s: getreferrer.c.s
 
 # target to generate assembly for a file
 getreferrer.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/getreferrer.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-getreferrer.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/getreferrer.c.s
 .PHONY : getreferrer.c.s
 
 headerapi.obj: headerapi.c.obj
@@ -2353,7 +2363,7 @@ headerapi.obj: headerapi.c.obj
 
 # target to build an object file
 headerapi.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/headerapi.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/headerapi.c.obj
 .PHONY : headerapi.c.obj
 
 headerapi.i: headerapi.c.i
@@ -2361,7 +2371,7 @@ headerapi.i: headerapi.c.i
 
 # target to preprocess a source file
 headerapi.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/headerapi.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/headerapi.c.i
 .PHONY : headerapi.c.i
 
 headerapi.s: headerapi.c.s
@@ -2369,7 +2379,7 @@ headerapi.s: headerapi.c.s
 
 # target to generate assembly for a file
 headerapi.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/headerapi.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-headerapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/headerapi.c.s
 .PHONY : headerapi.c.s
 
 hsts-preload.obj: hsts-preload.c.obj
@@ -2377,7 +2387,7 @@ hsts-preload.obj: hsts-preload.c.obj
 
 # target to build an object file
 hsts-preload.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/hsts-preload.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/hsts-preload.c.obj
 .PHONY : hsts-preload.c.obj
 
 hsts-preload.i: hsts-preload.c.i
@@ -2385,7 +2395,7 @@ hsts-preload.i: hsts-preload.c.i
 
 # target to preprocess a source file
 hsts-preload.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/hsts-preload.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/hsts-preload.c.i
 .PHONY : hsts-preload.c.i
 
 hsts-preload.s: hsts-preload.c.s
@@ -2393,7 +2403,7 @@ hsts-preload.s: hsts-preload.c.s
 
 # target to generate assembly for a file
 hsts-preload.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/hsts-preload.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-hsts-preload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/hsts-preload.c.s
 .PHONY : hsts-preload.c.s
 
 http-options.obj: http-options.c.obj
@@ -2401,7 +2411,7 @@ http-options.obj: http-options.c.obj
 
 # target to build an object file
 http-options.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/http-options.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/http-options.c.obj
 .PHONY : http-options.c.obj
 
 http-options.i: http-options.c.i
@@ -2409,7 +2419,7 @@ http-options.i: http-options.c.i
 
 # target to preprocess a source file
 http-options.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/http-options.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/http-options.c.i
 .PHONY : http-options.c.i
 
 http-options.s: http-options.c.s
@@ -2417,7 +2427,7 @@ http-options.s: http-options.c.s
 
 # target to generate assembly for a file
 http-options.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/http-options.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/http-options.c.s
 .PHONY : http-options.c.s
 
 http-post.obj: http-post.c.obj
@@ -2425,7 +2435,7 @@ http-post.obj: http-post.c.obj
 
 # target to build an object file
 http-post.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/http-post.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/http-post.c.obj
 .PHONY : http-post.c.obj
 
 http-post.i: http-post.c.i
@@ -2433,7 +2443,7 @@ http-post.i: http-post.c.i
 
 # target to preprocess a source file
 http-post.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/http-post.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/http-post.c.i
 .PHONY : http-post.c.i
 
 http-post.s: http-post.c.s
@@ -2441,7 +2451,7 @@ http-post.s: http-post.c.s
 
 # target to generate assembly for a file
 http-post.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/http-post.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/http-post.c.s
 .PHONY : http-post.c.s
 
 http2-download.obj: http2-download.c.obj
@@ -2449,7 +2459,7 @@ http2-download.obj: http2-download.c.obj
 
 # target to build an object file
 http2-download.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/http2-download.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/http2-download.c.obj
 .PHONY : http2-download.c.obj
 
 http2-download.i: http2-download.c.i
@@ -2457,7 +2467,7 @@ http2-download.i: http2-download.c.i
 
 # target to preprocess a source file
 http2-download.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/http2-download.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/http2-download.c.i
 .PHONY : http2-download.c.i
 
 http2-download.s: http2-download.c.s
@@ -2465,7 +2475,7 @@ http2-download.s: http2-download.c.s
 
 # target to generate assembly for a file
 http2-download.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/http2-download.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-download.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/http2-download.c.s
 .PHONY : http2-download.c.s
 
 http2-pushinmemory.obj: http2-pushinmemory.c.obj
@@ -2473,7 +2483,7 @@ http2-pushinmemory.obj: http2-pushinmemory.c.obj
 
 # target to build an object file
 http2-pushinmemory.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.obj
 .PHONY : http2-pushinmemory.c.obj
 
 http2-pushinmemory.i: http2-pushinmemory.c.i
@@ -2481,7 +2491,7 @@ http2-pushinmemory.i: http2-pushinmemory.c.i
 
 # target to preprocess a source file
 http2-pushinmemory.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.i
 .PHONY : http2-pushinmemory.c.i
 
 http2-pushinmemory.s: http2-pushinmemory.c.s
@@ -2489,7 +2499,7 @@ http2-pushinmemory.s: http2-pushinmemory.c.s
 
 # target to generate assembly for a file
 http2-pushinmemory.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-pushinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/http2-pushinmemory.c.s
 .PHONY : http2-pushinmemory.c.s
 
 http2-serverpush.obj: http2-serverpush.c.obj
@@ -2497,7 +2507,7 @@ http2-serverpush.obj: http2-serverpush.c.obj
 
 # target to build an object file
 http2-serverpush.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/http2-serverpush.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/http2-serverpush.c.obj
 .PHONY : http2-serverpush.c.obj
 
 http2-serverpush.i: http2-serverpush.c.i
@@ -2505,7 +2515,7 @@ http2-serverpush.i: http2-serverpush.c.i
 
 # target to preprocess a source file
 http2-serverpush.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/http2-serverpush.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/http2-serverpush.c.i
 .PHONY : http2-serverpush.c.i
 
 http2-serverpush.s: http2-serverpush.c.s
@@ -2513,7 +2523,7 @@ http2-serverpush.s: http2-serverpush.c.s
 
 # target to generate assembly for a file
 http2-serverpush.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/http2-serverpush.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-serverpush.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/http2-serverpush.c.s
 .PHONY : http2-serverpush.c.s
 
 http2-upload.obj: http2-upload.c.obj
@@ -2521,7 +2531,7 @@ http2-upload.obj: http2-upload.c.obj
 
 # target to build an object file
 http2-upload.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/http2-upload.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/http2-upload.c.obj
 .PHONY : http2-upload.c.obj
 
 http2-upload.i: http2-upload.c.i
@@ -2529,7 +2539,7 @@ http2-upload.i: http2-upload.c.i
 
 # target to preprocess a source file
 http2-upload.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/http2-upload.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/http2-upload.c.i
 .PHONY : http2-upload.c.i
 
 http2-upload.s: http2-upload.c.s
@@ -2537,7 +2547,7 @@ http2-upload.s: http2-upload.c.s
 
 # target to generate assembly for a file
 http2-upload.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/http2-upload.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http2-upload.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/http2-upload.c.s
 .PHONY : http2-upload.c.s
 
 http3-present.obj: http3-present.c.obj
@@ -2545,7 +2555,7 @@ http3-present.obj: http3-present.c.obj
 
 # target to build an object file
 http3-present.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/http3-present.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/http3-present.c.obj
 .PHONY : http3-present.c.obj
 
 http3-present.i: http3-present.c.i
@@ -2553,7 +2563,7 @@ http3-present.i: http3-present.c.i
 
 # target to preprocess a source file
 http3-present.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/http3-present.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/http3-present.c.i
 .PHONY : http3-present.c.i
 
 http3-present.s: http3-present.c.s
@@ -2561,7 +2571,7 @@ http3-present.s: http3-present.c.s
 
 # target to generate assembly for a file
 http3-present.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/http3-present.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3-present.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/http3-present.c.s
 .PHONY : http3-present.c.s
 
 http3.obj: http3.c.obj
@@ -2569,7 +2579,7 @@ http3.obj: http3.c.obj
 
 # target to build an object file
 http3.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/http3.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/http3.c.obj
 .PHONY : http3.c.obj
 
 http3.i: http3.c.i
@@ -2577,7 +2587,7 @@ http3.i: http3.c.i
 
 # target to preprocess a source file
 http3.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/http3.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/http3.c.i
 .PHONY : http3.c.i
 
 http3.s: http3.c.s
@@ -2585,7 +2595,7 @@ http3.s: http3.c.s
 
 # target to generate assembly for a file
 http3.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/http3.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-http3.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/http3.c.s
 .PHONY : http3.c.s
 
 httpcustomheader.obj: httpcustomheader.c.obj
@@ -2593,7 +2603,7 @@ httpcustomheader.obj: httpcustomheader.c.obj
 
 # target to build an object file
 httpcustomheader.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/httpcustomheader.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/httpcustomheader.c.obj
 .PHONY : httpcustomheader.c.obj
 
 httpcustomheader.i: httpcustomheader.c.i
@@ -2601,7 +2611,7 @@ httpcustomheader.i: httpcustomheader.c.i
 
 # target to preprocess a source file
 httpcustomheader.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/httpcustomheader.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/httpcustomheader.c.i
 .PHONY : httpcustomheader.c.i
 
 httpcustomheader.s: httpcustomheader.c.s
@@ -2609,7 +2619,7 @@ httpcustomheader.s: httpcustomheader.c.s
 
 # target to generate assembly for a file
 httpcustomheader.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/httpcustomheader.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpcustomheader.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/httpcustomheader.c.s
 .PHONY : httpcustomheader.c.s
 
 httpput-postfields.obj: httpput-postfields.c.obj
@@ -2617,7 +2627,7 @@ httpput-postfields.obj: httpput-postfields.c.obj
 
 # target to build an object file
 httpput-postfields.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/httpput-postfields.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/httpput-postfields.c.obj
 .PHONY : httpput-postfields.c.obj
 
 httpput-postfields.i: httpput-postfields.c.i
@@ -2625,7 +2635,7 @@ httpput-postfields.i: httpput-postfields.c.i
 
 # target to preprocess a source file
 httpput-postfields.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/httpput-postfields.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/httpput-postfields.c.i
 .PHONY : httpput-postfields.c.i
 
 httpput-postfields.s: httpput-postfields.c.s
@@ -2633,7 +2643,7 @@ httpput-postfields.s: httpput-postfields.c.s
 
 # target to generate assembly for a file
 httpput-postfields.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/httpput-postfields.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput-postfields.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/httpput-postfields.c.s
 .PHONY : httpput-postfields.c.s
 
 httpput.obj: httpput.c.obj
@@ -2641,7 +2651,7 @@ httpput.obj: httpput.c.obj
 
 # target to build an object file
 httpput.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/httpput.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/httpput.c.obj
 .PHONY : httpput.c.obj
 
 httpput.i: httpput.c.i
@@ -2649,7 +2659,7 @@ httpput.i: httpput.c.i
 
 # target to preprocess a source file
 httpput.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/httpput.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/httpput.c.i
 .PHONY : httpput.c.i
 
 httpput.s: httpput.c.s
@@ -2657,7 +2667,7 @@ httpput.s: httpput.c.s
 
 # target to generate assembly for a file
 httpput.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/httpput.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-httpput.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/httpput.c.s
 .PHONY : httpput.c.s
 
 https.obj: https.c.obj
@@ -2665,7 +2675,7 @@ https.obj: https.c.obj
 
 # target to build an object file
 https.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/https.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/https.c.obj
 .PHONY : https.c.obj
 
 https.i: https.c.i
@@ -2673,7 +2683,7 @@ https.i: https.c.i
 
 # target to preprocess a source file
 https.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/https.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/https.c.i
 .PHONY : https.c.i
 
 https.s: https.c.s
@@ -2681,7 +2691,7 @@ https.s: https.c.s
 
 # target to generate assembly for a file
 https.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/https.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-https.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/https.c.s
 .PHONY : https.c.s
 
 imap-append.obj: imap-append.c.obj
@@ -2689,7 +2699,7 @@ imap-append.obj: imap-append.c.obj
 
 # target to build an object file
 imap-append.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/imap-append.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/imap-append.c.obj
 .PHONY : imap-append.c.obj
 
 imap-append.i: imap-append.c.i
@@ -2697,7 +2707,7 @@ imap-append.i: imap-append.c.i
 
 # target to preprocess a source file
 imap-append.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/imap-append.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/imap-append.c.i
 .PHONY : imap-append.c.i
 
 imap-append.s: imap-append.c.s
@@ -2705,7 +2715,7 @@ imap-append.s: imap-append.c.s
 
 # target to generate assembly for a file
 imap-append.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/imap-append.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-append.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/imap-append.c.s
 .PHONY : imap-append.c.s
 
 imap-authzid.obj: imap-authzid.c.obj
@@ -2713,7 +2723,7 @@ imap-authzid.obj: imap-authzid.c.obj
 
 # target to build an object file
 imap-authzid.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/imap-authzid.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/imap-authzid.c.obj
 .PHONY : imap-authzid.c.obj
 
 imap-authzid.i: imap-authzid.c.i
@@ -2721,7 +2731,7 @@ imap-authzid.i: imap-authzid.c.i
 
 # target to preprocess a source file
 imap-authzid.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/imap-authzid.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/imap-authzid.c.i
 .PHONY : imap-authzid.c.i
 
 imap-authzid.s: imap-authzid.c.s
@@ -2729,7 +2739,7 @@ imap-authzid.s: imap-authzid.c.s
 
 # target to generate assembly for a file
 imap-authzid.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/imap-authzid.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/imap-authzid.c.s
 .PHONY : imap-authzid.c.s
 
 imap-copy.obj: imap-copy.c.obj
@@ -2737,7 +2747,7 @@ imap-copy.obj: imap-copy.c.obj
 
 # target to build an object file
 imap-copy.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/imap-copy.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/imap-copy.c.obj
 .PHONY : imap-copy.c.obj
 
 imap-copy.i: imap-copy.c.i
@@ -2745,7 +2755,7 @@ imap-copy.i: imap-copy.c.i
 
 # target to preprocess a source file
 imap-copy.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/imap-copy.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/imap-copy.c.i
 .PHONY : imap-copy.c.i
 
 imap-copy.s: imap-copy.c.s
@@ -2753,7 +2763,7 @@ imap-copy.s: imap-copy.c.s
 
 # target to generate assembly for a file
 imap-copy.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/imap-copy.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-copy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/imap-copy.c.s
 .PHONY : imap-copy.c.s
 
 imap-create.obj: imap-create.c.obj
@@ -2761,7 +2771,7 @@ imap-create.obj: imap-create.c.obj
 
 # target to build an object file
 imap-create.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/imap-create.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/imap-create.c.obj
 .PHONY : imap-create.c.obj
 
 imap-create.i: imap-create.c.i
@@ -2769,7 +2779,7 @@ imap-create.i: imap-create.c.i
 
 # target to preprocess a source file
 imap-create.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/imap-create.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/imap-create.c.i
 .PHONY : imap-create.c.i
 
 imap-create.s: imap-create.c.s
@@ -2777,7 +2787,7 @@ imap-create.s: imap-create.c.s
 
 # target to generate assembly for a file
 imap-create.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/imap-create.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-create.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/imap-create.c.s
 .PHONY : imap-create.c.s
 
 imap-delete.obj: imap-delete.c.obj
@@ -2785,7 +2795,7 @@ imap-delete.obj: imap-delete.c.obj
 
 # target to build an object file
 imap-delete.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/imap-delete.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/imap-delete.c.obj
 .PHONY : imap-delete.c.obj
 
 imap-delete.i: imap-delete.c.i
@@ -2793,7 +2803,7 @@ imap-delete.i: imap-delete.c.i
 
 # target to preprocess a source file
 imap-delete.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/imap-delete.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/imap-delete.c.i
 .PHONY : imap-delete.c.i
 
 imap-delete.s: imap-delete.c.s
@@ -2801,7 +2811,7 @@ imap-delete.s: imap-delete.c.s
 
 # target to generate assembly for a file
 imap-delete.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/imap-delete.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-delete.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/imap-delete.c.s
 .PHONY : imap-delete.c.s
 
 imap-examine.obj: imap-examine.c.obj
@@ -2809,7 +2819,7 @@ imap-examine.obj: imap-examine.c.obj
 
 # target to build an object file
 imap-examine.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/imap-examine.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/imap-examine.c.obj
 .PHONY : imap-examine.c.obj
 
 imap-examine.i: imap-examine.c.i
@@ -2817,7 +2827,7 @@ imap-examine.i: imap-examine.c.i
 
 # target to preprocess a source file
 imap-examine.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/imap-examine.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/imap-examine.c.i
 .PHONY : imap-examine.c.i
 
 imap-examine.s: imap-examine.c.s
@@ -2825,7 +2835,7 @@ imap-examine.s: imap-examine.c.s
 
 # target to generate assembly for a file
 imap-examine.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/imap-examine.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-examine.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/imap-examine.c.s
 .PHONY : imap-examine.c.s
 
 imap-fetch.obj: imap-fetch.c.obj
@@ -2833,7 +2843,7 @@ imap-fetch.obj: imap-fetch.c.obj
 
 # target to build an object file
 imap-fetch.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/imap-fetch.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/imap-fetch.c.obj
 .PHONY : imap-fetch.c.obj
 
 imap-fetch.i: imap-fetch.c.i
@@ -2841,7 +2851,7 @@ imap-fetch.i: imap-fetch.c.i
 
 # target to preprocess a source file
 imap-fetch.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/imap-fetch.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/imap-fetch.c.i
 .PHONY : imap-fetch.c.i
 
 imap-fetch.s: imap-fetch.c.s
@@ -2849,7 +2859,7 @@ imap-fetch.s: imap-fetch.c.s
 
 # target to generate assembly for a file
 imap-fetch.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/imap-fetch.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-fetch.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/imap-fetch.c.s
 .PHONY : imap-fetch.c.s
 
 imap-list.obj: imap-list.c.obj
@@ -2857,7 +2867,7 @@ imap-list.obj: imap-list.c.obj
 
 # target to build an object file
 imap-list.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/imap-list.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/imap-list.c.obj
 .PHONY : imap-list.c.obj
 
 imap-list.i: imap-list.c.i
@@ -2865,7 +2875,7 @@ imap-list.i: imap-list.c.i
 
 # target to preprocess a source file
 imap-list.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/imap-list.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/imap-list.c.i
 .PHONY : imap-list.c.i
 
 imap-list.s: imap-list.c.s
@@ -2873,7 +2883,7 @@ imap-list.s: imap-list.c.s
 
 # target to generate assembly for a file
 imap-list.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/imap-list.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/imap-list.c.s
 .PHONY : imap-list.c.s
 
 imap-lsub.obj: imap-lsub.c.obj
@@ -2881,7 +2891,7 @@ imap-lsub.obj: imap-lsub.c.obj
 
 # target to build an object file
 imap-lsub.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/imap-lsub.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/imap-lsub.c.obj
 .PHONY : imap-lsub.c.obj
 
 imap-lsub.i: imap-lsub.c.i
@@ -2889,7 +2899,7 @@ imap-lsub.i: imap-lsub.c.i
 
 # target to preprocess a source file
 imap-lsub.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/imap-lsub.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/imap-lsub.c.i
 .PHONY : imap-lsub.c.i
 
 imap-lsub.s: imap-lsub.c.s
@@ -2897,7 +2907,7 @@ imap-lsub.s: imap-lsub.c.s
 
 # target to generate assembly for a file
 imap-lsub.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/imap-lsub.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-lsub.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/imap-lsub.c.s
 .PHONY : imap-lsub.c.s
 
 imap-multi.obj: imap-multi.c.obj
@@ -2905,7 +2915,7 @@ imap-multi.obj: imap-multi.c.obj
 
 # target to build an object file
 imap-multi.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/imap-multi.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/imap-multi.c.obj
 .PHONY : imap-multi.c.obj
 
 imap-multi.i: imap-multi.c.i
@@ -2913,7 +2923,7 @@ imap-multi.i: imap-multi.c.i
 
 # target to preprocess a source file
 imap-multi.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/imap-multi.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/imap-multi.c.i
 .PHONY : imap-multi.c.i
 
 imap-multi.s: imap-multi.c.s
@@ -2921,7 +2931,7 @@ imap-multi.s: imap-multi.c.s
 
 # target to generate assembly for a file
 imap-multi.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/imap-multi.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/imap-multi.c.s
 .PHONY : imap-multi.c.s
 
 imap-noop.obj: imap-noop.c.obj
@@ -2929,7 +2939,7 @@ imap-noop.obj: imap-noop.c.obj
 
 # target to build an object file
 imap-noop.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/imap-noop.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/imap-noop.c.obj
 .PHONY : imap-noop.c.obj
 
 imap-noop.i: imap-noop.c.i
@@ -2937,7 +2947,7 @@ imap-noop.i: imap-noop.c.i
 
 # target to preprocess a source file
 imap-noop.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/imap-noop.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/imap-noop.c.i
 .PHONY : imap-noop.c.i
 
 imap-noop.s: imap-noop.c.s
@@ -2945,7 +2955,7 @@ imap-noop.s: imap-noop.c.s
 
 # target to generate assembly for a file
 imap-noop.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/imap-noop.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/imap-noop.c.s
 .PHONY : imap-noop.c.s
 
 imap-search.obj: imap-search.c.obj
@@ -2953,7 +2963,7 @@ imap-search.obj: imap-search.c.obj
 
 # target to build an object file
 imap-search.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/imap-search.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/imap-search.c.obj
 .PHONY : imap-search.c.obj
 
 imap-search.i: imap-search.c.i
@@ -2961,7 +2971,7 @@ imap-search.i: imap-search.c.i
 
 # target to preprocess a source file
 imap-search.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/imap-search.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/imap-search.c.i
 .PHONY : imap-search.c.i
 
 imap-search.s: imap-search.c.s
@@ -2969,7 +2979,7 @@ imap-search.s: imap-search.c.s
 
 # target to generate assembly for a file
 imap-search.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/imap-search.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-search.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/imap-search.c.s
 .PHONY : imap-search.c.s
 
 imap-ssl.obj: imap-ssl.c.obj
@@ -2977,7 +2987,7 @@ imap-ssl.obj: imap-ssl.c.obj
 
 # target to build an object file
 imap-ssl.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/imap-ssl.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/imap-ssl.c.obj
 .PHONY : imap-ssl.c.obj
 
 imap-ssl.i: imap-ssl.c.i
@@ -2985,7 +2995,7 @@ imap-ssl.i: imap-ssl.c.i
 
 # target to preprocess a source file
 imap-ssl.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/imap-ssl.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/imap-ssl.c.i
 .PHONY : imap-ssl.c.i
 
 imap-ssl.s: imap-ssl.c.s
@@ -2993,7 +3003,7 @@ imap-ssl.s: imap-ssl.c.s
 
 # target to generate assembly for a file
 imap-ssl.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/imap-ssl.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/imap-ssl.c.s
 .PHONY : imap-ssl.c.s
 
 imap-store.obj: imap-store.c.obj
@@ -3001,7 +3011,7 @@ imap-store.obj: imap-store.c.obj
 
 # target to build an object file
 imap-store.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/imap-store.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/imap-store.c.obj
 .PHONY : imap-store.c.obj
 
 imap-store.i: imap-store.c.i
@@ -3009,7 +3019,7 @@ imap-store.i: imap-store.c.i
 
 # target to preprocess a source file
 imap-store.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/imap-store.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/imap-store.c.i
 .PHONY : imap-store.c.i
 
 imap-store.s: imap-store.c.s
@@ -3017,7 +3027,7 @@ imap-store.s: imap-store.c.s
 
 # target to generate assembly for a file
 imap-store.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/imap-store.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-store.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/imap-store.c.s
 .PHONY : imap-store.c.s
 
 imap-tls.obj: imap-tls.c.obj
@@ -3025,7 +3035,7 @@ imap-tls.obj: imap-tls.c.obj
 
 # target to build an object file
 imap-tls.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/imap-tls.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/imap-tls.c.obj
 .PHONY : imap-tls.c.obj
 
 imap-tls.i: imap-tls.c.i
@@ -3033,7 +3043,7 @@ imap-tls.i: imap-tls.c.i
 
 # target to preprocess a source file
 imap-tls.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/imap-tls.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/imap-tls.c.i
 .PHONY : imap-tls.c.i
 
 imap-tls.s: imap-tls.c.s
@@ -3041,7 +3051,7 @@ imap-tls.s: imap-tls.c.s
 
 # target to generate assembly for a file
 imap-tls.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/imap-tls.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-imap-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/imap-tls.c.s
 .PHONY : imap-tls.c.s
 
 interface.obj: interface.c.obj
@@ -3049,7 +3059,7 @@ interface.obj: interface.c.obj
 
 # target to build an object file
 interface.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/interface.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/interface.c.obj
 .PHONY : interface.c.obj
 
 interface.i: interface.c.i
@@ -3057,7 +3067,7 @@ interface.i: interface.c.i
 
 # target to preprocess a source file
 interface.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/interface.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/interface.c.i
 .PHONY : interface.c.i
 
 interface.s: interface.c.s
@@ -3065,7 +3075,7 @@ interface.s: interface.c.s
 
 # target to generate assembly for a file
 interface.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/interface.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-interface.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/interface.c.s
 .PHONY : interface.c.s
 
 ipv6.obj: ipv6.c.obj
@@ -3073,7 +3083,7 @@ ipv6.obj: ipv6.c.obj
 
 # target to build an object file
 ipv6.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/ipv6.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/ipv6.c.obj
 .PHONY : ipv6.c.obj
 
 ipv6.i: ipv6.c.i
@@ -3081,7 +3091,7 @@ ipv6.i: ipv6.c.i
 
 # target to preprocess a source file
 ipv6.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/ipv6.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/ipv6.c.i
 .PHONY : ipv6.c.i
 
 ipv6.s: ipv6.c.s
@@ -3089,7 +3099,7 @@ ipv6.s: ipv6.c.s
 
 # target to generate assembly for a file
 ipv6.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/ipv6.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-ipv6.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/ipv6.c.s
 .PHONY : ipv6.c.s
 
 keepalive.obj: keepalive.c.obj
@@ -3097,7 +3107,7 @@ keepalive.obj: keepalive.c.obj
 
 # target to build an object file
 keepalive.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/keepalive.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/keepalive.c.obj
 .PHONY : keepalive.c.obj
 
 keepalive.i: keepalive.c.i
@@ -3105,7 +3115,7 @@ keepalive.i: keepalive.c.i
 
 # target to preprocess a source file
 keepalive.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/keepalive.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/keepalive.c.i
 .PHONY : keepalive.c.i
 
 keepalive.s: keepalive.c.s
@@ -3113,7 +3123,7 @@ keepalive.s: keepalive.c.s
 
 # target to generate assembly for a file
 keepalive.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/keepalive.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-keepalive.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/keepalive.c.s
 .PHONY : keepalive.c.s
 
 localport.obj: localport.c.obj
@@ -3121,7 +3131,7 @@ localport.obj: localport.c.obj
 
 # target to build an object file
 localport.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/localport.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/localport.c.obj
 .PHONY : localport.c.obj
 
 localport.i: localport.c.i
@@ -3129,7 +3139,7 @@ localport.i: localport.c.i
 
 # target to preprocess a source file
 localport.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/localport.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/localport.c.i
 .PHONY : localport.c.i
 
 localport.s: localport.c.s
@@ -3137,7 +3147,7 @@ localport.s: localport.c.s
 
 # target to generate assembly for a file
 localport.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/localport.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-localport.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/localport.c.s
 .PHONY : localport.c.s
 
 maxconnects.obj: maxconnects.c.obj
@@ -3145,7 +3155,7 @@ maxconnects.obj: maxconnects.c.obj
 
 # target to build an object file
 maxconnects.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/maxconnects.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/maxconnects.c.obj
 .PHONY : maxconnects.c.obj
 
 maxconnects.i: maxconnects.c.i
@@ -3153,7 +3163,7 @@ maxconnects.i: maxconnects.c.i
 
 # target to preprocess a source file
 maxconnects.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/maxconnects.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/maxconnects.c.i
 .PHONY : maxconnects.c.i
 
 maxconnects.s: maxconnects.c.s
@@ -3161,7 +3171,7 @@ maxconnects.s: maxconnects.c.s
 
 # target to generate assembly for a file
 maxconnects.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/maxconnects.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-maxconnects.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/maxconnects.c.s
 .PHONY : maxconnects.c.s
 
 multi-app.obj: multi-app.c.obj
@@ -3169,7 +3179,7 @@ multi-app.obj: multi-app.c.obj
 
 # target to build an object file
 multi-app.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/multi-app.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/multi-app.c.obj
 .PHONY : multi-app.c.obj
 
 multi-app.i: multi-app.c.i
@@ -3177,7 +3187,7 @@ multi-app.i: multi-app.c.i
 
 # target to preprocess a source file
 multi-app.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/multi-app.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/multi-app.c.i
 .PHONY : multi-app.c.i
 
 multi-app.s: multi-app.c.s
@@ -3185,7 +3195,7 @@ multi-app.s: multi-app.c.s
 
 # target to generate assembly for a file
 multi-app.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/multi-app.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-app.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/multi-app.c.s
 .PHONY : multi-app.c.s
 
 multi-debugcallback.obj: multi-debugcallback.c.obj
@@ -3193,7 +3203,7 @@ multi-debugcallback.obj: multi-debugcallback.c.obj
 
 # target to build an object file
 multi-debugcallback.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/multi-debugcallback.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/multi-debugcallback.c.obj
 .PHONY : multi-debugcallback.c.obj
 
 multi-debugcallback.i: multi-debugcallback.c.i
@@ -3201,7 +3211,7 @@ multi-debugcallback.i: multi-debugcallback.c.i
 
 # target to preprocess a source file
 multi-debugcallback.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/multi-debugcallback.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/multi-debugcallback.c.i
 .PHONY : multi-debugcallback.c.i
 
 multi-debugcallback.s: multi-debugcallback.c.s
@@ -3209,7 +3219,7 @@ multi-debugcallback.s: multi-debugcallback.c.s
 
 # target to generate assembly for a file
 multi-debugcallback.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/multi-debugcallback.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-debugcallback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/multi-debugcallback.c.s
 .PHONY : multi-debugcallback.c.s
 
 multi-double.obj: multi-double.c.obj
@@ -3217,7 +3227,7 @@ multi-double.obj: multi-double.c.obj
 
 # target to build an object file
 multi-double.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/multi-double.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/multi-double.c.obj
 .PHONY : multi-double.c.obj
 
 multi-double.i: multi-double.c.i
@@ -3225,7 +3235,7 @@ multi-double.i: multi-double.c.i
 
 # target to preprocess a source file
 multi-double.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/multi-double.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/multi-double.c.i
 .PHONY : multi-double.c.i
 
 multi-double.s: multi-double.c.s
@@ -3233,7 +3243,7 @@ multi-double.s: multi-double.c.s
 
 # target to generate assembly for a file
 multi-double.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/multi-double.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-double.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/multi-double.c.s
 .PHONY : multi-double.c.s
 
 multi-formadd.obj: multi-formadd.c.obj
@@ -3241,7 +3251,7 @@ multi-formadd.obj: multi-formadd.c.obj
 
 # target to build an object file
 multi-formadd.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/multi-formadd.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/multi-formadd.c.obj
 .PHONY : multi-formadd.c.obj
 
 multi-formadd.i: multi-formadd.c.i
@@ -3249,7 +3259,7 @@ multi-formadd.i: multi-formadd.c.i
 
 # target to preprocess a source file
 multi-formadd.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/multi-formadd.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/multi-formadd.c.i
 .PHONY : multi-formadd.c.i
 
 multi-formadd.s: multi-formadd.c.s
@@ -3257,7 +3267,7 @@ multi-formadd.s: multi-formadd.c.s
 
 # target to generate assembly for a file
 multi-formadd.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/multi-formadd.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/multi-formadd.c.s
 .PHONY : multi-formadd.c.s
 
 multi-legacy.obj: multi-legacy.c.obj
@@ -3265,7 +3275,7 @@ multi-legacy.obj: multi-legacy.c.obj
 
 # target to build an object file
 multi-legacy.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/multi-legacy.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/multi-legacy.c.obj
 .PHONY : multi-legacy.c.obj
 
 multi-legacy.i: multi-legacy.c.i
@@ -3273,7 +3283,7 @@ multi-legacy.i: multi-legacy.c.i
 
 # target to preprocess a source file
 multi-legacy.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/multi-legacy.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/multi-legacy.c.i
 .PHONY : multi-legacy.c.i
 
 multi-legacy.s: multi-legacy.c.s
@@ -3281,7 +3291,7 @@ multi-legacy.s: multi-legacy.c.s
 
 # target to generate assembly for a file
 multi-legacy.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/multi-legacy.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-legacy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/multi-legacy.c.s
 .PHONY : multi-legacy.c.s
 
 multi-post.obj: multi-post.c.obj
@@ -3289,7 +3299,7 @@ multi-post.obj: multi-post.c.obj
 
 # target to build an object file
 multi-post.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/multi-post.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/multi-post.c.obj
 .PHONY : multi-post.c.obj
 
 multi-post.i: multi-post.c.i
@@ -3297,7 +3307,7 @@ multi-post.i: multi-post.c.i
 
 # target to preprocess a source file
 multi-post.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/multi-post.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/multi-post.c.i
 .PHONY : multi-post.c.i
 
 multi-post.s: multi-post.c.s
@@ -3305,7 +3315,7 @@ multi-post.s: multi-post.c.s
 
 # target to generate assembly for a file
 multi-post.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/multi-post.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-post.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/multi-post.c.s
 .PHONY : multi-post.c.s
 
 multi-single.obj: multi-single.c.obj
@@ -3313,7 +3323,7 @@ multi-single.obj: multi-single.c.obj
 
 # target to build an object file
 multi-single.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/multi-single.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/multi-single.c.obj
 .PHONY : multi-single.c.obj
 
 multi-single.i: multi-single.c.i
@@ -3321,7 +3331,7 @@ multi-single.i: multi-single.c.i
 
 # target to preprocess a source file
 multi-single.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/multi-single.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/multi-single.c.i
 .PHONY : multi-single.c.i
 
 multi-single.s: multi-single.c.s
@@ -3329,7 +3339,7 @@ multi-single.s: multi-single.c.s
 
 # target to generate assembly for a file
 multi-single.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/multi-single.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-multi-single.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/multi-single.c.s
 .PHONY : multi-single.c.s
 
 netrc.obj: netrc.c.obj
@@ -3337,7 +3347,7 @@ netrc.obj: netrc.c.obj
 
 # target to build an object file
 netrc.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/netrc.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/netrc.c.obj
 .PHONY : netrc.c.obj
 
 netrc.i: netrc.c.i
@@ -3345,7 +3355,7 @@ netrc.i: netrc.c.i
 
 # target to preprocess a source file
 netrc.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/netrc.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/netrc.c.i
 .PHONY : netrc.c.i
 
 netrc.s: netrc.c.s
@@ -3353,7 +3363,7 @@ netrc.s: netrc.c.s
 
 # target to generate assembly for a file
 netrc.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/netrc.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-netrc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/netrc.c.s
 .PHONY : netrc.c.s
 
 parseurl.obj: parseurl.c.obj
@@ -3361,7 +3371,7 @@ parseurl.obj: parseurl.c.obj
 
 # target to build an object file
 parseurl.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/parseurl.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/parseurl.c.obj
 .PHONY : parseurl.c.obj
 
 parseurl.i: parseurl.c.i
@@ -3369,7 +3379,7 @@ parseurl.i: parseurl.c.i
 
 # target to preprocess a source file
 parseurl.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/parseurl.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/parseurl.c.i
 .PHONY : parseurl.c.i
 
 parseurl.s: parseurl.c.s
@@ -3377,7 +3387,7 @@ parseurl.s: parseurl.c.s
 
 # target to generate assembly for a file
 parseurl.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/parseurl.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-parseurl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/parseurl.c.s
 .PHONY : parseurl.c.s
 
 persistent.obj: persistent.c.obj
@@ -3385,7 +3395,7 @@ persistent.obj: persistent.c.obj
 
 # target to build an object file
 persistent.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/persistent.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/persistent.c.obj
 .PHONY : persistent.c.obj
 
 persistent.i: persistent.c.i
@@ -3393,7 +3403,7 @@ persistent.i: persistent.c.i
 
 # target to preprocess a source file
 persistent.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/persistent.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/persistent.c.i
 .PHONY : persistent.c.i
 
 persistent.s: persistent.c.s
@@ -3401,7 +3411,7 @@ persistent.s: persistent.c.s
 
 # target to generate assembly for a file
 persistent.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/persistent.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-persistent.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/persistent.c.s
 .PHONY : persistent.c.s
 
 pop3-authzid.obj: pop3-authzid.c.obj
@@ -3409,7 +3419,7 @@ pop3-authzid.obj: pop3-authzid.c.obj
 
 # target to build an object file
 pop3-authzid.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/pop3-authzid.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/pop3-authzid.c.obj
 .PHONY : pop3-authzid.c.obj
 
 pop3-authzid.i: pop3-authzid.c.i
@@ -3417,7 +3427,7 @@ pop3-authzid.i: pop3-authzid.c.i
 
 # target to preprocess a source file
 pop3-authzid.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/pop3-authzid.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/pop3-authzid.c.i
 .PHONY : pop3-authzid.c.i
 
 pop3-authzid.s: pop3-authzid.c.s
@@ -3425,7 +3435,7 @@ pop3-authzid.s: pop3-authzid.c.s
 
 # target to generate assembly for a file
 pop3-authzid.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/pop3-authzid.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/pop3-authzid.c.s
 .PHONY : pop3-authzid.c.s
 
 pop3-dele.obj: pop3-dele.c.obj
@@ -3433,7 +3443,7 @@ pop3-dele.obj: pop3-dele.c.obj
 
 # target to build an object file
 pop3-dele.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/pop3-dele.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/pop3-dele.c.obj
 .PHONY : pop3-dele.c.obj
 
 pop3-dele.i: pop3-dele.c.i
@@ -3441,7 +3451,7 @@ pop3-dele.i: pop3-dele.c.i
 
 # target to preprocess a source file
 pop3-dele.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/pop3-dele.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/pop3-dele.c.i
 .PHONY : pop3-dele.c.i
 
 pop3-dele.s: pop3-dele.c.s
@@ -3449,7 +3459,7 @@ pop3-dele.s: pop3-dele.c.s
 
 # target to generate assembly for a file
 pop3-dele.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/pop3-dele.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-dele.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/pop3-dele.c.s
 .PHONY : pop3-dele.c.s
 
 pop3-list.obj: pop3-list.c.obj
@@ -3457,7 +3467,7 @@ pop3-list.obj: pop3-list.c.obj
 
 # target to build an object file
 pop3-list.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/pop3-list.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/pop3-list.c.obj
 .PHONY : pop3-list.c.obj
 
 pop3-list.i: pop3-list.c.i
@@ -3465,7 +3475,7 @@ pop3-list.i: pop3-list.c.i
 
 # target to preprocess a source file
 pop3-list.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/pop3-list.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/pop3-list.c.i
 .PHONY : pop3-list.c.i
 
 pop3-list.s: pop3-list.c.s
@@ -3473,7 +3483,7 @@ pop3-list.s: pop3-list.c.s
 
 # target to generate assembly for a file
 pop3-list.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/pop3-list.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-list.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/pop3-list.c.s
 .PHONY : pop3-list.c.s
 
 pop3-multi.obj: pop3-multi.c.obj
@@ -3481,7 +3491,7 @@ pop3-multi.obj: pop3-multi.c.obj
 
 # target to build an object file
 pop3-multi.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/pop3-multi.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/pop3-multi.c.obj
 .PHONY : pop3-multi.c.obj
 
 pop3-multi.i: pop3-multi.c.i
@@ -3489,7 +3499,7 @@ pop3-multi.i: pop3-multi.c.i
 
 # target to preprocess a source file
 pop3-multi.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/pop3-multi.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/pop3-multi.c.i
 .PHONY : pop3-multi.c.i
 
 pop3-multi.s: pop3-multi.c.s
@@ -3497,7 +3507,7 @@ pop3-multi.s: pop3-multi.c.s
 
 # target to generate assembly for a file
 pop3-multi.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/pop3-multi.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/pop3-multi.c.s
 .PHONY : pop3-multi.c.s
 
 pop3-noop.obj: pop3-noop.c.obj
@@ -3505,7 +3515,7 @@ pop3-noop.obj: pop3-noop.c.obj
 
 # target to build an object file
 pop3-noop.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/pop3-noop.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/pop3-noop.c.obj
 .PHONY : pop3-noop.c.obj
 
 pop3-noop.i: pop3-noop.c.i
@@ -3513,7 +3523,7 @@ pop3-noop.i: pop3-noop.c.i
 
 # target to preprocess a source file
 pop3-noop.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/pop3-noop.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/pop3-noop.c.i
 .PHONY : pop3-noop.c.i
 
 pop3-noop.s: pop3-noop.c.s
@@ -3521,7 +3531,7 @@ pop3-noop.s: pop3-noop.c.s
 
 # target to generate assembly for a file
 pop3-noop.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/pop3-noop.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-noop.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/pop3-noop.c.s
 .PHONY : pop3-noop.c.s
 
 pop3-retr.obj: pop3-retr.c.obj
@@ -3529,7 +3539,7 @@ pop3-retr.obj: pop3-retr.c.obj
 
 # target to build an object file
 pop3-retr.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/pop3-retr.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/pop3-retr.c.obj
 .PHONY : pop3-retr.c.obj
 
 pop3-retr.i: pop3-retr.c.i
@@ -3537,7 +3547,7 @@ pop3-retr.i: pop3-retr.c.i
 
 # target to preprocess a source file
 pop3-retr.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/pop3-retr.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/pop3-retr.c.i
 .PHONY : pop3-retr.c.i
 
 pop3-retr.s: pop3-retr.c.s
@@ -3545,7 +3555,7 @@ pop3-retr.s: pop3-retr.c.s
 
 # target to generate assembly for a file
 pop3-retr.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/pop3-retr.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-retr.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/pop3-retr.c.s
 .PHONY : pop3-retr.c.s
 
 pop3-ssl.obj: pop3-ssl.c.obj
@@ -3553,7 +3563,7 @@ pop3-ssl.obj: pop3-ssl.c.obj
 
 # target to build an object file
 pop3-ssl.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/pop3-ssl.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/pop3-ssl.c.obj
 .PHONY : pop3-ssl.c.obj
 
 pop3-ssl.i: pop3-ssl.c.i
@@ -3561,7 +3571,7 @@ pop3-ssl.i: pop3-ssl.c.i
 
 # target to preprocess a source file
 pop3-ssl.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/pop3-ssl.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/pop3-ssl.c.i
 .PHONY : pop3-ssl.c.i
 
 pop3-ssl.s: pop3-ssl.c.s
@@ -3569,7 +3579,7 @@ pop3-ssl.s: pop3-ssl.c.s
 
 # target to generate assembly for a file
 pop3-ssl.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/pop3-ssl.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/pop3-ssl.c.s
 .PHONY : pop3-ssl.c.s
 
 pop3-stat.obj: pop3-stat.c.obj
@@ -3577,7 +3587,7 @@ pop3-stat.obj: pop3-stat.c.obj
 
 # target to build an object file
 pop3-stat.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/pop3-stat.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/pop3-stat.c.obj
 .PHONY : pop3-stat.c.obj
 
 pop3-stat.i: pop3-stat.c.i
@@ -3585,7 +3595,7 @@ pop3-stat.i: pop3-stat.c.i
 
 # target to preprocess a source file
 pop3-stat.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/pop3-stat.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/pop3-stat.c.i
 .PHONY : pop3-stat.c.i
 
 pop3-stat.s: pop3-stat.c.s
@@ -3593,7 +3603,7 @@ pop3-stat.s: pop3-stat.c.s
 
 # target to generate assembly for a file
 pop3-stat.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/pop3-stat.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-stat.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/pop3-stat.c.s
 .PHONY : pop3-stat.c.s
 
 pop3-tls.obj: pop3-tls.c.obj
@@ -3601,7 +3611,7 @@ pop3-tls.obj: pop3-tls.c.obj
 
 # target to build an object file
 pop3-tls.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/pop3-tls.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/pop3-tls.c.obj
 .PHONY : pop3-tls.c.obj
 
 pop3-tls.i: pop3-tls.c.i
@@ -3609,7 +3619,7 @@ pop3-tls.i: pop3-tls.c.i
 
 # target to preprocess a source file
 pop3-tls.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/pop3-tls.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/pop3-tls.c.i
 .PHONY : pop3-tls.c.i
 
 pop3-tls.s: pop3-tls.c.s
@@ -3617,7 +3627,7 @@ pop3-tls.s: pop3-tls.c.s
 
 # target to generate assembly for a file
 pop3-tls.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/pop3-tls.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/pop3-tls.c.s
 .PHONY : pop3-tls.c.s
 
 pop3-top.obj: pop3-top.c.obj
@@ -3625,7 +3635,7 @@ pop3-top.obj: pop3-top.c.obj
 
 # target to build an object file
 pop3-top.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/pop3-top.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/pop3-top.c.obj
 .PHONY : pop3-top.c.obj
 
 pop3-top.i: pop3-top.c.i
@@ -3633,7 +3643,7 @@ pop3-top.i: pop3-top.c.i
 
 # target to preprocess a source file
 pop3-top.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/pop3-top.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/pop3-top.c.i
 .PHONY : pop3-top.c.i
 
 pop3-top.s: pop3-top.c.s
@@ -3641,7 +3651,7 @@ pop3-top.s: pop3-top.c.s
 
 # target to generate assembly for a file
 pop3-top.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/pop3-top.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-top.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/pop3-top.c.s
 .PHONY : pop3-top.c.s
 
 pop3-uidl.obj: pop3-uidl.c.obj
@@ -3649,7 +3659,7 @@ pop3-uidl.obj: pop3-uidl.c.obj
 
 # target to build an object file
 pop3-uidl.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/pop3-uidl.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/pop3-uidl.c.obj
 .PHONY : pop3-uidl.c.obj
 
 pop3-uidl.i: pop3-uidl.c.i
@@ -3657,7 +3667,7 @@ pop3-uidl.i: pop3-uidl.c.i
 
 # target to preprocess a source file
 pop3-uidl.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/pop3-uidl.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/pop3-uidl.c.i
 .PHONY : pop3-uidl.c.i
 
 pop3-uidl.s: pop3-uidl.c.s
@@ -3665,7 +3675,7 @@ pop3-uidl.s: pop3-uidl.c.s
 
 # target to generate assembly for a file
 pop3-uidl.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/pop3-uidl.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-pop3-uidl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/pop3-uidl.c.s
 .PHONY : pop3-uidl.c.s
 
 post-callback.obj: post-callback.c.obj
@@ -3673,7 +3683,7 @@ post-callback.obj: post-callback.c.obj
 
 # target to build an object file
 post-callback.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/post-callback.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/post-callback.c.obj
 .PHONY : post-callback.c.obj
 
 post-callback.i: post-callback.c.i
@@ -3681,7 +3691,7 @@ post-callback.i: post-callback.c.i
 
 # target to preprocess a source file
 post-callback.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/post-callback.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/post-callback.c.i
 .PHONY : post-callback.c.i
 
 post-callback.s: post-callback.c.s
@@ -3689,7 +3699,7 @@ post-callback.s: post-callback.c.s
 
 # target to generate assembly for a file
 post-callback.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/post-callback.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-post-callback.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/post-callback.c.s
 .PHONY : post-callback.c.s
 
 postinmemory.obj: postinmemory.c.obj
@@ -3697,7 +3707,7 @@ postinmemory.obj: postinmemory.c.obj
 
 # target to build an object file
 postinmemory.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/postinmemory.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/postinmemory.c.obj
 .PHONY : postinmemory.c.obj
 
 postinmemory.i: postinmemory.c.i
@@ -3705,7 +3715,7 @@ postinmemory.i: postinmemory.c.i
 
 # target to preprocess a source file
 postinmemory.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/postinmemory.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/postinmemory.c.i
 .PHONY : postinmemory.c.i
 
 postinmemory.s: postinmemory.c.s
@@ -3713,7 +3723,7 @@ postinmemory.s: postinmemory.c.s
 
 # target to generate assembly for a file
 postinmemory.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/postinmemory.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postinmemory.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/postinmemory.c.s
 .PHONY : postinmemory.c.s
 
 postit2-formadd.obj: postit2-formadd.c.obj
@@ -3721,7 +3731,7 @@ postit2-formadd.obj: postit2-formadd.c.obj
 
 # target to build an object file
 postit2-formadd.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/postit2-formadd.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/postit2-formadd.c.obj
 .PHONY : postit2-formadd.c.obj
 
 postit2-formadd.i: postit2-formadd.c.i
@@ -3729,7 +3739,7 @@ postit2-formadd.i: postit2-formadd.c.i
 
 # target to preprocess a source file
 postit2-formadd.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/postit2-formadd.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/postit2-formadd.c.i
 .PHONY : postit2-formadd.c.i
 
 postit2-formadd.s: postit2-formadd.c.s
@@ -3737,7 +3747,7 @@ postit2-formadd.s: postit2-formadd.c.s
 
 # target to generate assembly for a file
 postit2-formadd.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/postit2-formadd.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2-formadd.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/postit2-formadd.c.s
 .PHONY : postit2-formadd.c.s
 
 postit2.obj: postit2.c.obj
@@ -3745,7 +3755,7 @@ postit2.obj: postit2.c.obj
 
 # target to build an object file
 postit2.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/postit2.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/postit2.c.obj
 .PHONY : postit2.c.obj
 
 postit2.i: postit2.c.i
@@ -3753,7 +3763,7 @@ postit2.i: postit2.c.i
 
 # target to preprocess a source file
 postit2.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/postit2.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/postit2.c.i
 .PHONY : postit2.c.i
 
 postit2.s: postit2.c.s
@@ -3761,7 +3771,7 @@ postit2.s: postit2.c.s
 
 # target to generate assembly for a file
 postit2.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/postit2.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-postit2.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/postit2.c.s
 .PHONY : postit2.c.s
 
 progressfunc.obj: progressfunc.c.obj
@@ -3769,7 +3779,7 @@ progressfunc.obj: progressfunc.c.obj
 
 # target to build an object file
 progressfunc.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/progressfunc.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/progressfunc.c.obj
 .PHONY : progressfunc.c.obj
 
 progressfunc.i: progressfunc.c.i
@@ -3777,7 +3787,7 @@ progressfunc.i: progressfunc.c.i
 
 # target to preprocess a source file
 progressfunc.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/progressfunc.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/progressfunc.c.i
 .PHONY : progressfunc.c.i
 
 progressfunc.s: progressfunc.c.s
@@ -3785,7 +3795,7 @@ progressfunc.s: progressfunc.c.s
 
 # target to generate assembly for a file
 progressfunc.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/progressfunc.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-progressfunc.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/progressfunc.c.s
 .PHONY : progressfunc.c.s
 
 protofeats.obj: protofeats.c.obj
@@ -3793,7 +3803,7 @@ protofeats.obj: protofeats.c.obj
 
 # target to build an object file
 protofeats.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/protofeats.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/protofeats.c.obj
 .PHONY : protofeats.c.obj
 
 protofeats.i: protofeats.c.i
@@ -3801,7 +3811,7 @@ protofeats.i: protofeats.c.i
 
 # target to preprocess a source file
 protofeats.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/protofeats.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/protofeats.c.i
 .PHONY : protofeats.c.i
 
 protofeats.s: protofeats.c.s
@@ -3809,7 +3819,7 @@ protofeats.s: protofeats.c.s
 
 # target to generate assembly for a file
 protofeats.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/protofeats.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-protofeats.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/protofeats.c.s
 .PHONY : protofeats.c.s
 
 range.obj: range.c.obj
@@ -3817,7 +3827,7 @@ range.obj: range.c.obj
 
 # target to build an object file
 range.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/range.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/range.c.obj
 .PHONY : range.c.obj
 
 range.i: range.c.i
@@ -3825,7 +3835,7 @@ range.i: range.c.i
 
 # target to preprocess a source file
 range.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/range.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/range.c.i
 .PHONY : range.c.i
 
 range.s: range.c.s
@@ -3833,7 +3843,7 @@ range.s: range.c.s
 
 # target to generate assembly for a file
 range.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/range.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-range.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/range.c.s
 .PHONY : range.c.s
 
 resolve.obj: resolve.c.obj
@@ -3841,7 +3851,7 @@ resolve.obj: resolve.c.obj
 
 # target to build an object file
 resolve.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/resolve.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/resolve.c.obj
 .PHONY : resolve.c.obj
 
 resolve.i: resolve.c.i
@@ -3849,7 +3859,7 @@ resolve.i: resolve.c.i
 
 # target to preprocess a source file
 resolve.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/resolve.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/resolve.c.i
 .PHONY : resolve.c.i
 
 resolve.s: resolve.c.s
@@ -3857,7 +3867,7 @@ resolve.s: resolve.c.s
 
 # target to generate assembly for a file
 resolve.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/resolve.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-resolve.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/resolve.c.s
 .PHONY : resolve.c.s
 
 rtsp-options.obj: rtsp-options.c.obj
@@ -3865,7 +3875,7 @@ rtsp-options.obj: rtsp-options.c.obj
 
 # target to build an object file
 rtsp-options.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rtsp-options.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rtsp-options.c.obj
 .PHONY : rtsp-options.c.obj
 
 rtsp-options.i: rtsp-options.c.i
@@ -3873,7 +3883,7 @@ rtsp-options.i: rtsp-options.c.i
 
 # target to preprocess a source file
 rtsp-options.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rtsp-options.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rtsp-options.c.i
 .PHONY : rtsp-options.c.i
 
 rtsp-options.s: rtsp-options.c.s
@@ -3881,7 +3891,7 @@ rtsp-options.s: rtsp-options.c.s
 
 # target to generate assembly for a file
 rtsp-options.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rtsp-options.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-rtsp-options.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/rtsp-options.c.s
 .PHONY : rtsp-options.c.s
 
 sendrecv.obj: sendrecv.c.obj
@@ -3889,7 +3899,7 @@ sendrecv.obj: sendrecv.c.obj
 
 # target to build an object file
 sendrecv.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/sendrecv.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/sendrecv.c.obj
 .PHONY : sendrecv.c.obj
 
 sendrecv.i: sendrecv.c.i
@@ -3897,7 +3907,7 @@ sendrecv.i: sendrecv.c.i
 
 # target to preprocess a source file
 sendrecv.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/sendrecv.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/sendrecv.c.i
 .PHONY : sendrecv.c.i
 
 sendrecv.s: sendrecv.c.s
@@ -3905,7 +3915,7 @@ sendrecv.s: sendrecv.c.s
 
 # target to generate assembly for a file
 sendrecv.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/sendrecv.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sendrecv.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/sendrecv.c.s
 .PHONY : sendrecv.c.s
 
 sepheaders.obj: sepheaders.c.obj
@@ -3913,7 +3923,7 @@ sepheaders.obj: sepheaders.c.obj
 
 # target to build an object file
 sepheaders.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/sepheaders.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/sepheaders.c.obj
 .PHONY : sepheaders.c.obj
 
 sepheaders.i: sepheaders.c.i
@@ -3921,7 +3931,7 @@ sepheaders.i: sepheaders.c.i
 
 # target to preprocess a source file
 sepheaders.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/sepheaders.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/sepheaders.c.i
 .PHONY : sepheaders.c.i
 
 sepheaders.s: sepheaders.c.s
@@ -3929,7 +3939,7 @@ sepheaders.s: sepheaders.c.s
 
 # target to generate assembly for a file
 sepheaders.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/sepheaders.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sepheaders.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/sepheaders.c.s
 .PHONY : sepheaders.c.s
 
 sftpget.obj: sftpget.c.obj
@@ -3937,7 +3947,7 @@ sftpget.obj: sftpget.c.obj
 
 # target to build an object file
 sftpget.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/sftpget.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/sftpget.c.obj
 .PHONY : sftpget.c.obj
 
 sftpget.i: sftpget.c.i
@@ -3945,7 +3955,7 @@ sftpget.i: sftpget.c.i
 
 # target to preprocess a source file
 sftpget.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/sftpget.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/sftpget.c.i
 .PHONY : sftpget.c.i
 
 sftpget.s: sftpget.c.s
@@ -3953,7 +3963,7 @@ sftpget.s: sftpget.c.s
 
 # target to generate assembly for a file
 sftpget.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/sftpget.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpget.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/sftpget.c.s
 .PHONY : sftpget.c.s
 
 sftpuploadresume.obj: sftpuploadresume.c.obj
@@ -3961,7 +3971,7 @@ sftpuploadresume.obj: sftpuploadresume.c.obj
 
 # target to build an object file
 sftpuploadresume.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/sftpuploadresume.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/sftpuploadresume.c.obj
 .PHONY : sftpuploadresume.c.obj
 
 sftpuploadresume.i: sftpuploadresume.c.i
@@ -3969,7 +3979,7 @@ sftpuploadresume.i: sftpuploadresume.c.i
 
 # target to preprocess a source file
 sftpuploadresume.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/sftpuploadresume.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/sftpuploadresume.c.i
 .PHONY : sftpuploadresume.c.i
 
 sftpuploadresume.s: sftpuploadresume.c.s
@@ -3977,7 +3987,7 @@ sftpuploadresume.s: sftpuploadresume.c.s
 
 # target to generate assembly for a file
 sftpuploadresume.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/sftpuploadresume.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sftpuploadresume.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/sftpuploadresume.c.s
 .PHONY : sftpuploadresume.c.s
 
 shared-connection-cache.obj: shared-connection-cache.c.obj
@@ -3985,7 +3995,7 @@ shared-connection-cache.obj: shared-connection-cache.c.obj
 
 # target to build an object file
 shared-connection-cache.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/shared-connection-cache.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/shared-connection-cache.c.obj
 .PHONY : shared-connection-cache.c.obj
 
 shared-connection-cache.i: shared-connection-cache.c.i
@@ -3993,7 +4003,7 @@ shared-connection-cache.i: shared-connection-cache.c.i
 
 # target to preprocess a source file
 shared-connection-cache.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/shared-connection-cache.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/shared-connection-cache.c.i
 .PHONY : shared-connection-cache.c.i
 
 shared-connection-cache.s: shared-connection-cache.c.s
@@ -4001,7 +4011,7 @@ shared-connection-cache.s: shared-connection-cache.c.s
 
 # target to generate assembly for a file
 shared-connection-cache.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/shared-connection-cache.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-shared-connection-cache.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/shared-connection-cache.c.s
 .PHONY : shared-connection-cache.c.s
 
 simple.obj: simple.c.obj
@@ -4009,7 +4019,7 @@ simple.obj: simple.c.obj
 
 # target to build an object file
 simple.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/simple.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/simple.c.obj
 .PHONY : simple.c.obj
 
 simple.i: simple.c.i
@@ -4017,7 +4027,7 @@ simple.i: simple.c.i
 
 # target to preprocess a source file
 simple.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/simple.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/simple.c.i
 .PHONY : simple.c.i
 
 simple.s: simple.c.s
@@ -4025,7 +4035,7 @@ simple.s: simple.c.s
 
 # target to generate assembly for a file
 simple.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/simple.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simple.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/simple.c.s
 .PHONY : simple.c.s
 
 simplepost.obj: simplepost.c.obj
@@ -4033,7 +4043,7 @@ simplepost.obj: simplepost.c.obj
 
 # target to build an object file
 simplepost.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/simplepost.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/simplepost.c.obj
 .PHONY : simplepost.c.obj
 
 simplepost.i: simplepost.c.i
@@ -4041,7 +4051,7 @@ simplepost.i: simplepost.c.i
 
 # target to preprocess a source file
 simplepost.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/simplepost.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/simplepost.c.i
 .PHONY : simplepost.c.i
 
 simplepost.s: simplepost.c.s
@@ -4049,7 +4059,7 @@ simplepost.s: simplepost.c.s
 
 # target to generate assembly for a file
 simplepost.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/simplepost.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplepost.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/simplepost.c.s
 .PHONY : simplepost.c.s
 
 simplessl.obj: simplessl.c.obj
@@ -4057,7 +4067,7 @@ simplessl.obj: simplessl.c.obj
 
 # target to build an object file
 simplessl.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/simplessl.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/simplessl.c.obj
 .PHONY : simplessl.c.obj
 
 simplessl.i: simplessl.c.i
@@ -4065,7 +4075,7 @@ simplessl.i: simplessl.c.i
 
 # target to preprocess a source file
 simplessl.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/simplessl.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/simplessl.c.i
 .PHONY : simplessl.c.i
 
 simplessl.s: simplessl.c.s
@@ -4073,7 +4083,7 @@ simplessl.s: simplessl.c.s
 
 # target to generate assembly for a file
 simplessl.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/simplessl.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-simplessl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/simplessl.c.s
 .PHONY : simplessl.c.s
 
 smtp-authzid.obj: smtp-authzid.c.obj
@@ -4081,7 +4091,7 @@ smtp-authzid.obj: smtp-authzid.c.obj
 
 # target to build an object file
 smtp-authzid.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/smtp-authzid.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/smtp-authzid.c.obj
 .PHONY : smtp-authzid.c.obj
 
 smtp-authzid.i: smtp-authzid.c.i
@@ -4089,7 +4099,7 @@ smtp-authzid.i: smtp-authzid.c.i
 
 # target to preprocess a source file
 smtp-authzid.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/smtp-authzid.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/smtp-authzid.c.i
 .PHONY : smtp-authzid.c.i
 
 smtp-authzid.s: smtp-authzid.c.s
@@ -4097,7 +4107,7 @@ smtp-authzid.s: smtp-authzid.c.s
 
 # target to generate assembly for a file
 smtp-authzid.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/smtp-authzid.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-authzid.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/smtp-authzid.c.s
 .PHONY : smtp-authzid.c.s
 
 smtp-expn.obj: smtp-expn.c.obj
@@ -4105,7 +4115,7 @@ smtp-expn.obj: smtp-expn.c.obj
 
 # target to build an object file
 smtp-expn.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/smtp-expn.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/smtp-expn.c.obj
 .PHONY : smtp-expn.c.obj
 
 smtp-expn.i: smtp-expn.c.i
@@ -4113,7 +4123,7 @@ smtp-expn.i: smtp-expn.c.i
 
 # target to preprocess a source file
 smtp-expn.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/smtp-expn.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/smtp-expn.c.i
 .PHONY : smtp-expn.c.i
 
 smtp-expn.s: smtp-expn.c.s
@@ -4121,7 +4131,7 @@ smtp-expn.s: smtp-expn.c.s
 
 # target to generate assembly for a file
 smtp-expn.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/smtp-expn.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-expn.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/smtp-expn.c.s
 .PHONY : smtp-expn.c.s
 
 smtp-mail.obj: smtp-mail.c.obj
@@ -4129,7 +4139,7 @@ smtp-mail.obj: smtp-mail.c.obj
 
 # target to build an object file
 smtp-mail.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/smtp-mail.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/smtp-mail.c.obj
 .PHONY : smtp-mail.c.obj
 
 smtp-mail.i: smtp-mail.c.i
@@ -4137,7 +4147,7 @@ smtp-mail.i: smtp-mail.c.i
 
 # target to preprocess a source file
 smtp-mail.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/smtp-mail.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/smtp-mail.c.i
 .PHONY : smtp-mail.c.i
 
 smtp-mail.s: smtp-mail.c.s
@@ -4145,7 +4155,7 @@ smtp-mail.s: smtp-mail.c.s
 
 # target to generate assembly for a file
 smtp-mail.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/smtp-mail.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mail.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/smtp-mail.c.s
 .PHONY : smtp-mail.c.s
 
 smtp-mime.obj: smtp-mime.c.obj
@@ -4153,7 +4163,7 @@ smtp-mime.obj: smtp-mime.c.obj
 
 # target to build an object file
 smtp-mime.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/smtp-mime.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/smtp-mime.c.obj
 .PHONY : smtp-mime.c.obj
 
 smtp-mime.i: smtp-mime.c.i
@@ -4161,7 +4171,7 @@ smtp-mime.i: smtp-mime.c.i
 
 # target to preprocess a source file
 smtp-mime.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/smtp-mime.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/smtp-mime.c.i
 .PHONY : smtp-mime.c.i
 
 smtp-mime.s: smtp-mime.c.s
@@ -4169,7 +4179,7 @@ smtp-mime.s: smtp-mime.c.s
 
 # target to generate assembly for a file
 smtp-mime.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/smtp-mime.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-mime.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/smtp-mime.c.s
 .PHONY : smtp-mime.c.s
 
 smtp-multi.obj: smtp-multi.c.obj
@@ -4177,7 +4187,7 @@ smtp-multi.obj: smtp-multi.c.obj
 
 # target to build an object file
 smtp-multi.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/smtp-multi.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/smtp-multi.c.obj
 .PHONY : smtp-multi.c.obj
 
 smtp-multi.i: smtp-multi.c.i
@@ -4185,7 +4195,7 @@ smtp-multi.i: smtp-multi.c.i
 
 # target to preprocess a source file
 smtp-multi.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/smtp-multi.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/smtp-multi.c.i
 .PHONY : smtp-multi.c.i
 
 smtp-multi.s: smtp-multi.c.s
@@ -4193,7 +4203,7 @@ smtp-multi.s: smtp-multi.c.s
 
 # target to generate assembly for a file
 smtp-multi.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/smtp-multi.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-multi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/smtp-multi.c.s
 .PHONY : smtp-multi.c.s
 
 smtp-ssl.obj: smtp-ssl.c.obj
@@ -4201,7 +4211,7 @@ smtp-ssl.obj: smtp-ssl.c.obj
 
 # target to build an object file
 smtp-ssl.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/smtp-ssl.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/smtp-ssl.c.obj
 .PHONY : smtp-ssl.c.obj
 
 smtp-ssl.i: smtp-ssl.c.i
@@ -4209,7 +4219,7 @@ smtp-ssl.i: smtp-ssl.c.i
 
 # target to preprocess a source file
 smtp-ssl.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/smtp-ssl.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/smtp-ssl.c.i
 .PHONY : smtp-ssl.c.i
 
 smtp-ssl.s: smtp-ssl.c.s
@@ -4217,7 +4227,7 @@ smtp-ssl.s: smtp-ssl.c.s
 
 # target to generate assembly for a file
 smtp-ssl.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/smtp-ssl.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-ssl.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/smtp-ssl.c.s
 .PHONY : smtp-ssl.c.s
 
 smtp-tls.obj: smtp-tls.c.obj
@@ -4225,7 +4235,7 @@ smtp-tls.obj: smtp-tls.c.obj
 
 # target to build an object file
 smtp-tls.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/smtp-tls.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/smtp-tls.c.obj
 .PHONY : smtp-tls.c.obj
 
 smtp-tls.i: smtp-tls.c.i
@@ -4233,7 +4243,7 @@ smtp-tls.i: smtp-tls.c.i
 
 # target to preprocess a source file
 smtp-tls.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/smtp-tls.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/smtp-tls.c.i
 .PHONY : smtp-tls.c.i
 
 smtp-tls.s: smtp-tls.c.s
@@ -4241,7 +4251,7 @@ smtp-tls.s: smtp-tls.c.s
 
 # target to generate assembly for a file
 smtp-tls.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/smtp-tls.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-tls.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/smtp-tls.c.s
 .PHONY : smtp-tls.c.s
 
 smtp-vrfy.obj: smtp-vrfy.c.obj
@@ -4249,7 +4259,7 @@ smtp-vrfy.obj: smtp-vrfy.c.obj
 
 # target to build an object file
 smtp-vrfy.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/smtp-vrfy.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/smtp-vrfy.c.obj
 .PHONY : smtp-vrfy.c.obj
 
 smtp-vrfy.i: smtp-vrfy.c.i
@@ -4257,7 +4267,7 @@ smtp-vrfy.i: smtp-vrfy.c.i
 
 # target to preprocess a source file
 smtp-vrfy.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/smtp-vrfy.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/smtp-vrfy.c.i
 .PHONY : smtp-vrfy.c.i
 
 smtp-vrfy.s: smtp-vrfy.c.s
@@ -4265,7 +4275,7 @@ smtp-vrfy.s: smtp-vrfy.c.s
 
 # target to generate assembly for a file
 smtp-vrfy.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/smtp-vrfy.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-smtp-vrfy.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/smtp-vrfy.c.s
 .PHONY : smtp-vrfy.c.s
 
 sslbackend.obj: sslbackend.c.obj
@@ -4273,7 +4283,7 @@ sslbackend.obj: sslbackend.c.obj
 
 # target to build an object file
 sslbackend.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/sslbackend.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/sslbackend.c.obj
 .PHONY : sslbackend.c.obj
 
 sslbackend.i: sslbackend.c.i
@@ -4281,7 +4291,7 @@ sslbackend.i: sslbackend.c.i
 
 # target to preprocess a source file
 sslbackend.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/sslbackend.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/sslbackend.c.i
 .PHONY : sslbackend.c.i
 
 sslbackend.s: sslbackend.c.s
@@ -4289,7 +4299,7 @@ sslbackend.s: sslbackend.c.s
 
 # target to generate assembly for a file
 sslbackend.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/sslbackend.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-sslbackend.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/sslbackend.c.s
 .PHONY : sslbackend.c.s
 
 unixsocket.obj: unixsocket.c.obj
@@ -4297,7 +4307,7 @@ unixsocket.obj: unixsocket.c.obj
 
 # target to build an object file
 unixsocket.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/unixsocket.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/unixsocket.c.obj
 .PHONY : unixsocket.c.obj
 
 unixsocket.i: unixsocket.c.i
@@ -4305,7 +4315,7 @@ unixsocket.i: unixsocket.c.i
 
 # target to preprocess a source file
 unixsocket.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/unixsocket.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/unixsocket.c.i
 .PHONY : unixsocket.c.i
 
 unixsocket.s: unixsocket.c.s
@@ -4313,7 +4323,7 @@ unixsocket.s: unixsocket.c.s
 
 # target to generate assembly for a file
 unixsocket.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/unixsocket.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-unixsocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/unixsocket.c.s
 .PHONY : unixsocket.c.s
 
 url2file.obj: url2file.c.obj
@@ -4321,7 +4331,7 @@ url2file.obj: url2file.c.obj
 
 # target to build an object file
 url2file.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/url2file.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/url2file.c.obj
 .PHONY : url2file.c.obj
 
 url2file.i: url2file.c.i
@@ -4329,7 +4339,7 @@ url2file.i: url2file.c.i
 
 # target to preprocess a source file
 url2file.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/url2file.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/url2file.c.i
 .PHONY : url2file.c.i
 
 url2file.s: url2file.c.s
@@ -4337,7 +4347,7 @@ url2file.s: url2file.c.s
 
 # target to generate assembly for a file
 url2file.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/url2file.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-url2file.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/url2file.c.s
 .PHONY : url2file.c.s
 
 urlapi.obj: urlapi.c.obj
@@ -4345,7 +4355,7 @@ urlapi.obj: urlapi.c.obj
 
 # target to build an object file
 urlapi.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/urlapi.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/urlapi.c.obj
 .PHONY : urlapi.c.obj
 
 urlapi.i: urlapi.c.i
@@ -4353,7 +4363,7 @@ urlapi.i: urlapi.c.i
 
 # target to preprocess a source file
 urlapi.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/urlapi.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/urlapi.c.i
 .PHONY : urlapi.c.i
 
 urlapi.s: urlapi.c.s
@@ -4361,7 +4371,7 @@ urlapi.s: urlapi.c.s
 
 # target to generate assembly for a file
 urlapi.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/urlapi.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-urlapi.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/urlapi.c.s
 .PHONY : urlapi.c.s
 
 websocket-cb.obj: websocket-cb.c.obj
@@ -4369,7 +4379,7 @@ websocket-cb.obj: websocket-cb.c.obj
 
 # target to build an object file
 websocket-cb.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/websocket-cb.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/websocket-cb.c.obj
 .PHONY : websocket-cb.c.obj
 
 websocket-cb.i: websocket-cb.c.i
@@ -4377,7 +4387,7 @@ websocket-cb.i: websocket-cb.c.i
 
 # target to preprocess a source file
 websocket-cb.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/websocket-cb.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/websocket-cb.c.i
 .PHONY : websocket-cb.c.i
 
 websocket-cb.s: websocket-cb.c.s
@@ -4385,7 +4395,7 @@ websocket-cb.s: websocket-cb.c.s
 
 # target to generate assembly for a file
 websocket-cb.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/websocket-cb.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket-cb.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/websocket-cb.c.s
 .PHONY : websocket-cb.c.s
 
 websocket.obj: websocket.c.obj
@@ -4393,7 +4403,7 @@ websocket.obj: websocket.c.obj
 
 # target to build an object file
 websocket.c.obj:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/websocket.c.obj
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/websocket.c.obj
 .PHONY : websocket.c.obj
 
 websocket.i: websocket.c.i
@@ -4401,7 +4411,7 @@ websocket.i: websocket.c.i
 
 # target to preprocess a source file
 websocket.c.i:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/websocket.c.i
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/websocket.c.i
 .PHONY : websocket.c.i
 
 websocket.s: websocket.c.s
@@ -4409,7 +4419,7 @@ websocket.s: websocket.c.s
 
 # target to generate assembly for a file
 websocket.c.s:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/websocket.c.s
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-example-websocket.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/websocket.c.s
 .PHONY : websocket.c.s
 
 # Help Target
@@ -4426,6 +4436,7 @@ help:
 	@echo ... package
 	@echo ... package_source
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... curl-examples
 	@echo ... curl-example-10-at-a-time
 	@echo ... curl-example-address-scope
@@ -4882,6 +4893,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

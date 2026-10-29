@@ -253,8 +253,8 @@ CMakeFiles/ATrain.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/winsvc.h C:/msys64/mingw64/include/mcx.h \
  C:/msys64/mingw64/include/imm.h \
  C:\Users\tgene\OneDrive\ -\ MOEC\Projects\CppProjects\ATrain\src\Core/Assistant.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/AI/IAIProvider.h \
- C:/Users/tgene/OneDrive\ -\ MOEC/Projects/CppProjects/ATrain/src/Core/Message.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/src/AI/IAIProvider.h \
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/src/Core/Message.h \
  C:/msys64/mingw64/include/c++/16.2.0/string \
  C:/msys64/mingw64/include/c++/16.2.0/bits/requires_hosted.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stringfwd.h \

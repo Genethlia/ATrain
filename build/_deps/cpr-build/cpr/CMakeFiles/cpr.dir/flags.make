@@ -6,5 +6,5 @@ CXX_DEFINES = -DCPR_ENABLE_CURL_HTTP_ONLY -DCPR_ENABLE_SSL -DCPR_USE_SYSTEM_LIB_
 
 CXX_INCLUDES = @CMakeFiles/cpr.dir/includes_CXX.rsp
 
-CXX_FLAGS =  -Wall -Wextra -Wpedantic -Werror -g -std=gnu++20
+CXX_FLAGS =  -Wall -Wextra -Wpedantic -Werror -g -std=c++20
 

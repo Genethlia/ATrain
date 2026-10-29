@@ -66,7 +66,7 @@ include _deps/curl-build/CMakeFiles/curl_uninstall.dir/compiler_depend.make
 include _deps/curl-build/CMakeFiles/curl_uninstall.dir/progress.make
 
 _deps/curl-build/CMakeFiles/curl_uninstall:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build" && "C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMake/cmake_uninstall.cmake"
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1 && "C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMake/cmake_uninstall.cmake"
 
 _deps/curl-build/CMakeFiles/curl_uninstall.dir/codegen:
 .PHONY : _deps/curl-build/CMakeFiles/curl_uninstall.dir/codegen
@@ -80,7 +80,7 @@ _deps/curl-build/CMakeFiles/curl_uninstall.dir/build: curl_uninstall
 .PHONY : _deps/curl-build/CMakeFiles/curl_uninstall.dir/build
 
 _deps/curl-build/CMakeFiles/curl_uninstall.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build" && $(CMAKE_COMMAND) -P CMakeFiles\curl_uninstall.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1 && $(CMAKE_COMMAND) -P CMakeFiles\curl_uninstall.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/CMakeFiles/curl_uninstall.dir/clean
 
 _deps/curl-build/CMakeFiles/curl_uninstall.dir/depend:

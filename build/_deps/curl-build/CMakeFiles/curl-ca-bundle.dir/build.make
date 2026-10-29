@@ -67,7 +67,7 @@ include _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/progress.make
 
 _deps/curl-build/CMakeFiles/curl-ca-bundle: _deps/curl-src/scripts/mk-ca-bundle.pl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating a fresh ca-bundle.crt"
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build" && C:\msys64\usr\bin\perl.exe "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/scripts/mk-ca-bundle.pl" -b -l -u lib/ca-bundle.crt
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1 && C:\msys64\usr\bin\perl.exe "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/scripts/mk-ca-bundle.pl" -b -l -u lib/ca-bundle.crt
 
 _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/codegen:
 .PHONY : _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/codegen
@@ -81,7 +81,7 @@ _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/build: curl-ca-bundle
 .PHONY : _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/build
 
 _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/clean:
-	cd /d "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\_deps\curl-build" && $(CMAKE_COMMAND) -P CMakeFiles\curl-ca-bundle.dir\cmake_clean.cmake
+	cd /d C:\Users\tgene\ONEDRI~1\Projects\CPPPRO~1\ATrain\build\_deps\CURL-B~1 && $(CMAKE_COMMAND) -P CMakeFiles\curl-ca-bundle.dir\cmake_clean.cmake
 .PHONY : _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/clean
 
 _deps/curl-build/CMakeFiles/curl-ca-bundle.dir/depend:

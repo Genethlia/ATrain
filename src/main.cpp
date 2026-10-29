@@ -38,8 +38,7 @@ int main()
 
         try
         {
-            std::cout << "\nA.T.R.A.I.N.: " << ATrain.Ask(input) << "\n\n";
-            ATrain.ShouldSummarize();
+            std::cout << "\nA.T.R.A.I.N.: " << ATrain.GenerateReply(input) << "\n\n";
         }
         catch (const std::exception &e)
         {
