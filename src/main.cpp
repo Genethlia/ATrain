@@ -38,7 +38,9 @@ int main()
 
         try
         {
-            std::cout << "\nA.T.R.A.I.N.: " << ATrain.GenerateReply(input) << "\n\n";
+            std::cout << "\nA.T.R.A.I.N.: ";
+            std::string response = ATrain.GenerateReply(input);
+            std::cout << "\n\n";
         }
         catch (const std::exception &e)
         {

@@ -323,6 +323,7 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: C:/Users/tgene/OneDr
   C:/msys64/mingw64/include/c++/16.2.0/iomanip \
   C:/msys64/mingw64/include/c++/16.2.0/ios \
   C:/msys64/mingw64/include/c++/16.2.0/iosfwd \
+  C:/msys64/mingw64/include/c++/16.2.0/iostream \
   C:/msys64/mingw64/include/c++/16.2.0/istream \
   C:/msys64/mingw64/include/c++/16.2.0/iterator \
   C:/msys64/mingw64/include/c++/16.2.0/limits \
@@ -1027,6 +1028,8 @@ _deps/json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp:
 
 _deps/json-src/include/nlohmann/detail/iterators/iterator_traits.hpp:
 
+C:/msys64/mingw64/include/c++/16.2.0/iostream:
+
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/tmmintrin.h:
 
 _deps/json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
@@ -1569,11 +1572,11 @@ C:/msys64/mingw64/include/reason.h:
 
 C:/msys64/mingw64/include/c++/16.2.0/compare:
 
+C:/msys64/mingw64/include/sdkddkver.h:
+
 C:/msys64/mingw64/include/c++/16.2.0/condition_variable:
 
 C:/msys64/mingw64/include/cderr.h:
-
-C:/msys64/mingw64/include/sdkddkver.h:
 
 C:/msys64/mingw64/include/c++/16.2.0/cstdio:
 

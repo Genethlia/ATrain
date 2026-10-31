@@ -126,6 +126,20 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/deque \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_deque.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/deque.tcc \
+ C:/msys64/mingw64/include/c++/16.2.0/functional \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/refwrap.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/std_function.h \
+ C:/msys64/mingw64/include/c++/16.2.0/typeinfo \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/functexcept.h \
+ C:/msys64/mingw64/include/c++/16.2.0/unordered_map \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/unordered_map.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/hashtable.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/hashtable_policy.h \
+ C:/msys64/mingw64/include/c++/16.2.0/ext/aligned_buffer.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/enable_special_members.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/node_handle.h \
+ C:/msys64/mingw64/include/c++/16.2.0/array \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/binders.h \
  C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/cpr.h \
  C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/cpr-src/include/cpr/api.h \
  C:/msys64/mingw64/include/c++/16.2.0/fstream \
@@ -134,7 +148,6 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/exception \
  C:/msys64/mingw64/include/c++/16.2.0/bits/exception_ptr.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/cxxabi_init_exception.h \
- C:/msys64/mingw64/include/c++/16.2.0/typeinfo \
  C:/msys64/mingw64/include/c++/16.2.0/bits/nested_exception.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/ios_base.h \
  C:/msys64/mingw64/include/c++/16.2.0/ext/atomicity.h \
@@ -152,7 +165,6 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/pthread_unistd.h \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/locale_classes.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/functexcept.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/locale_classes.tcc \
  C:/msys64/mingw64/include/c++/16.2.0/system_error \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/error_constants.h \
@@ -178,18 +190,6 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/mingw64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/fstream.tcc \
- C:/msys64/mingw64/include/c++/16.2.0/functional \
- C:/msys64/mingw64/include/c++/16.2.0/bits/refwrap.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/std_function.h \
- C:/msys64/mingw64/include/c++/16.2.0/unordered_map \
- C:/msys64/mingw64/include/c++/16.2.0/bits/unordered_map.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/hashtable.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/hashtable_policy.h \
- C:/msys64/mingw64/include/c++/16.2.0/ext/aligned_buffer.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/enable_special_members.h \
- C:/msys64/mingw64/include/c++/16.2.0/bits/node_handle.h \
- C:/msys64/mingw64/include/c++/16.2.0/array \
- C:/msys64/mingw64/include/c++/16.2.0/bits/binders.h \
  C:/msys64/mingw64/include/c++/16.2.0/future \
  C:/msys64/mingw64/include/c++/16.2.0/mutex \
  C:/msys64/mingw64/include/c++/16.2.0/bits/chrono.h \
@@ -663,4 +663,5 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj: \
  C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/ordered_map.hpp \
  C:/msys64/mingw64/include/c++/16.2.0/any \
  C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/detail/macro_unscope.hpp \
- C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+ C:/Users/tgene/ONEDRI~1/Projects/CPPPRO~1/ATrain/build/_deps/json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ C:/msys64/mingw64/include/c++/16.2.0/iostream

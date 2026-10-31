@@ -324,6 +324,7 @@ CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj
  C:/msys64/mingw64/include/c++/16.2.0/iomanip
  C:/msys64/mingw64/include/c++/16.2.0/ios
  C:/msys64/mingw64/include/c++/16.2.0/iosfwd
+ C:/msys64/mingw64/include/c++/16.2.0/iostream
  C:/msys64/mingw64/include/c++/16.2.0/istream
  C:/msys64/mingw64/include/c++/16.2.0/iterator
  C:/msys64/mingw64/include/c++/16.2.0/limits

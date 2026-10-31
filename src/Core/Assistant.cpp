@@ -55,7 +55,7 @@ void Assistant::SummarizeHistory()
         summaryRequest.push_back(msg);
     }
 
-    auto summary = provider->GenerateResponse(summaryRequest);
+    auto summary = provider->GenerateResponse(summaryRequest, [](const std::string &token) {});
 
     if (summary.empty())
     {
@@ -83,12 +83,14 @@ void Assistant::TrimHistory()
 
 bool Assistant::RemoveOldestCompleteTurn()
 {
-    if (history.size() < 2)
+    if (history.size() < 3)
         return false;
-    if (history.back().role != "assistant")
-        return false;    // Ensure the last message is from the assistant
-    history.pop_front(); // Remove the oldest user message
-    history.pop_front(); // Remove the corresponding assistant message
+
+    if (history[0].role != "user" || history[1].role != "assistant")
+        return false;
+
+    history.pop_front();
+    history.pop_front();
 
     tokenCount = EstimateTokens(BuildRequestHistory()); // Update token count after removing a turn
     return true;
@@ -126,7 +128,7 @@ std::string Assistant::GenerateReply(const std::string &message)
         {
             SummarizeHistory();
         }
-        if (EstimateTokens(BuildRequestHistory()) > (contextBudget - reservedTokens))
+        while (EstimateTokens(BuildRequestHistory()) > (contextBudget - reservedTokens))
         {
             if (!RemoveOldestCompleteTurn())
             {
@@ -134,10 +136,11 @@ std::string Assistant::GenerateReply(const std::string &message)
             }
         }
 
-        auto response = provider->GenerateResponse(BuildRequestHistory());
+        auto response = provider->GenerateResponse(BuildRequestHistory(), [](const std::string &token)
+                                                   { std::cout << token << std::flush; });
         AddMessage("assistant", response);
 
-        std::cout << "Token count for this response: " << tokenCount << std::endl;
+        std::cout << "\nToken count for this response: " << tokenCount << std::endl;
 
         return response;
     }
