@@ -7,6 +7,7 @@
             "cppStandard": "c++20",
             "includePath": [
                 "${workspaceFolder}/src",
+                "${workspaceFolder}/build/_deps/crow-src/include",
                 "${workspaceFolder}/build/_deps/cpr-src/include",
                 "${workspaceFolder}/build/_deps/cpr-build/cpr_generated_includes",
                 "${workspaceFolder}/build/_deps/curl-src/include",

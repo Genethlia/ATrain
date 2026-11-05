@@ -269,3 +269,13 @@ C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-buil
 C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-build/CMakeFiles/install.dir
 C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-build/CMakeFiles/install/local.dir
 C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/json-build/CMakeFiles/install/strip.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/uninstall.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/package.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/package_source.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/test.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/edit_cache.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/rebuild_cache.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/list_install_components.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/install.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/install/local.dir
+C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build/CMakeFiles/install/strip.dir

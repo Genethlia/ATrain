@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>ATrain</title>
   </head>
   <body>
-    <h1>ATrain</h1>
+    <h1>A.T.R.A.I.N.</h1>
     <div id="chat-container">
-      <div id="chat-box">chat</div>
+      <div id="chat-box"></div>
     </div>
-    <div id="root">
-      <input type="text" placeholder="Input text" class="submit" />
-      <button type="submit">Submit</button>
+    <div class="chat-input">
+      <textarea
+        id="messageInput"
+        placeholder="Message ATrain"
+        rows="1"
+        cols="50"
+      ></textarea>
+      <button id="sendButton">Send</button>
+      <script src="app.js"></script>
     </div>
   </body>
 </html>

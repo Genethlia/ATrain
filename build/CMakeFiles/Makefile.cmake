@@ -57,6 +57,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPackageMessage.cmake"
   "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPerl.cmake"
   "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPkgConfig.cmake"
+  "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake"
+  "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake"
+  "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake"
   "C:/Program Files/CMake/share/cmake-4.2/Modules/FindZLIB.cmake"
   "C:/Program Files/CMake/share/cmake-4.2/Modules/GNUInstallDirs.cmake"
   "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCLinkerInformation.cmake"
@@ -100,6 +103,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/cpr-src/cmake/zlib_external.cmake"
   "_deps/cpr-src/cpr/CMakeLists.txt"
   "_deps/cpr-src/include/CMakeLists.txt"
+  "_deps/crow-src/CMakeLists.txt"
+  "_deps/crow-src/cmake/CrowConfig.cmake.in"
+  "_deps/crow-src/cmake/Findasio.cmake"
+  "_deps/crow-src/cmake/cmake_uninstall.cmake.in"
   "_deps/curl-build/docs/examples/Makefile.inc.cmake"
   "_deps/curl-build/docs/libcurl/Makefile.inc.cmake"
   "_deps/curl-build/docs/libcurl/opts/Makefile.inc.cmake"
@@ -163,6 +170,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CTestScript.cmake"
   "_deps/cpr-subbuild/CMakeLists.txt"
   "_deps/json-subbuild/CMakeLists.txt"
+  "_deps/crow-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/cpr-build/cpr_generated_includes/cpr/cprver.h"
   "_deps/zlib-subbuild/CMakeLists.txt"
@@ -195,6 +203,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/json-build/nlohmann_jsonConfigVersion.cmake"
   "_deps/json-build/nlohmann_jsonConfig.cmake"
   "_deps/json-build/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/crow-build/CrowConfig.cmake"
+  "CPackConfig.cmake"
+  "CPackSourceConfig.cmake"
+  "_deps/crow-build/cmake_uninstall.cmake"
+  "_deps/crow-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -353,4 +366,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "_deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/DependInfo.cmake"
   "_deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/DependInfo.cmake"
   "_deps/cpr-build/cpr/CMakeFiles/cpr.dir/DependInfo.cmake"
+  "_deps/crow-build/CMakeFiles/uninstall.dir/DependInfo.cmake"
   )

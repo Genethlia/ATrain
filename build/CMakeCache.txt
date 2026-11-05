@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//No help, variable specified on the command line.
+ASIO_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
+
+//Path to a file.
+ASIO_VERSION_HPP:FILEPATH=C:/msys64/mingw64/include/asio/version.hpp
+
 //Value Computed by CMake
 ATrain_BINARY_DIR:STATIC=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build
 
@@ -456,6 +462,44 @@ CPR_USE_SYSTEM_GTEST:BOOL=OFF
 // required as build dependency.
 CPR_USE_SYSTEM_LIB_PSL:BOOL=ON
 
+//Combine all headers into one
+CROW_AMALGAMATE:BOOL=OFF
+
+//Build the examples in the project
+CROW_BUILD_EXAMPLES:BOOL=OFF
+
+//Instrument and build Crow fuzzer
+CROW_BUILD_FUZZER:BOOL=OFF
+
+//Build the tests in the project
+CROW_BUILD_TESTS:BOOL=OFF
+
+//Enable Crow's Compression feature for supporting compressed http
+// content
+CROW_ENABLE_COMPRESSION:BOOL=OFF
+
+//Enable sanitizers (ASan, UBSan) for test builds
+CROW_ENABLE_SANITIZERS:BOOL=OFF
+
+//Enable Crow's SSL feature for supporting https
+CROW_ENABLE_SSL:BOOL=OFF
+
+//Enable ThreadSanitizer
+CROW_ENABLE_TSAN:BOOL=OFF
+
+//Generate SBOM file
+CROW_GENERATE_SBOM:BOOL=OFF
+
+//Add install step for Crow
+CROW_INSTALL:BOOL=ON
+
+//Returns HTTP status code OK (200) instead of 204 for OPTIONS
+// request
+CROW_RETURNS_OK_ON_HTTP_OPTIONS_REQUEST:BOOL=OFF
+
+//Use Boost.Asio for Crow
+CROW_USE_BOOST:BOOL=OFF
+
 //How many times to retry timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_COUNT:STRING=3
 
@@ -713,6 +757,15 @@ CURL_ZSTD:STRING=AUTO
 //Path to a program.
 CYGWIN_BAT:FILEPATH=CYGWIN_BAT-NOTFOUND
 
+//Value Computed by CMake
+Crow_BINARY_DIR:STATIC=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-build
+
+//Value Computed by CMake
+Crow_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Crow_SOURCE_DIR:STATIC=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/crow-src
+
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
@@ -758,6 +811,10 @@ FETCHCONTENT_QUIET:BOOL=ON
 FETCHCONTENT_SOURCE_DIR_CPR:PATH=
 
 //When not empty, overrides where to find pre-populated content
+// for Crow
+FETCHCONTENT_SOURCE_DIR_CROW:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for curl
 FETCHCONTENT_SOURCE_DIR_CURL:PATH=
 
@@ -774,6 +831,9 @@ FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of cpr
 FETCHCONTENT_UPDATES_DISCONNECTED_CPR:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of Crow
+FETCHCONTENT_UPDATES_DISCONNECTED_CROW:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of curl
 FETCHCONTENT_UPDATES_DISCONNECTED_CURL:BOOL=OFF
@@ -1035,6 +1095,8 @@ zlib_SOURCE_DIR:STATIC=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrai
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: ASIO_INCLUDE_DIR
+ASIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
 BROTLI_CFLAGS:INTERNAL=-IC:/msys64/mingw64/bin/../include
 BROTLI_CFLAGS_I:INTERNAL=
 BROTLI_CFLAGS_OTHER:INTERNAL=
@@ -1162,6 +1224,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain
@@ -1216,7 +1280,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1410,6 +1474,10 @@ DETECT_SSL_BACKEND:INTERNAL=ON
 ENABLE_IPV6-ADVANCED:INTERNAL=1
 //Details about finding Perl
 FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[C:/msys64/usr/bin/perl.exe][v5.42.3()]
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/tgene/AppData/Local/Programs/Python/Python314/python.exe][found components: Interpreter ][v3.14.6()]
+//Details about finding asio
+FIND_PACKAGE_MESSAGE_DETAILS_asio:INTERNAL=[C:/msys64/mingw64/include][v()]
 //Test FNO_LTO_AVAILABLE
 FNO_LTO_AVAILABLE:INTERNAL=1
 //ADVANCED property for variable: GITCOMMAND
@@ -1696,6 +1764,18 @@ ZSTD_libzstd_PREFIX:INTERNAL=
 ZSTD_libzstd_VERSION:INTERNAL=
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/ATrain
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+_Python3_EXECUTABLE:INTERNAL=C:/Users/tgene/AppData/Local/Programs/Python/Python314/python.exe
+//Path to a program.
+_Python3_EXECUTABLE_DEBUG:INTERNAL=_Python3_EXECUTABLE_DEBUG-NOTFOUND
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;6;64;32;<none>;cp314-win_amd64;;C:\Users\tgene\AppData\Local\Programs\Python\Python314\Lib;C:\Users\tgene\AppData\Local\Programs\Python\Python314\Lib;C:\Users\tgene\AppData\Local\Programs\Python\Python314\Lib\site-packages;C:\Users\tgene\AppData\Local\Programs\Python\Python314\Lib\site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=4b747f6c9b6e77e808dfbd74de97eb8e
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
 __pkg_config_arguments_BROTLI:INTERNAL=libbrotlidec;libbrotlicommon
 __pkg_config_arguments_LIBIDN2:INTERNAL=libidn2
 __pkg_config_arguments_LIBSSH2:INTERNAL=libssh2

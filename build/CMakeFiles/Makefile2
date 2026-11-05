@@ -67,6 +67,7 @@ all: CMakeFiles/atrain_ollama.dir/all
 all: CMakeFiles/ATrain.dir/all
 all: _deps/cpr-build/all
 all: _deps/json-build/all
+all: _deps/crow-build/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -75,11 +76,13 @@ codegen: CMakeFiles/atrain_ollama.dir/codegen
 codegen: CMakeFiles/ATrain.dir/codegen
 codegen: _deps/cpr-build/codegen
 codegen: _deps/json-build/codegen
+codegen: _deps/crow-build/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: _deps/cpr-build/preinstall
 preinstall: _deps/json-build/preinstall
+preinstall: _deps/crow-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -116,6 +119,7 @@ clean: CMakeFiles/atrain_ollama.dir/clean
 clean: CMakeFiles/ATrain.dir/clean
 clean: _deps/cpr-build/clean
 clean: _deps/json-build/clean
+clean: _deps/crow-build/clean
 .PHONY : clean
 
 #=============================================================================
@@ -186,6 +190,25 @@ _deps/cpr-build/include/preinstall:
 # Recursive "clean" directory target.
 _deps/cpr-build/include/clean:
 .PHONY : _deps/cpr-build/include/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/crow-build
+
+# Recursive "all" directory target.
+_deps/crow-build/all:
+.PHONY : _deps/crow-build/all
+
+# Recursive "codegen" directory target.
+_deps/crow-build/codegen:
+.PHONY : _deps/crow-build/codegen
+
+# Recursive "preinstall" directory target.
+_deps/crow-build/preinstall:
+.PHONY : _deps/crow-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/crow-build/clean: _deps/crow-build/CMakeFiles/uninstall.dir/clean
+.PHONY : _deps/crow-build/clean
 
 #=============================================================================
 # Directory level rules for directory _deps/curl-build
@@ -1462,8 +1485,8 @@ CMakeFiles/atrain_ollama.dir/clean:
 # Target rules for target CMakeFiles/ATrain.dir
 
 # All Build rule for target.
-CMakeFiles/ATrain.dir/all: CMakeFiles/atrain_ollama.dir/all
 CMakeFiles/ATrain.dir/all: CMakeFiles/atrain_core.dir/all
+CMakeFiles/ATrain.dir/all: CMakeFiles/atrain_ollama.dir/all
 CMakeFiles/ATrain.dir/all: _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/all
 CMakeFiles/ATrain.dir/all: _deps/cpr-build/cpr/CMakeFiles/cpr.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/depend
@@ -1817,117 +1840,117 @@ _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/clean:
 # Target rules for target _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir
 
 # All Build rule for target.
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/all: _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-examples.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-examples.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num= "Built target curl-examples"
@@ -1945,117 +1968,117 @@ curl-examples: _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/rule
 .PHONY : curl-examples
 
 # codegen rule for target.
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-altsvc.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-address-scope.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-10-at-a-time.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-block_ip.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-connect-to.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-anyauthput.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-cookie_interface.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-certinfo.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-debug.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-chkspeed.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-externalsocket.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-fileupload.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpget.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftp-wildcard.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-default-scheme.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadresume.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpupload.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetinfo.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpuploadfrommem.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinmemory.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpsget.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ftpgetresp.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getinfo.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getredirect.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-hsts-preload.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-download.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-getreferrer.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-pushinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-post.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http-options.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-headerapi.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-https.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpcustomheader.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-serverpush.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http3-present.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-examine.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-http2-upload.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-httpput-postfields.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-append.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-delete.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-authzid.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-copy.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-create.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-list.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-lsub.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-multi.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-fetch.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-noop.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-interface.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-localport.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-debugcallback.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-keepalive.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-maxconnects.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-ssl.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-search.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-store.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-imap-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-ipv6.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-app.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-single.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-post.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-persistent.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-list.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-legacy.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-retr.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-double.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-multi-formadd.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-parseurl.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-dele.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-netrc.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-authzid.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-multi.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-noop.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-top.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-uidl.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-range.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-progressfunc.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-stat.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-ssl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-pop3-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-post-callback.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-postinmemory.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-postit2-formadd.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-protofeats.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-resolve.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sendrecv.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simple.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplessl.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpuploadresume.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-rtsp-options.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-shared-connection-cache.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-ssl.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mail.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sepheaders.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sftpget.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-simplepost.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-authzid.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-expn.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-mime.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-multi.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-vrfy.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/all
-_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-url2file.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-sslbackend.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-urlapi.dir/all
 _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-websocket-cb.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-smtp-tls.dir/all
+_deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen: _deps/curl-build/docs/examples/CMakeFiles/curl-example-unixsocket.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps\curl-build\docs\examples\CMakeFiles\curl-examples.dir\build.make _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num= "Finished codegen for target curl-examples"
 .PHONY : _deps/curl-build/docs/examples/CMakeFiles/curl-examples.dir/codegen
@@ -5648,6 +5671,38 @@ _deps/cpr-build/cpr/CMakeFiles/cpr.dir/codegen:
 _deps/cpr-build/cpr/CMakeFiles/cpr.dir/clean:
 	$(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/clean
 .PHONY : _deps/cpr-build/cpr/CMakeFiles/cpr.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/crow-build/CMakeFiles/uninstall.dir
+
+# All Build rule for target.
+_deps/crow-build/CMakeFiles/uninstall.dir/all:
+	$(MAKE) $(MAKESILENT) -f _deps\crow-build\CMakeFiles\uninstall.dir\build.make _deps/crow-build/CMakeFiles/uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps\crow-build\CMakeFiles\uninstall.dir\build.make _deps/crow-build/CMakeFiles/uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num= "Built target uninstall"
+.PHONY : _deps/crow-build/CMakeFiles/uninstall.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/crow-build/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/crow-build/CMakeFiles/uninstall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" 0
+.PHONY : _deps/crow-build/CMakeFiles/uninstall.dir/rule
+
+# Convenience name for target.
+uninstall: _deps/crow-build/CMakeFiles/uninstall.dir/rule
+.PHONY : uninstall
+
+# codegen rule for target.
+_deps/crow-build/CMakeFiles/uninstall.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f _deps\crow-build\CMakeFiles\uninstall.dir\build.make _deps/crow-build/CMakeFiles/uninstall.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\tgene\OneDrive - MOEC\Projects\CppProjects\ATrain\build\CMakeFiles" --progress-num= "Finished codegen for target uninstall"
+.PHONY : _deps/crow-build/CMakeFiles/uninstall.dir/codegen
+
+# clean rule for target.
+_deps/crow-build/CMakeFiles/uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps\crow-build\CMakeFiles\uninstall.dir\build.make _deps/crow-build/CMakeFiles/uninstall.dir/clean
+.PHONY : _deps/crow-build/CMakeFiles/uninstall.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

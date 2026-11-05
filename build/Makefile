@@ -2192,6 +2192,19 @@ cpr/fast:
 	$(MAKE) $(MAKESILENT) -f _deps\cpr-build\cpr\CMakeFiles\cpr.dir\build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/build
 .PHONY : cpr/fast
 
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\crow-build\CMakeFiles\uninstall.dir\build.make _deps/crow-build/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
 src/AI/OllamaProvider.obj: src/AI/OllamaProvider.cpp.obj
 .PHONY : src/AI/OllamaProvider.obj
 
@@ -2315,6 +2328,7 @@ help:
 	@echo ... curl-man
 	@echo ... curl-opts-man
 	@echo ... curl_uninstall
+	@echo ... uninstall
 	@echo ... ATrain
 	@echo ... atrain_core
 	@echo ... atrain_ollama

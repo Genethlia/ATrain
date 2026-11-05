@@ -27,6 +27,7 @@ b89c82e348c33a42dcb115749b6afca7 CMakeFiles/NightlyStart
 8ea039fb4be0e4f9ed06b480df2c18bd CMakeFiles/NightlySubmit
 4b5b9b0fb804671748ee02b0142461e7 CMakeFiles/NightlyTest
 3714b17b5eba5a4e40b32c8c41c947cc CMakeFiles/NightlyUpdate
+69b0822b5cf9e68b2d100d57745159fa _deps/crow-build/CMakeFiles/uninstall
 bba1df1ac5c53c0edac8e6e48c041b50 _deps/curl-build/CMakeFiles/curl-ca-bundle
 964a3a803761b17a5e56c475bd2a020f _deps/curl-build/CMakeFiles/curl-ca-firefox
 604203f406d582e3064206e7d2400815 _deps/curl-build/CMakeFiles/curl_uninstall

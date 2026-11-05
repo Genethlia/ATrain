@@ -6,3 +6,4 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("_deps/cpr-build")
 subdirs("_deps/json-build")
+subdirs("_deps/crow-build")
