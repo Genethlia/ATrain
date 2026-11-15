@@ -16888,3 +16888,1713 @@ events:
         - "C:/Program Files/CMake"
         - "C:/Program Files (x86)/ATrain"
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e93aa/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e93aa.dir\\build.make CMakeFiles/cmTC_e93aa.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_e93aa.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_e93aa.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[2]: *** [CMakeFiles\\cmTC_e93aa.dir\\build.make:80: CMakeFiles/cmTC_e93aa.dir/detect-arch.c.obj] Error 1
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: *** [Makefile:133: cmTC_e93aa/fast] Error 2
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_8dd28/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8dd28.dir\\build.make CMakeFiles/cmTC_8dd28.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_8dd28.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_8dd28.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_8dd28.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_8dd28.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_8dd28.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_8dd28.dir/objects.a @CMakeFiles\\cmTC_8dd28.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_8dd28.dir/objects.a -Wl,--no-whole-archive -o cmTC_8dd28.exe -Wl,--out-implib,libcmTC_8dd28.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8dd28.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_bfb52/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_bfb52.dir\\build.make CMakeFiles/cmTC_bfb52.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_bfb52.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_bfb52.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_bfb52.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_bfb52.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_bfb52.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_bfb52.dir/objects.a @CMakeFiles\\cmTC_bfb52.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_bfb52.dir/objects.a -Wl,--no-whole-archive -o cmTC_bfb52.exe -Wl,--out-implib,libcmTC_bfb52.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_bfb52.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_410af/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_410af.dir\\build.make CMakeFiles/cmTC_410af.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_410af.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_410af.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_410af.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_410af.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_410af.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_410af.dir/objects.a @CMakeFiles\\cmTC_410af.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_410af.dir/objects.a -Wl,--no-whole-archive -o cmTC_410af.exe -Wl,--out-implib,libcmTC_410af.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_410af.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_2f1c8/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2f1c8.dir\\build.make CMakeFiles/cmTC_2f1c8.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_2f1c8.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_2f1c8.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_2f1c8.dir\\build.make:80: CMakeFiles/cmTC_2f1c8.dir/detect-arch.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_2f1c8/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b6a05/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b6a05.dir\\build.make CMakeFiles/cmTC_b6a05.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_b6a05.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_b6a05.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_b6a05.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b6a05.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b6a05.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b6a05.dir/objects.a @CMakeFiles\\cmTC_b6a05.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_b6a05.dir/objects.a -Wl,--no-whole-archive -o cmTC_b6a05.exe -Wl,--out-implib,libcmTC_b6a05.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b6a05.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_409d0/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_409d0.dir\\build.make CMakeFiles/cmTC_409d0.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_409d0.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_409d0.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_409d0.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_409d0.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_409d0.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_409d0.dir/objects.a @CMakeFiles\\cmTC_409d0.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_409d0.dir/objects.a -Wl,--no-whole-archive -o cmTC_409d0.exe -Wl,--out-implib,libcmTC_409d0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_409d0.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b89ea/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b89ea.dir\\build.make CMakeFiles/cmTC_b89ea.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b89ea.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_b89ea.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_b89ea.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b89ea.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b89ea.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b89ea.dir/objects.a @CMakeFiles\\cmTC_b89ea.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_b89ea.dir/objects.a -Wl,--no-whole-archive -o cmTC_b89ea.exe -Wl,--out-implib,libcmTC_b89ea.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b89ea.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_c7b82/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c7b82.dir\\build.make CMakeFiles/cmTC_c7b82.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_c7b82.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_c7b82.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[2]: *** [CMakeFiles\\cmTC_c7b82.dir\\build.make:80: CMakeFiles/cmTC_c7b82.dir/detect-arch.c.obj] Error 1
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: *** [Makefile:133: cmTC_c7b82/fast] Error 2
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_29dd9/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_29dd9.dir\\build.make CMakeFiles/cmTC_29dd9.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_29dd9.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_29dd9.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_29dd9.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_29dd9.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_29dd9.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_29dd9.dir/objects.a @CMakeFiles\\cmTC_29dd9.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_29dd9.dir/objects.a -Wl,--no-whole-archive -o cmTC_29dd9.exe -Wl,--out-implib,libcmTC_29dd9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_29dd9.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9d901/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9d901.dir\\build.make CMakeFiles/cmTC_9d901.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_9d901.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_9d901.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_9d901.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_9d901.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_9d901.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_9d901.dir/objects.a @CMakeFiles\\cmTC_9d901.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_9d901.dir/objects.a -Wl,--no-whole-archive -o cmTC_9d901.exe -Wl,--out-implib,libcmTC_9d901.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_9d901.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_39bee/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_39bee.dir\\build.make CMakeFiles/cmTC_39bee.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_39bee.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_39bee.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_39bee.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_39bee.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_39bee.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_39bee.dir/objects.a @CMakeFiles\\cmTC_39bee.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_39bee.dir/objects.a -Wl,--no-whole-archive -o cmTC_39bee.exe -Wl,--out-implib,libcmTC_39bee.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_39bee.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_904a5/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_904a5.dir\\build.make CMakeFiles/cmTC_904a5.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_904a5.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_904a5.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_904a5.dir\\build.make:80: CMakeFiles/cmTC_904a5.dir/detect-arch.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_904a5/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_c4bba/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c4bba.dir\\build.make CMakeFiles/cmTC_c4bba.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_c4bba.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_c4bba.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_c4bba.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_c4bba.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_c4bba.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_c4bba.dir/objects.a @CMakeFiles\\cmTC_c4bba.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_c4bba.dir/objects.a -Wl,--no-whole-archive -o cmTC_c4bba.exe -Wl,--out-implib,libcmTC_c4bba.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_c4bba.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_02357/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_02357.dir\\build.make CMakeFiles/cmTC_02357.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_02357.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_02357.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_02357.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_02357.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_02357.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_02357.dir/objects.a @CMakeFiles\\cmTC_02357.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_02357.dir/objects.a -Wl,--no-whole-archive -o cmTC_02357.exe -Wl,--out-implib,libcmTC_02357.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_02357.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_cc2e4/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_cc2e4.dir\\build.make CMakeFiles/cmTC_cc2e4.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_cc2e4.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_cc2e4.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_cc2e4.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_cc2e4.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_cc2e4.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_cc2e4.dir/objects.a @CMakeFiles\\cmTC_cc2e4.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_cc2e4.dir/objects.a -Wl,--no-whole-archive -o cmTC_cc2e4.exe -Wl,--out-implib,libcmTC_cc2e4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_cc2e4.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_10347/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_10347.dir\\build.make CMakeFiles/cmTC_10347.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_10347.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_10347.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[2]: *** [CMakeFiles\\cmTC_10347.dir\\build.make:80: CMakeFiles/cmTC_10347.dir/detect-arch.c.obj] Error 1
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: *** [Makefile:133: cmTC_10347/fast] Error 2
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d9c0b/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d9c0b.dir\\build.make CMakeFiles/cmTC_d9c0b.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_d9c0b.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_d9c0b.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_d9c0b.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_d9c0b.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_d9c0b.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_d9c0b.dir/objects.a @CMakeFiles\\cmTC_d9c0b.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_d9c0b.dir/objects.a -Wl,--no-whole-archive -o cmTC_d9c0b.exe -Wl,--out-implib,libcmTC_d9c0b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_d9c0b.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9337f/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9337f.dir\\build.make CMakeFiles/cmTC_9337f.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_9337f.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_9337f.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_9337f.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_9337f.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_9337f.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_9337f.dir/objects.a @CMakeFiles\\cmTC_9337f.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_9337f.dir/objects.a -Wl,--no-whole-archive -o cmTC_9337f.exe -Wl,--out-implib,libcmTC_9337f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_9337f.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_44011/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_44011.dir\\build.make CMakeFiles/cmTC_44011.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_44011.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_44011.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_44011.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_44011.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_44011.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_44011.dir/objects.a @CMakeFiles\\cmTC_44011.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_44011.dir/objects.a -Wl,--no-whole-archive -o cmTC_44011.exe -Wl,--out-implib,libcmTC_44011.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_44011.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Users\\tgene\\.codex\\tmp\\arg0-windows\\codex-arg0cVkm11"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\.vscode\\extensions\\openai.chatgpt-26.1021.22027-win32-x64\\bin\\windows-x86_64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_45384/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_45384.dir\\build.make CMakeFiles/cmTC_45384.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_45384.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_45384.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_45384.dir\\build.make:80: CMakeFiles/cmTC_45384.dir/detect-arch.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_45384/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_64ad3/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_64ad3.dir\\build.make CMakeFiles/cmTC_64ad3.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_64ad3.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_64ad3.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_64ad3.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_64ad3.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_64ad3.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_64ad3.dir/objects.a @CMakeFiles\\cmTC_64ad3.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_64ad3.dir/objects.a -Wl,--no-whole-archive -o cmTC_64ad3.exe -Wl,--out-implib,libcmTC_64ad3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_64ad3.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_8571c/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8571c.dir\\build.make CMakeFiles/cmTC_8571c.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_8571c.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_8571c.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_8571c.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_8571c.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_8571c.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_8571c.dir/objects.a @CMakeFiles\\cmTC_8571c.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_8571c.dir/objects.a -Wl,--no-whole-archive -o cmTC_8571c.exe -Wl,--out-implib,libcmTC_8571c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8571c.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_79e1d/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_79e1d.dir\\build.make CMakeFiles/cmTC_79e1d.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_79e1d.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_79e1d.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_79e1d.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_79e1d.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_79e1d.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_79e1d.dir/objects.a @CMakeFiles\\cmTC_79e1d.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_79e1d.dir/objects.a -Wl,--no-whole-archive -o cmTC_79e1d.exe -Wl,--out-implib,libcmTC_79e1d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_79e1d.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_639ce/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_639ce.dir\\build.make CMakeFiles/cmTC_639ce.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_639ce.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_639ce.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[2]: *** [CMakeFiles\\cmTC_639ce.dir\\build.make:80: CMakeFiles/cmTC_639ce.dir/detect-arch.c.obj] Error 1
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: *** [Makefile:133: cmTC_639ce/fast] Error 2
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_73aff/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_73aff.dir\\build.make CMakeFiles/cmTC_73aff.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_73aff.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_73aff.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_73aff.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_73aff.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_73aff.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_73aff.dir/objects.a @CMakeFiles\\cmTC_73aff.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_73aff.dir/objects.a -Wl,--no-whole-archive -o cmTC_73aff.exe -Wl,--out-implib,libcmTC_73aff.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_73aff.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d2490/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d2490.dir\\build.make CMakeFiles/cmTC_d2490.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_d2490.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_d2490.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_d2490.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_d2490.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_d2490.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_d2490.dir/objects.a @CMakeFiles\\cmTC_d2490.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_d2490.dir/objects.a -Wl,--no-whole-archive -o cmTC_d2490.exe -Wl,--out-implib,libcmTC_d2490.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_d2490.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_88b6d/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_88b6d.dir\\build.make CMakeFiles/cmTC_88b6d.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_88b6d.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_88b6d.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_88b6d.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_88b6d.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_88b6d.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_88b6d.dir/objects.a @CMakeFiles\\cmTC_88b6d.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_88b6d.dir/objects.a -Wl,--no-whole-archive -o cmTC_88b6d.exe -Wl,--out-implib,libcmTC_88b6d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_88b6d.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "build/_deps/zlib-src/cmake/detect-arch.cmake:26 (try_run)"
+      - "build/_deps/zlib-src/CMakeLists.txt:47 (include)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_0852b/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0852b.dir\\build.make CMakeFiles/cmTC_0852b.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_0852b.dir/detect-arch.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -std=c11 -o CMakeFiles\\cmTC_0852b.dir\\detect-arch.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        mingw32-make[2]: *** [CMakeFiles\\cmTC_0852b.dir\\build.make:80: CMakeFiles/cmTC_0852b.dir/detect-arch.c.obj] Error 1
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: *** [Makefile:133: cmTC_0852b/fast] Error 2
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:244 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_WINNT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_bb6e3/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_bb6e3.dir\\build.make CMakeFiles/cmTC_bb6e3.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_bb6e3.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_bb6e3.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:369:9: note: '#pragma message: _WIN32_WINNT=0x601'
+          369 | #pragma message("_WIN32_WINNT=" expand(_WIN32_WINNT))
+              |         ^~~~~~~
+        Linking C executable cmTC_bb6e3.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_bb6e3.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_bb6e3.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_bb6e3.dir/objects.a @CMakeFiles\\cmTC_bb6e3.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DHAVE_WIN32_WINNT  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_bb6e3.dir/objects.a -Wl,--no-whole-archive -o cmTC_bb6e3.exe -Wl,--out-implib,libcmTC_bb6e3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_bb6e3.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/curl-src/CMake/Macros.cmake:51 (try_compile)"
+      - "build/_deps/curl-src/CMakeLists.txt:256 (curl_internal_test)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-src/CMake;C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake"
+    buildResult:
+      variable: "MINGW64_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_04fa9/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_04fa9.dir\\build.make CMakeFiles/cmTC_04fa9.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_04fa9.dir/CurlTests.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe   -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -o CMakeFiles\\cmTC_04fa9.dir\\CurlTests.c.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c"
+        C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\curl-src\\CMake\\CurlTests.c:384:9: note: '#pragma message: MINGW64_VERSION=15.0'
+          384 | #pragma message("MINGW64_VERSION=" \\
+              |         ^~~~~~~
+        Linking C executable cmTC_04fa9.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_04fa9.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_04fa9.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_04fa9.dir/objects.a @CMakeFiles\\cmTC_04fa9.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -DMINGW64_VERSION  -DWIN32_LEAN_AND_MEAN -Wl,--whole-archive CMakeFiles\\cmTC_04fa9.dir/objects.a -Wl,--no-whole-archive -o cmTC_04fa9.exe -Wl,--out-implib,libcmTC_04fa9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_04fa9.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/curl-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/cpr-src/include/CMakeLists.txt:64 (try_compile)"
+    directories:
+      source: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-src/cmake;"
+    buildResult:
+      variable: "STD_FS_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_59a29/fast
+        mingw32-make[1]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_59a29.dir\\build.make CMakeFiles/cmTC_59a29.dir/build
+        mingw32-make[2]: Entering directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_59a29.dir/std_fs_support_test.cpp.obj
+        C:\\msys64\\mingw64\\bin\\c++.exe   -Wall -Wextra -Wpedantic -Werror  -std=c++20 -o CMakeFiles\\cmTC_59a29.dir\\std_fs_support_test.cpp.obj -c "C:\\Users\\tgene\\OneDrive - MOEC\\Projects\\CppProjects\\ATrain\\build\\_deps\\cpr-src\\cmake\\std_fs_support_test.cpp"
+        Linking CXX executable cmTC_59a29.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_59a29.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_59a29.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_59a29.dir/objects.a @CMakeFiles\\cmTC_59a29.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\c++.exe  -Wall -Wextra -Wpedantic -Werror  -Wl,--whole-archive CMakeFiles\\cmTC_59a29.dir/objects.a -Wl,--no-whole-archive -o cmTC_59a29.exe -Wl,--out-implib,libcmTC_59a29.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_59a29.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        mingw32-make[1]: Leaving directory 'C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/build/_deps/cpr-build/include/std_fs/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake:2437 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake:671 (include)"
+      - "build/_deps/crow-src/CMakeLists.txt:42 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/"
+    searched_directories:
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3.14_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python3_d"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.com"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d.exe"
+      - "C:/Users/tgene/AppData/Local/Programs/Python/Python314/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\tgene\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\tgene\\AppData\\Roaming\\npm"
+        - "C:\\Users\\tgene\\.dotnet\\tools"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\tgene\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\tgene\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ATrain"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/ATrain"
+...

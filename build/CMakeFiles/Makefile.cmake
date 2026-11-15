@@ -156,6 +156,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/zlib-src/zlib.h.in"
   "_deps/zlib-src/zlib.pc.cmakein"
   "_deps/zlib-src/zlib_name_mangling.h.empty"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/cmake/CompilerWarnings.cmake"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/cmake/Dependencies.cmake"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/cmake/ProjectOptions.cmake"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/cmake/RuntimeDependencies.cmake"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/cmake/Targets.cmake"
   )
 
 # The corresponding makefile is:

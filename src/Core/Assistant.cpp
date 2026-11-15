@@ -151,6 +151,7 @@ std::string Assistant::GenerateReply(const std::string &message)
         if (userMessageAdded && !history.empty() && history.back().role == "user" && history.back().content == message)
         {
             history.pop_back();
+            tokenCount = EstimateTokens(BuildRequestHistory());
         }
         throw;
     }

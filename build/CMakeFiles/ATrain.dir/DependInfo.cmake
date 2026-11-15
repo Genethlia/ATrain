@@ -8,6 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/Commands/CommandRouter.cpp" "CMakeFiles/ATrain.dir/src/Commands/CommandRouter.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/Commands/CommandRouter.cpp.obj.d"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/Server/WebServer.cpp" "CMakeFiles/ATrain.dir/src/Server/WebServer.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/Server/WebServer.cpp.obj.d"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/System/ApplicationLauncher.cpp" "CMakeFiles/ATrain.dir/src/System/ApplicationLauncher.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/System/ApplicationLauncher.cpp.obj.d"
+  "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/System/WindowManager.cpp" "CMakeFiles/ATrain.dir/src/System/WindowManager.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/System/WindowManager.cpp.obj.d"
   "C:/Users/tgene/OneDrive - MOEC/Projects/CppProjects/ATrain/src/main.cpp" "CMakeFiles/ATrain.dir/src/main.cpp.obj" "gcc" "CMakeFiles/ATrain.dir/src/main.cpp.obj.d"
   )
 

@@ -2229,6 +2229,30 @@ src/AI/OllamaProvider.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\atrain_ollama.dir\build.make CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.s
 .PHONY : src/AI/OllamaProvider.cpp.s
 
+src/Commands/CommandRouter.obj: src/Commands/CommandRouter.cpp.obj
+.PHONY : src/Commands/CommandRouter.obj
+
+# target to build an object file
+src/Commands/CommandRouter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/Commands/CommandRouter.cpp.obj
+.PHONY : src/Commands/CommandRouter.cpp.obj
+
+src/Commands/CommandRouter.i: src/Commands/CommandRouter.cpp.i
+.PHONY : src/Commands/CommandRouter.i
+
+# target to preprocess a source file
+src/Commands/CommandRouter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/Commands/CommandRouter.cpp.i
+.PHONY : src/Commands/CommandRouter.cpp.i
+
+src/Commands/CommandRouter.s: src/Commands/CommandRouter.cpp.s
+.PHONY : src/Commands/CommandRouter.s
+
+# target to generate assembly for a file
+src/Commands/CommandRouter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/Commands/CommandRouter.cpp.s
+.PHONY : src/Commands/CommandRouter.cpp.s
+
 src/Core/Assistant.obj: src/Core/Assistant.cpp.obj
 .PHONY : src/Core/Assistant.obj
 
@@ -2252,6 +2276,78 @@ src/Core/Assistant.s: src/Core/Assistant.cpp.s
 src/Core/Assistant.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\atrain_core.dir\build.make CMakeFiles/atrain_core.dir/src/Core/Assistant.cpp.s
 .PHONY : src/Core/Assistant.cpp.s
+
+src/Server/WebServer.obj: src/Server/WebServer.cpp.obj
+.PHONY : src/Server/WebServer.obj
+
+# target to build an object file
+src/Server/WebServer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/Server/WebServer.cpp.obj
+.PHONY : src/Server/WebServer.cpp.obj
+
+src/Server/WebServer.i: src/Server/WebServer.cpp.i
+.PHONY : src/Server/WebServer.i
+
+# target to preprocess a source file
+src/Server/WebServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/Server/WebServer.cpp.i
+.PHONY : src/Server/WebServer.cpp.i
+
+src/Server/WebServer.s: src/Server/WebServer.cpp.s
+.PHONY : src/Server/WebServer.s
+
+# target to generate assembly for a file
+src/Server/WebServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/Server/WebServer.cpp.s
+.PHONY : src/Server/WebServer.cpp.s
+
+src/System/ApplicationLauncher.obj: src/System/ApplicationLauncher.cpp.obj
+.PHONY : src/System/ApplicationLauncher.obj
+
+# target to build an object file
+src/System/ApplicationLauncher.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/System/ApplicationLauncher.cpp.obj
+.PHONY : src/System/ApplicationLauncher.cpp.obj
+
+src/System/ApplicationLauncher.i: src/System/ApplicationLauncher.cpp.i
+.PHONY : src/System/ApplicationLauncher.i
+
+# target to preprocess a source file
+src/System/ApplicationLauncher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/System/ApplicationLauncher.cpp.i
+.PHONY : src/System/ApplicationLauncher.cpp.i
+
+src/System/ApplicationLauncher.s: src/System/ApplicationLauncher.cpp.s
+.PHONY : src/System/ApplicationLauncher.s
+
+# target to generate assembly for a file
+src/System/ApplicationLauncher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/System/ApplicationLauncher.cpp.s
+.PHONY : src/System/ApplicationLauncher.cpp.s
+
+src/System/WindowManager.obj: src/System/WindowManager.cpp.obj
+.PHONY : src/System/WindowManager.obj
+
+# target to build an object file
+src/System/WindowManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/System/WindowManager.cpp.obj
+.PHONY : src/System/WindowManager.cpp.obj
+
+src/System/WindowManager.i: src/System/WindowManager.cpp.i
+.PHONY : src/System/WindowManager.i
+
+# target to preprocess a source file
+src/System/WindowManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/System/WindowManager.cpp.i
+.PHONY : src/System/WindowManager.cpp.i
+
+src/System/WindowManager.s: src/System/WindowManager.cpp.s
+.PHONY : src/System/WindowManager.s
+
+# target to generate assembly for a file
+src/System/WindowManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ATrain.dir\build.make CMakeFiles/ATrain.dir/src/System/WindowManager.cpp.s
+.PHONY : src/System/WindowManager.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -2450,9 +2546,21 @@ help:
 	@echo ... src/AI/OllamaProvider.obj
 	@echo ... src/AI/OllamaProvider.i
 	@echo ... src/AI/OllamaProvider.s
+	@echo ... src/Commands/CommandRouter.obj
+	@echo ... src/Commands/CommandRouter.i
+	@echo ... src/Commands/CommandRouter.s
 	@echo ... src/Core/Assistant.obj
 	@echo ... src/Core/Assistant.i
 	@echo ... src/Core/Assistant.s
+	@echo ... src/Server/WebServer.obj
+	@echo ... src/Server/WebServer.i
+	@echo ... src/Server/WebServer.s
+	@echo ... src/System/ApplicationLauncher.obj
+	@echo ... src/System/ApplicationLauncher.i
+	@echo ... src/System/ApplicationLauncher.s
+	@echo ... src/System/WindowManager.obj
+	@echo ... src/System/WindowManager.i
+	@echo ... src/System/WindowManager.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
