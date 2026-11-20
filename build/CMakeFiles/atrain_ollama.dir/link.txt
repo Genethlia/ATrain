@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libatrain_ollama.a CMakeFiles/atrain_ollama.dir/src/AI/OllamaProvider.cpp.obj
-C:\msys64\mingw64\bin\ranlib.exe libatrain_ollama.a

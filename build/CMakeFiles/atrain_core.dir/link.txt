@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libatrain_core.a CMakeFiles/atrain_core.dir/src/Core/Assistant.cpp.obj
-C:\msys64\mingw64\bin\ranlib.exe libatrain_core.a
